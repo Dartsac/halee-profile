@@ -69,6 +69,24 @@
         opacity: 0;
         transition: all 0.3s ease-out;
       }
+
+      &:first-child {
+        &::after {
+          content: 'HOME';
+        }
+      }
+    }
+
+    a.about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+
+    a.contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
     }
   }
 }
