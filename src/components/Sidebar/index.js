@@ -4,6 +4,7 @@ import LogoH from '../../assets/images/logo-h.png'
 import LogoSubtitle from '../../assets/images/logo_sub_halee.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => (
   <div className='nav-bar'>
@@ -32,6 +33,17 @@ const Sidebar = () => (
         <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
       </NavLink>
     </nav>
+    <ul>
+      <li>
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://www.linkedin.com/in/halee-mccray-7040892a1/'
+        >
+          <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
+        </a>
+      </li>
+    </ul>
   </div>
 )
 
