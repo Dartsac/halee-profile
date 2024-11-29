@@ -43,7 +43,8 @@
       margin-left: 20px;
       opacity: 0;
       height: auto;
-      animation: rotateIn 1s linear both;
+      animation: jackInTheBox 1.5s ease-out;
+      animation-fill-mode: forwards;
       animation-delay: 1.4s;
     }
   }
