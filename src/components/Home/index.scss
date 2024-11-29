@@ -35,7 +35,7 @@
       margin-top: 18px;
       margin-left: 20px;
       opacity: 0.6;
-      animation: fadeIn 1s 1.7s backwards;
+      animation: fadeInOpacity 1s 2s backwards;
     }
 
     img {
@@ -77,5 +77,16 @@
       background: #ffd700;
       color: #333;
     }
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; /* Fade in from fully transparent */
+    transform: translateY(10px); /* Optional: Add slight vertical movement */
+  }
+  100% {
+    opacity: 0.6; /* Matches the initial setting for ::after */
+    transform: translateY(0); /* Ends in its final position */
   }
 }
