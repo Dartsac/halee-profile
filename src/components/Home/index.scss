@@ -50,7 +50,7 @@
   }
 
   h2 {
-    color: #8d8d8d;
+    color: #fff;
     margin-top: 20px;
     font-weight: 400;
     font-size: 11px;
@@ -67,7 +67,7 @@
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 10px;
-    border: 1px solid #cf3173;
+    border: 1px solid #fff;
     margin-top: 25px;
     float: left;
     animation: fadeIn 1s 1.8s backwards;
@@ -77,6 +77,7 @@
     &:hover {
       background: #cf3173;
       color: #fff;
+      border-color: #cf3173;
     }
   }
 }
