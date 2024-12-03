@@ -18,7 +18,7 @@
     &::before {
       content: '<h1>';
       font-family: 'La Belle Aurore';
-      color: #ffd700;
+      color: #cf3173;
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -29,7 +29,7 @@
     &::after {
       content: '</h1>';
       font-family: 'La Belle Aurore';
-      color: #ffd700;
+      color: #cf3173;
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
@@ -60,33 +60,39 @@
   }
 
   .flat-button {
-    color: #ffd700;
+    color: #cf3173;
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 10px;
-    border: 1px solid #ffd700;
+    border: 1px solid #cf3173;
     margin-top: 25px;
     float: left;
     animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
+    background-color: #fff;
 
     &:hover {
-      background: #ffd700;
-      color: #333;
+      background: #cf3173;
+      color: #fff;
     }
   }
 }
 
 @keyframes fadeInOpacity {
   0% {
-    opacity: 0; /* Fade in from fully transparent */
-    transform: translateY(10px); /* Optional: Add slight vertical movement */
+    opacity: 0;
+    /* Fade in from fully transparent */
+    transform: translateY(10px);
+    /* Optional: Add slight vertical movement */
   }
+
   100% {
-    opacity: 0.6; /* Matches the initial setting for ::after */
-    transform: translateY(0); /* Ends in its final position */
+    opacity: 0.6;
+    /* Matches the initial setting for ::after */
+    transform: translateY(0);
+    /* Ends in its final position */
   }
 }
