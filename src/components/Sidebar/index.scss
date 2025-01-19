@@ -1,5 +1,5 @@
 .nav-bar {
-  background: rgb(255, 255, 255);
+  background: #000;
   width: 60px;
   height: 100%;
   position: absolute;
@@ -15,7 +15,7 @@
   img {
     display: block;
     margin: 10px auto;
-    width: 34px;
+    width: 60px;
     height: auto;
 
     &.sub-logo {
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #cf3173;
+        color: #d3dbc1;
         svg {
           opacity: 0;
         }
@@ -90,7 +90,7 @@
 
     a.active {
       svg {
-        color: #cf3173;
+        color: #d3dbc1;
       }
     }
   }
@@ -112,7 +112,7 @@
       line-height: 16px;
 
       &:hover svg {
-        color: #cf3173;
+        color: #d3dbc1;
       }
     }
   }
