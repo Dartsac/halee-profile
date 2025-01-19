@@ -60,7 +60,8 @@
       &:after {
         content: '';
         font-size: 9px;
-        letter-spacing: 2px;
+        font-weight: bold;
+        letter-spacing: 1px;
         position: absolute;
         bottom: 0;
         display: block;
@@ -79,7 +80,13 @@
 
     a.about-link {
       &:after {
-        content: 'ABOUT';
+        content: 'ABOUT ME';
+      }
+    }
+
+    a.projects-link {
+      &:after {
+        content: 'PROJECTS';
       }
     }
 
