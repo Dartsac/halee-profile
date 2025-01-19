@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import LogoTitle from '../../assets/images/logo-h.png'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+
+const descriptors = ['skilled writer.', 'avid reader.', 'sharp editor.']
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -40,7 +42,7 @@ const Home = () => {
             idx={19}
           />
         </h1>
-        <h2>Crafting Words That Convert</h2>
+        <h2>Crafting Words That Inspire</h2>
         <Link to='/contact' className='flat-button'>
           CONTACT ME
         </Link>
