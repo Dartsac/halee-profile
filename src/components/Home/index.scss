@@ -1,3 +1,5 @@
+/* index.scss */
+
 .home-page {
   .text-zone {
     position: absolute;
@@ -14,6 +16,19 @@
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
+    position: relative;
+    height: 200px;
+    line-height: 1.2;
+
+    span.descriptors {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      height: 1.5em;
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
     &::before {
       content: '<h1>';
@@ -52,7 +67,7 @@
   h2 {
     color: #000;
     margin-top: 20px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 11px;
     font-family: sans-serif;
     letter-spacing: 3px;
@@ -85,15 +100,23 @@
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
-    /* Fade in from fully transparent */
     transform: translateY(10px);
-    /* Optional: Add slight vertical movement */
   }
 
   100% {
     opacity: 0.6;
-    /* Matches the initial setting for ::after */
     transform: translateY(0);
-    /* Ends in its final position */
+  }
+}
+
+/* Optional: Define additional fade-in keyframes if needed */
+@keyframes fadeInDescriptors {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
