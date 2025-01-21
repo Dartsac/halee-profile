@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
+import Logo from '../Logo'
 import './index.scss'
 
 const descriptors = ['skilled writer.', 'avid reader.', 'sharp editor.']
@@ -94,6 +95,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   )
 }

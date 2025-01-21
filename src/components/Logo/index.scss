@@ -1,0 +1,72 @@
+.logo-container {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center; // Centers horizontally
+  align-items: center; // Centers vertically
+  z-index: 0;
+  opacity: 0;
+
+  // Styling for the SVG
+  svg {
+    width: 100%; // Fit the container
+    height: auto; // Maintain aspect ratio
+    position: absolute;
+    transform: rotateZ(29deg);
+    z-index: 2;
+  }
+
+  // Styling for the image
+  .solid-logo {
+    position: absolute;
+    width: 100%; // Ensures it scales with the container
+    height: auto;
+    transform: rotateZ(29deg);
+    opacity: 0;
+    z-index: 1;
+  }
+  // SVG stroke styling
+  .svg-container {
+    stroke: #000;
+    stroke-width: 10px; // Adjust as needed
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .logo-container {
+    width: 500px;
+    height: 500px;
+    right: 10%;
+  }
+}
+
+@media (max-width: 880px) {
+  .logo-container {
+    width: 400px;
+    height: 400px;
+    right: 7%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    width: 300px;
+    height: 300px;
+    right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 200px;
+    height: 200px;
+    right: 2%;
+  }
+}
