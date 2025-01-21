@@ -1,9 +1,8 @@
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Headshot from '../../assets/images/headshot1.jpeg'
+import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
+import './index.scss'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
