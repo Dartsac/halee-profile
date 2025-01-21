@@ -3,6 +3,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import './index.scss'
 import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -28,11 +29,10 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
+          Swal.fire("I've got mail! :)", "I'll be in touch soon", 'success')
         },
         () => {
-          alert('Failed to send the message, please try again')
+          Swal.fire('Oops...', 'Failed to send message. Try again.', 'error')
         },
       )
   }
