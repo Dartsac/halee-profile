@@ -42,7 +42,8 @@
 }
 
 .about-page,
-.contact-page {
+.contact-page,
+.projects-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,7 +139,8 @@
 */
 @media (max-width: 1200px) {
   .about-page,
-  .contact-page {
+  .contact-page,
+  .projects-page {
     width: 85%; /* or something narrower if you like */
     max-width: 1000px; /* optional if you want smaller max at 1200px */
 
@@ -158,7 +160,8 @@
 */
 @media (max-width: 992px) {
   .about-page,
-  .contact-page {
+  .contact-page,
+  .projects-page {
     flex-direction: column;
     align-items: center;
     text-align: center; /* optional if you want text centered */
@@ -207,7 +210,8 @@
 */
 @media (max-width: 768px) {
   .about-page,
-  .contact-page {
+  .contact-page,
+  .projects-page {
     width: 85%;
     max-width: 600px; /* smaller container on mobile tablets */
 
@@ -243,7 +247,8 @@
 */
 @media (max-width: 480px) {
   .about-page,
-  .contact-page {
+  .contact-page,
+  .projects-page {
     .text-zone {
       max-width: 90%;
       margin-right: 0;
