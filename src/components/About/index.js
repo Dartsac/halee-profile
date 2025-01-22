@@ -29,9 +29,9 @@ const About = () => {
           <p>
             I’m a proud first-generation Georgia State University alumna with a
             serious passion for writing and editing. My mission? To make my
-            readers *feel* something—anything! Whether it’s a burst of joy, a
-            tear (hopefully happy), or that perfect “OMG” or “LOL” moment, I aim
-            to spark genuine emotion.
+            readers <strong>feel</strong> something—anything! Whether it’s a
+            burst of joy, a tear (hopefully happy), or that perfect <em>OMG</em>{' '}
+            or <em>LOL</em> moment, I aim to spark genuine emotion.
           </p>
           <p>
             With a degree in psychology, I understand that connecting with
