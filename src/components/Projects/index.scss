@@ -1,0 +1,141 @@
+.projects-page {
+  /* If needed, same layout rules as .about-page, .contact-page */
+  display: flex;
+  flex-direction: column; /* stacked: title -> grid */
+  align-items: center;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontally */
+}
+
+.projects-page .text-zone {
+  /* Optional spacing for heading/paragraph */
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* The grid or flex container for your 4 project items */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap; /* let items wrap in multiple rows if needed */
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Each "card" or project square */
+.project-item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 48%; /* each takes about half width on big screens */
+  height: 400px; /* or 300px, or a different fixed height if you want squares */
+  margin-bottom: 40px;
+  text-decoration: none; /* remove default link styling */
+}
+
+/* The container for the background image */
+.project-img-wrapper {
+  flex: 1; /* let the image area fill most of the card */
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 22px 24px rgb(51 51 50 / 4%);
+}
+
+/* (Optional) background images for each project */
+.project-img-1 {
+  /* background-image: url('/path/to/crystal-project-img.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-img-2 {
+  /* background-image: url('/path/to/ai-art.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Same idea for .project-img-3, .project-img-4, etc. */
+.project-img-3 {
+  /* background-image: url('/path/to/some-image.png'); */
+}
+.project-img-4 {
+  /* background-image: url('/path/to/another-image.png'); */
+}
+
+/* Content area below the image (title, arrow, subtitle) */
+.item-content {
+  margin-top: 20px;
+}
+
+/* Title row with the arrow svg on the right */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Project card title styling */
+.card-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+}
+
+/* Tiny subtitle text under the title */
+.subtitle-sm {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* The rotated count number (001, 002, etc.) on the side */
+.count {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -1.75rem;
+  transform: rotate(-90deg) translateY(-100%);
+  transform-origin: top right;
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+  .projects-grid {
+    justify-content: center; /* center them if you like */
+  }
+
+  .project-item {
+    flex: 0 1 80%; /* each item takes 80% width at tablet sizes */
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item {
+    flex: 0 1 100%; /* full width on mobile */
+    height: 300px; /* or reduce the height further for small screens */
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .subtitle-sm {
+    font-size: 0.75rem;
+  }
+}
