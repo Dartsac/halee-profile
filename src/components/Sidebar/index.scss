@@ -1,11 +1,14 @@
 .nav-bar {
   background: #000;
   width: 60px;
-  height: 100%;
-  position: absolute;
+  /* Pin to the left edge of the screen */
+  position: fixed;
   top: 0;
-  z-index: 3;
-  min-height: 500px;
+  left: 0;
+  z-index: 9999; /* or a high number to stay on top */
+
+  /* Full browser height so it spans from top to bottom */
+  height: 100vh;
 
   .logo {
     display: block;

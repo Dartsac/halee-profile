@@ -1,11 +1,15 @@
 .page {
-  /* Fill screen, but ensure top and bottom padding for the tags */
   position: relative;
   width: 100%;
-  height: 100vh;
-  padding-top: 60px; /* Enough space so text isn't above the top tag */
-  padding-bottom: 60px; /* Enough space so text isn't below the bottom tag */
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
   box-sizing: border-box;
+}
+
+.fixed-height {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .tags.top-tags {
