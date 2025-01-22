@@ -1,5 +1,3 @@
-/* index.scss */
-
 .home-page {
   .text-zone {
     position: absolute;
@@ -118,5 +116,118 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+/* 
+  Desktop-ish: 1200px or below 
+  -> Slightly reduce max-width of container or adjust spacing
+*/
+@media (max-width: 1200px) {
+  .home-page {
+    width: 85%; /* or something narrower if you like */
+    max-width: 1000px; /* optional if you want smaller max at 1200px */
+
+    .text-zone {
+      margin-right: 10px; /* slightly reduce margin */
+    }
+
+    h1 {
+      font-size: 48px; /* scale down a bit from 53px */
+    }
+  }
+
+  .logo-container {
+    width: 500px;
+    height: 500px;
+    right: 10%;
+  }
+}
+
+/*
+  Tablet-ish: 992px or below 
+  -> Start stacking or adjusting the flex proportions
+*/
+@media (max-width: 992px) {
+  .home-page {
+    .text-zone {
+      max-width: 90%;
+      margin-right: 0;
+      margin-bottom: 20px; /* add some spacing below text */
+    }
+
+    h1 {
+      font-size: 40px;
+      left: 0;
+      margin: 0 auto; /* let auto left/right margins center it */
+    }
+  }
+
+  .logo-container {
+    width: 400px;
+    height: 400px;
+    right: 7%;
+  }
+}
+
+/*
+  Mobile-ish: 768px or below 
+  -> Further reduce font sizes, spacing, etc.
+*/
+@media (max-width: 768px) {
+  .home-page {
+    width: 85%;
+    max-width: 600px; /* smaller container on mobile tablets */
+
+    .text-zone {
+      margin-bottom: 15px;
+      /* Possibly reduce paragraph font-size: */
+      p {
+        font-size: 14px;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .logo-container {
+    width: 300px;
+    height: 300px;
+    right: 5%;
+  }
+}
+
+/*
+  Very small screens: 480px or below
+  -> Even smaller fonts/images
+*/
+@media (max-width: 480px) {
+  .home-page {
+    .text-zone {
+      max-width: 90%;
+      margin-right: 0;
+      margin-bottom: 20px; /* add some spacing below text */
+
+      p {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .logo-container {
+    width: 200px;
+    height: 200px;
+    right: 2%;
   }
 }
