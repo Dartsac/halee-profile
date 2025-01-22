@@ -1,16 +1,25 @@
 .headshot {
-  flex: 1;
-  max-width: 45%;
-  position: relative;
-  display: flex;
-  border: 3px solid #000;
-  justify-content: center;
-  align-items: center;
+  /* Let .headshot naturally size itself or 
+     set a max-width if you want a certain limit on large screens. */
+  flex: 1; /* or flex: 0 0 45%; if you want it specifically 45% wide */
+  max-width: 45%; /* This is optional if you want an upper limit (45% of its container). */
+  /* border: 3px solid #000; */
+  border-radius: 10px; /* if you want the entire container rounded corners, otherwise remove */
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+
+  /* You usually don’t need display: flex for a simple image container.
+     If you remove 'align-items: center; justify-content: center;', 
+     the image won't be forced or cropped in odd ways. */
+  display: block;
+  overflow: hidden; /* So that if 'object-fit: cover' is used, we hide overflow. */
 
   img {
-    width: 100%;
-    height: auto;
+    display: block;
+    width: 100%; /* Let the img fill the container's width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* 'cover' crops to fill the container if aspect ratios differ */
+
+    /* If you don't want *any* cropping, use 'object-fit: contain' or remove object-fit entirely. */
   }
 }

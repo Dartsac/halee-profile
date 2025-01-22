@@ -170,9 +170,9 @@
     }
 
     .headshot {
-      max-width: 29%; /* let the image shrink to a comfortable width */
-      // min-width: 320px;
-      // margin: 0 auto; /* center it horizontally */
+      max-width: 60%;
+      margin-bottom: 20px; /* spacing under the image */
+      box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
@@ -220,8 +220,8 @@
     }
 
     .headshot {
-      max-width: 30%;
-      // margin-top: 10px;
+      max-width: 60%;
+      margin-bottom: 20px; /* spacing under the image */
     }
 
     h1 {
@@ -265,7 +265,9 @@
     }
 
     .headshot {
-      max-width: 30%;
+      max-width: 60%;
+      margin-bottom: 20px; /* spacing under the image */
+      box-shadow: 7px 7px rgba(0, 0, 0, 0.15);
     }
   }
 }

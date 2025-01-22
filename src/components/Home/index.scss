@@ -127,24 +127,24 @@
   Desktop-ish: 1200px or below 
   -> Slightly reduce max-width of container or adjust spacing
 */
-@media (max-width: 1200px) {
+@media (max-width: 1240px) {
   .home-page {
     width: 85%; /* or something narrower if you like */
     max-width: 1000px; /* optional if you want smaller max at 1200px */
 
     .text-zone {
       margin-right: 10px; /* slightly reduce margin */
-    }
 
-    h1 {
-      font-size: 48px; /* scale down a bit from 53px */
+      h1 {
+        font-size: 48px; /* scale down a bit from 53px */
+      }
     }
   }
 
   .logo-container {
     width: 500px;
     height: 500px;
-    right: 10%;
+    right: 2%;
   }
 }
 
@@ -158,19 +158,18 @@
       max-width: 90%;
       margin-right: 0;
       margin-bottom: 20px; /* add some spacing below text */
-    }
-
-    h1 {
-      font-size: 40px;
-      left: 0;
-      margin: 0 auto; /* let auto left/right margins center it */
+      h1 {
+        font-size: 40px;
+        left: 0;
+        margin: 0 auto; /* let auto left/right margins center it */
+      }
     }
   }
 
   .logo-container {
     width: 400px;
     height: 400px;
-    right: 7%;
+    right: 2%;
   }
 }
 
@@ -180,8 +179,8 @@
 */
 @media (max-width: 768px) {
   .home-page {
-    width: 85%;
-    max-width: 600px; /* smaller container on mobile tablets */
+    width: 100%;
+    max-width: 1000px; /* smaller container on mobile tablets */
 
     .text-zone {
       margin-bottom: 15px;
@@ -199,7 +198,7 @@
   .logo-container {
     width: 300px;
     height: 300px;
-    right: 5%;
+    right: 0;
   }
 }
 
@@ -213,15 +212,9 @@
       max-width: 90%;
       margin-right: 0;
       margin-bottom: 20px; /* add some spacing below text */
-
-      p {
-        font-size: 13px;
-        line-height: 1.4;
+      h1 {
+        font-size: 24px;
       }
-    }
-
-    h1 {
-      font-size: 24px;
     }
   }
 
