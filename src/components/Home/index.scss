@@ -208,19 +208,55 @@
 */
 @media (max-width: 480px) {
   .home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+
+    .logo-container {
+      width: 70px;
+      height: 100px;
+      margin-bottom: 100px; // Adds spacing between logo and text
+      position: static; // Removes absolute positioning for stacking
+      right: auto;
+      left: auto;
+      margin-top: 150px;
+    }
+
     .text-zone {
-      max-width: 90%;
-      margin-right: 0;
-      margin-bottom: 20px; /* add some spacing below text */
+      position: static;
+      width: 90%;
+      max-width: 300px;
+      transform: none;
+      margin: 0 auto; // Center text content
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
       h1 {
-        font-size: 24px;
+        font-size: 44px;
+        width: 100%;
+        height: 150px;
+        line-height: 1.2;
+        &::before {
+          margin-top: -20px;
+          font-size: 14px;
+        }
+        &::after {
+          font-size: 14px;
+        }
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+
+      .flat-button {
+        width: 100%;
+        width: 130px;
+        text-align: center;
+        margin-top: 10px;
       }
     }
-  }
-
-  .logo-container {
-    width: 200px;
-    height: 200px;
-    right: 2%;
   }
 }
