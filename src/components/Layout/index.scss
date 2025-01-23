@@ -168,41 +168,50 @@
   .projects-page {
     flex-direction: column;
     align-items: center;
-    text-align: center; /* optional if you want text centered */
+    text-align: center;
 
     .text-zone {
       max-width: 90%;
       margin-right: 0;
-      margin-bottom: 20px; /* add some spacing below text */
+      margin-bottom: 20px;
     }
 
     .headshot {
       max-width: 60%;
-      margin-bottom: 20px; /* spacing under the image */
+      margin-bottom: 20px;
       box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
-      font-size: 40px;
-      left: 0;
-      margin: 0 auto; /* let auto left/right margins center it */
+      /* inline or inline-block so pseudo-elements flow around the text */
+      display: inline-block;
+      position: relative;
+      font-size: 32px; /* your mobile default, adjust as needed */
+      font-family: 'Coolvetica';
+      color: #000;
+      font-weight: 400;
+      margin: 20px auto; /* center horizontally if parent has text-align: center */
+      margin-right: 80.36px;
 
-      /* 
-        Re-position your pseudo-elements so they're
-        centered above & below the h1 instead of to the left 
-      */
+      /* Pseudo-elements as inline text: */
       &::before {
-        left: 40%; /* center horizontally */
-        transform: translateX(-50%);
-        top: -15px; /* move above the h1 */
-        margin-top: 0; /* override previous margin-top if needed */
+        content: '<h1> ';
+        font-family: 'La Belle Aurore';
+        color: #4d4d4e;
+        font-size: 18px;
+        opacity: 0.6;
+        margin-right: 5px; /* spacing after <h1> */
+        position: static; /* ensure it’s inline */
       }
 
       &::after {
-        left: 40%; /* center horizontally */
-        transform: translateX(-50%);
-        bottom: -15px; /* move below the h1 */
-        margin-left: 0; /* override any previous offsets */
+        content: ' </h1>';
+        font-family: 'La Belle Aurore';
+        color: #4d4d4e;
+        font-size: 18px;
+        opacity: 0.6;
+        margin-left: 5px; /* spacing before </h1> */
+        position: static; /* ensure it’s inline */
       }
     }
   }
@@ -242,6 +251,17 @@
     width: 100%;
     margin-left: 0;
     float: none;
+  }
+
+  .tags.top-tags {
+    top: 10px;
+    left: 30px;
+    font-size: 14px;
+  }
+
+  .tags.bottom-tags {
+    left: 30px;
+    font-size: 14px;
   }
 }
 
