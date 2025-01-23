@@ -1,14 +1,27 @@
+/* =========================================
+   Base (Desktop) styles
+========================================= */
+.hamburger-btn {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
 .nav-bar {
   background: #000;
   width: 60px;
-  /* Pin to the left edge of the screen */
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999; /* or a high number to stay on top */
-
-  /* Full browser height so it spans from top to bottom */
   height: 100vh;
+  z-index: 9999;
+  transition: transform 0.3s ease;
 
   .logo {
     display: block;
@@ -20,10 +33,6 @@
     margin: 10px auto;
     width: 60px;
     height: auto;
-
-    &.sub-logo {
-      width: 50px;
-    }
   }
 
   nav {
@@ -35,6 +44,11 @@
     margin-top: -145px;
     width: 100%;
 
+    .menu-text {
+      opacity: 0;
+      margin-left: 30px;
+    }
+
     a {
       font-size: 22px;
       color: #4d4d4e;
@@ -43,10 +57,6 @@
       height: 51px;
       position: relative;
       text-decoration: none;
-
-      i {
-        transition: all 0.3s ease-out;
-      }
 
       &:hover {
         color: #d3dbc1;
@@ -70,7 +80,11 @@
         width: 100%;
         text-align: center;
         opacity: 0;
-        transition: all 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
+      }
+
+      &:hover:after {
+        opacity: 1;
       }
 
       &:first-child {
@@ -109,7 +123,6 @@
     position: absolute;
     bottom: 20px;
     width: 100%;
-    display: block;
     padding: 0;
     list-style: none;
     text-align: center;
@@ -117,13 +130,102 @@
 
     li {
       padding: 7px 0px;
-      display: block;
       font-size: 15px;
       line-height: 16px;
-
       &:hover svg {
         color: #d3dbc1;
       }
     }
+  }
+}
+
+/* =========================================
+   MOBILE (max-width: 768px)
+   -> Full screen overlay that slides 
+      DOWN from top when open
+========================================= */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+
+    .logo {
+      margin: 1rem;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    nav {
+      position: static;
+      margin-top: 0;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 80px 20px;
+
+      .menu-text {
+        opacity: 1;
+      }
+
+      .icon {
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      a {
+        line-height: normal;
+        height: auto;
+        margin-bottom: 1.2rem;
+        font-size: 24px;
+        color: #fff;
+        position: relative;
+
+        &:first-child {
+          &::after {
+            content: none;
+          }
+        }
+        &.about-link::after {
+          content: none;
+        }
+        &.projects-link::after {
+          content: none;
+        }
+        &.contact-link::after {
+          content: none;
+        }
+      }
+    }
+
+    ul {
+      position: static;
+      margin-top: auto; /* push it down if you want */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 20px;
+
+      li {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  /* Slide down when mobile-show is added */
+  .nav-bar.mobile-show {
+    transform: translateY(0);
   }
 }
