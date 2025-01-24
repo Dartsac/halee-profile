@@ -15,7 +15,7 @@
 .tags.top-tags {
   position: absolute;
   top: 30px;
-  left: 120px;
+  left: 9%;
   /* or wherever you want the <body> tag to appear visually */
   font-size: 18px;
   color: #4d4d4e;
@@ -26,7 +26,7 @@
 .tags.bottom-tags {
   position: absolute;
   bottom: 0;
-  left: 120px;
+  left: 9%;
   font-size: 18px;
   color: #4d4d4e;
   opacity: 0.6;
@@ -64,7 +64,7 @@
   }
 
   h1 {
-    font-size: 53px;
+    font-size: 5.6rem;
     font-family: 'Coolvetica';
     color: #000;
     font-weight: 400;
@@ -79,20 +79,20 @@
       content: '<h1>';
       font-family: 'La Belle Aurore';
       color: #4d4d4e;
-      font-size: 18px;
+      font-size: 1.8rem;
       position: absolute;
       margin-top: -10px;
       left: -10px;
       opacity: 0.6;
-      line-height: 18px;
+      line-height: 1.8;
     }
 
     &::after {
       content: '</h1>';
       font-family: 'La Belle Aurore';
       color: #4d4d4e;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 1.8rem;
+      line-height: 1.8;
       position: absolute;
       left: -30px;
       bottom: -20px;
@@ -102,7 +102,8 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.4;
     color: #000;
     font-family: sans-serif;
     font-weight: 300;
@@ -153,7 +154,7 @@
     }
 
     h1 {
-      font-size: 48px; /* scale down a bit from 53px */
+      font-size: 4.8rem; /* scale down a bit from 53px */
     }
   }
 }
@@ -174,6 +175,10 @@
       max-width: 90%;
       margin-right: 0;
       margin-bottom: 20px;
+
+      p {
+        line-height: 1.5;
+      }
     }
 
     .headshot {
@@ -186,7 +191,7 @@
       /* inline or inline-block so pseudo-elements flow around the text */
       display: inline-block;
       position: relative;
-      font-size: 32px; /* your mobile default, adjust as needed */
+      font-size: 3.6rem; /* your mobile default, adjust as needed */
       font-family: 'Coolvetica';
       color: #000;
       font-weight: 400;
@@ -198,7 +203,7 @@
         content: '<h1> ';
         font-family: 'La Belle Aurore';
         color: #4d4d4e;
-        font-size: 18px;
+        font-size: 1.8rem;
         opacity: 0.6;
         margin-right: 5px; /* spacing after <h1> */
         position: static; /* ensure it’s inline */
@@ -208,7 +213,7 @@
         content: ' </h1>';
         font-family: 'La Belle Aurore';
         color: #4d4d4e;
-        font-size: 18px;
+        font-size: 1.8rem;
         opacity: 0.6;
         margin-left: 5px; /* spacing before </h1> */
         position: static; /* ensure it’s inline */
@@ -232,7 +237,8 @@
       margin-bottom: 15px;
       /* Possibly reduce paragraph font-size: */
       p {
-        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 1.6;
       }
     }
 
@@ -242,7 +248,7 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 3.2rem;
     }
   }
 
@@ -254,14 +260,14 @@
   }
 
   .tags.top-tags {
-    top: 10px;
-    left: 30px;
-    font-size: 14px;
+    top: 2%;
+    left: 3%;
+    font-size: 1.4rem;
   }
 
   .tags.bottom-tags {
-    left: 30px;
-    font-size: 14px;
+    left: 3%;
+    font-size: 1.4rem;
   }
 }
 
@@ -279,17 +285,17 @@
       margin-bottom: 20px; /* add some spacing below text */
 
       p {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 1.3rem;
+        line-height: 1.6;
       }
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 2.4rem;
       /* If you want the <h1> tag corner tags smaller, reduce them too: */
       &::before,
       &::after {
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
 
