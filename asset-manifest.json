@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/halee-profile/static/css/main.2130d46a.css",
+    "main.js": "/halee-profile/static/js/main.f5aa1806.js",
+    "static/js/453.4ac3334c.chunk.js": "/halee-profile/static/js/453.4ac3334c.chunk.js",
+    "static/media/LogoH.png": "/halee-profile/static/media/LogoH.83dfc84aeba37f49aff8.png",
+    "static/media/headshot1.jpeg": "/halee-profile/static/media/headshot1.b503025a323059df1bec.jpeg",
+    "static/media/logo.png": "/halee-profile/static/media/logo.b9c95d18433c20215c63.png",
+    "static/media/helvetica-neu.ttf": "/halee-profile/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/LaBelleAurore.woff2": "/halee-profile/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/CoolveticaRg-Regular.woff2": "/halee-profile/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/halee-profile/index.html",
+    "main.2130d46a.css.map": "/halee-profile/static/css/main.2130d46a.css.map",
+    "main.f5aa1806.js.map": "/halee-profile/static/js/main.f5aa1806.js.map",
+    "453.4ac3334c.chunk.js.map": "/halee-profile/static/js/453.4ac3334c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2130d46a.css",
+    "static/js/main.f5aa1806.js"
+  ]
+}
