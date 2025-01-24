@@ -260,7 +260,7 @@
   }
 
   .tags.top-tags {
-    top: 2%;
+    top: 15px;
     left: 3%;
     font-size: 1.4rem;
   }
@@ -276,21 +276,25 @@
   -> Even smaller fonts/images
 */
 @media (max-width: 480px) {
+  .page {
+    padding: 0;
+  }
   .about-page,
   .contact-page,
   .projects-page {
     .text-zone {
       max-width: 90%;
       margin-right: 0;
-      margin-bottom: 20px; /* add some spacing below text */
 
       p {
         font-size: 1.3rem;
         line-height: 1.6;
+        margin: 3px 0;
       }
     }
 
     h1 {
+      margin-bottom: 0;
       font-size: 2.4rem;
       /* If you want the <h1> tag corner tags smaller, reduce them too: */
       &::before,
