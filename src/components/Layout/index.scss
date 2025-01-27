@@ -227,6 +227,11 @@
   -> Further reduce font sizes, spacing, etc.
 */
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow: auto;
+  }
+
   .about-page,
   .contact-page,
   .projects-page {
@@ -261,12 +266,13 @@
 
   .tags.top-tags {
     top: 15px;
-    left: 3%;
+    left: 3.5%;
     font-size: 1.4rem;
   }
 
   .tags.bottom-tags {
-    left: 3%;
+    left: 3.5%;
+    bottom: 1%;
     font-size: 1.4rem;
   }
 }
