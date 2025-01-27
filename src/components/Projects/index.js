@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import './index.scss'
@@ -33,7 +34,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className='projects-grid'>
           {/* Project 1 */}
-          <a className='project-item' href='#project1'>
+          <Link className='project-item' to='/projects/email'>
             <div className='project-img-wrapper'>
               <div className='project-img-1'></div>
             </div>
@@ -54,10 +55,10 @@ const Projects = () => {
               </div>
             </div>
             <span className='count'>001</span>
-          </a>
+          </Link>
 
           {/* Project 2 */}
-          <a className='project-item' href='#project2'>
+          <Link className='project-item' to='/projects/sms'>
             <div className='project-img-wrapper'>
               <div className='project-img-2'></div>
             </div>
@@ -77,10 +78,10 @@ const Projects = () => {
               </div>
             </div>
             <span className='count'>002</span>
-          </a>
+          </Link>
 
           {/* Project 3 */}
-          <a className='project-item' href='#project3'>
+          <Link className='project-item' to='/projects/blog'>
             <div className='project-img-wrapper'>
               <div className='project-img-3'></div>
             </div>
@@ -100,10 +101,10 @@ const Projects = () => {
               </div>
             </div>
             <span className='count'>003</span>
-          </a>
+          </Link>
 
           {/* Project 4 */}
-          <a className='project-item' href='#project4'>
+          <Link className='project-item' to='/projects/ecom/'>
             <div className='project-img-wrapper'>
               <div className='project-img-4'></div>
             </div>
@@ -123,7 +124,7 @@ const Projects = () => {
               </div>
             </div>
             <span className='count'>004</span>
-          </a>
+          </Link>
         </div>
       </div>
 
