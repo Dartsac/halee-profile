@@ -39,7 +39,7 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>Crystal</h3>
+                <h3 className='card-title'>Email Campaigns</h3>
                 {/* A small arrow svg, same as your sample */}
                 <svg
                   width='24'
@@ -52,9 +52,6 @@ const Projects = () => {
                   <path d='M8 6.5H18V16.5' stroke='#1A1A19'></path>
                 </svg>
               </div>
-              <p className='subtitle-sm'>
-                Individual Guide to Spirituality Application
-              </p>
             </div>
             <span className='count'>001</span>
           </a>
@@ -66,7 +63,7 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>AI Art</h3>
+                <h3 className='card-title'>SMS Strategies</h3>
                 <svg
                   width='24'
                   height='25'
@@ -78,9 +75,6 @@ const Projects = () => {
                   <path d='M8 6.5H18V16.5' stroke='#1A1A19'></path>
                 </svg>
               </div>
-              <p className='subtitle-sm'>
-                Art created by training a Convolutional Neural Network
-              </p>
             </div>
             <span className='count'>002</span>
           </a>
@@ -92,7 +86,7 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>Project Three</h3>
+                <h3 className='card-title'>Blog Articles</h3>
                 <svg
                   width='24'
                   height='25'
@@ -104,7 +98,6 @@ const Projects = () => {
                   <path d='M8 6.5H18V16.5' stroke='#1A1A19'></path>
                 </svg>
               </div>
-              <p className='subtitle-sm'>Some quick description here</p>
             </div>
             <span className='count'>003</span>
           </a>
@@ -116,7 +109,7 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>Project Four</h3>
+                <h3 className='card-title'>E-Commerce Product Copy</h3>
                 <svg
                   width='24'
                   height='25'
@@ -128,7 +121,6 @@ const Projects = () => {
                   <path d='M8 6.5H18V16.5' stroke='#1A1A19'></path>
                 </svg>
               </div>
-              <p className='subtitle-sm'>Another quick description here</p>
             </div>
             <span className='count'>004</span>
           </a>
