@@ -130,6 +130,9 @@
 }
 
 @media (max-width: 480px) {
+  .projects-grid {
+    margin-bottom: 30px;
+  }
   .project-item {
     flex: 0 1 100%; /* full width on mobile */
     height: 300px; /* or reduce the height further for small screens */
