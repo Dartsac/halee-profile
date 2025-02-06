@@ -1,0 +1,276 @@
+html,
+body {
+  overflow: auto;
+}
+.email-campaigns-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* main container padding if you like */
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #000;
+  font-family: sans-serif;
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    margin-bottom: 3rem;
+
+    .hero-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 300px; /* or whatever hero height */
+      background-color: #ccc; /* fallback if no hero image used */
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; /* if your image is bright, adjust color accordingly */
+        text-align: center;
+
+        h1 {
+          font-size: 3rem; /* adjust to taste */
+          margin: 0;
+        }
+
+        p {
+          margin-top: 0.5rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  /* Project details, writing process, intended impact sections */
+  .project-details,
+  .writing-process,
+  .intended-impact {
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #333;
+      position: relative;
+    }
+
+    p,
+    ul {
+      font-size: 1.6rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+      li {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  /* Carousel styles */
+  .carousel-section {
+    margin-bottom: 3rem;
+
+    .multi-carousel-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem; /* space between the arrows and the viewport */
+
+      .arrow-btn {
+        font-size: 2rem;
+        background: none;
+        border: 1px solid #000;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #d3dbc1;
+        }
+      }
+
+      .carousel-viewport {
+        /* 
+          Enough width to show 3 slides side by side 
+          Each slide below is 260px wide + 20px margin-right => ~280 total
+          3 slides => ~840
+          Let's do 900 for a bit of extra space so the center can enlarge comfortably
+        */
+        width: 900px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel-track {
+        display: flex;
+        align-items: center;
+        /* The transform: translateX(...) is set in JS */
+        transition: transform 0.5s ease; /* fallback if needed */
+      }
+
+      .carousel-slide {
+        /* Make each slide bigger so we see the difference in scale. */
+        min-width: 260px; /* base width for each slide */
+        margin-right: 20px; /* gap between slides */
+        height: 360px; /* or however tall you like */
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 
+          By default, scale slides down 
+          so side slides look smaller unless they're the "center-slide"
+        */
+        transform: scale(0.8);
+        transition: transform 0.3s ease; /* smooth scaling in/out */
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* or cover if you prefer cropping */
+        }
+      }
+
+      /* The center slide is scaled up or has a drop shadow, etc. */
+      .center-slide {
+        transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 2; /* appear above neighbors if overlap occurs */
+      }
+    }
+  }
+}
+
+/* =========================================
+   MEDIA QUERIES
+========================================= */
+
+/* Example: Desktop-ish: 1200px */
+@media (max-width: 1200px) {
+  .email-campaigns-page {
+    padding: 1rem;
+    .hero-section {
+      .hero-image-wrapper {
+        height: 250px; /* slightly smaller hero */
+      }
+      .hero-text-overlay {
+        h1 {
+          font-size: 2.4rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .carousel-section .carousel-image-wrapper {
+      width: 250px;
+      height: 400px;
+    }
+  }
+}
+
+/* Tablet-ish: 992px */
+@media (max-width: 992px) {
+  .email-campaigns-page {
+    .hero-section {
+      .hero-image-wrapper {
+        height: 200px;
+      }
+      .hero-text-overlay {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .carousel-section {
+      .multi-carousel-container {
+        .carousel-viewport {
+          width: 700px; /* narrower on tablet */
+        }
+        .carousel-slide {
+          min-width: 200px;
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile-ish: 768px */
+@media (max-width: 768px) {
+  .email-campaigns-page {
+    .hero-section {
+      .hero-image-wrapper {
+        height: 180px;
+      }
+      .hero-text-overlay {
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    .carousel-section {
+      .multi-carousel-container {
+        .carousel-viewport {
+          width: 500px;
+        }
+        .carousel-slide {
+          min-width: 160px;
+          height: 220px;
+        }
+      }
+    }
+  }
+}
+
+/* Very small screens: 480px */
+@media (max-width: 480px) {
+  .email-campaigns-page {
+    .hero-section {
+      .hero-image-wrapper {
+        height: 150px;
+      }
+      .hero-text-overlay {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .carousel-section {
+      .multi-carousel-container {
+        .carousel-viewport {
+          width: 320px;
+        }
+        .carousel-slide {
+          min-width: 120px;
+          height: 160px;
+        }
+      }
+    }
+  }
+}
