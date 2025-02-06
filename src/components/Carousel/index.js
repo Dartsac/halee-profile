@@ -12,18 +12,19 @@ import Img5 from '../../assets/images/email/img5.png'
 const images = [Img1, Img2, Img3, Img4, Img5]
 
 const Carousel = () => {
-  // The offset determines which image is “in focus” (slot 1 is the leftmost, 2, … 5)
-  // In our CSS, we have classes for gallery-item-1 through gallery-item-5.
+  // The offset determines which image appears in which “slot”
+  // (slot 1 will be the leftmost, 2, …, 5).
   const [offset, setOffset] = useState(0)
-  // This flag will add a "transitioning" class to trigger the CSS transition.
+  // This flag is used solely to add a "transitioning" class (if needed).
   const [isAnimating, setIsAnimating] = useState(false)
 
   const handleNext = () => {
     if (isAnimating) return
     setIsAnimating(true)
-    // Wait for the CSS transition (0.4s) before updating the offset.
+    // Immediately update the offset so the new classes apply and the
+    // CSS transition (defined in the .gallery-item rule) animates the change.
+    setOffset((prev) => (prev + 1) % images.length)
     setTimeout(() => {
-      setOffset((prev) => (prev + 1) % images.length)
       setIsAnimating(false)
     }, 400)
   }
@@ -31,8 +32,8 @@ const Carousel = () => {
   const handlePrev = () => {
     if (isAnimating) return
     setIsAnimating(true)
+    setOffset((prev) => (prev - 1 + images.length) % images.length)
     setTimeout(() => {
-      setOffset((prev) => (prev - 1 + images.length) % images.length)
       setIsAnimating(false)
     }, 400)
   }
@@ -41,11 +42,11 @@ const Carousel = () => {
     <div className='gallery'>
       <div className='gallery-container'>
         {images.map((img, i) => {
-          // Compute each image’s relative position (0 to 4) based on the offset.
+          // Compute the image’s relative position (0 to 4) based on the offset.
           const relativePos = (i - offset + images.length) % images.length
-          // We want to assign classes 1 through 5 (gallery-item-1, gallery-item-2, etc.)
+          // Slot numbers are 1-based so add 1.
           const slotNumber = relativePos + 1
-          // Optionally add a "transitioning" class while animating.
+          // Optionally add a transitioning class while animating.
           const extraClass = isAnimating ? ' transitioning' : ''
           const className = `gallery-item-${slotNumber}${extraClass}`
           return (
