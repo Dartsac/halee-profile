@@ -75,10 +75,32 @@ const EmailCampaigns = () => {
               className='inline-img'
             />
           </div>
+          <h2>Writing Process</h2>
+          <p>
+            For each email, I developed high-impact subject lines, preview text,
+            and email body copy that highlighted Bevel’s most significant deals
+            of the year. My approach included:
+          </p>
+          <ul>
+            <li>
+              Focus on urgency and exclusivity: Leveraged limited-time offers
+              and countdown language to encourage quick action.
+            </li>
+            <li>
+              Highlighting product value: Showcased Bevel’s flagship products,
+              like the Bevel Trimmer and Shave Essentials, emphasizing their
+              premium quality and gifting potential.
+            </li>
+            <li>
+              Tone: Infused emails with bold, energetic language that appealed
+              to Bevel’s audience.
+            </li>
+          </ul>
         </section>
 
         {/* Carousel Section */}
         <section className='carousel-section'>
+          <h2>Email Examples I Wrote</h2>
           <Carousel />
         </section>
       </div>
