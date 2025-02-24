@@ -8,11 +8,85 @@
   margin: 0 auto; /* center horizontally */
 }
 
+/* For project detail pages, allow scrolling */
+.project-detail-page {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+/* Add this class to body when viewing project detail pages */
+body.project-page-active {
+  overflow: auto !important;
+  height: auto !important;
+}
+
 .projects-page .text-zone {
   /* Optional spacing for heading/paragraph */
   max-width: 700px;
   text-align: center;
   margin-bottom: 40px;
+}
+
+/* For individual project pages, we'll add project content styling */
+.project-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    position: relative;
+  }
+
+  p,
+  li {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+/* Carousel section styling */
+.carousel-section {
+  position: relative;
+  width: calc(100% + 120px); /* Account for page margin and sidebar */
+  margin-left: -60px; /* Pull back to align with sidebar */
+  padding: 2rem 0;
+  margin-bottom: 40px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center relative to viewport */
+    left: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 /* The grid or flex container for your 4 project items */
@@ -127,6 +201,41 @@
     flex: 0 1 80%; /* each item takes 80% width at tablet sizes */
     margin-bottom: 30px;
   }
+
+  .project-content {
+    h2 {
+      font-size: 1.8rem;
+    }
+    ul {
+      text-align: left;
+    }
+    p,
+    li {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    text-align: center;
+
+    ul {
+      text-align: left;
+    }
+  }
+
+  .carousel-section {
+    padding: 1rem 0;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .gallery-container {
+      right: 60px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -143,5 +252,24 @@
   }
   .subtitle-sm {
     font-size: 0.75rem;
+  }
+
+  .project-content {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p,
+    li {
+      font-size: 1.2rem;
+    }
+  }
+
+  .carousel-section {
+    padding: 0.5rem 0;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
   }
 }
