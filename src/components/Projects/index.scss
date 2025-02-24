@@ -41,6 +41,12 @@ body.project-page-active {
     position: relative;
   }
 
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+  }
+
   p,
   li {
     font-size: 1.6rem;
@@ -55,6 +61,10 @@ body.project-page-active {
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     width: 100%;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
 
@@ -206,9 +216,11 @@ body.project-page-active {
     h2 {
       font-size: 1.8rem;
     }
-    ul {
-      text-align: left;
+
+    h3 {
+      font-size: 1.6rem;
     }
+
     p,
     li {
       font-size: 1.4rem;
@@ -258,6 +270,11 @@ body.project-page-active {
     h2 {
       font-size: 1.6rem;
     }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
     p,
     li {
       font-size: 1.2rem;

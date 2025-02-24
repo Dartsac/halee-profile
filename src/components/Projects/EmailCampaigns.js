@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import Carousel from '../Carousel' // Reusable carousel component
+import ProjectNavigation from './ProjectNavigation' // Import the new navigation component
+import './EmailCampaigns.scss'
 import './index.scss'
 
 const EmailCampaigns = () => {
@@ -115,6 +117,9 @@ const EmailCampaigns = () => {
               during Black Friday, Cyber Monday, and holiday shopping peaks.
             </li>
           </ul>
+
+          {/* Add the ProjectNavigation component */}
+          <ProjectNavigation currentProject='/projects/email' />
         </div>
       </div>
       <Loader />
