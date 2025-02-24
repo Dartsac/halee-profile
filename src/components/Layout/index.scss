@@ -5,6 +5,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   box-sizing: border-box;
+  padding-left: 60px; /* Add padding equal to sidebar width */
 }
 
 .fixed-height {
@@ -15,8 +16,7 @@
 .tags.top-tags {
   position: absolute;
   top: 30px;
-  left: 9%;
-  /* or wherever you want the <body> tag to appear visually */
+  left: calc(9% + 30px); /* Adjust left position to account for sidebar */
   font-size: 18px;
   color: #4d4d4e;
   opacity: 0.6;
@@ -26,7 +26,7 @@
 .tags.bottom-tags {
   position: absolute;
   bottom: 0;
-  left: 9%;
+  left: calc(9% + 30px); /* Adjust left position to account for sidebar */
   font-size: 18px;
   color: #4d4d4e;
   opacity: 0.6;
@@ -43,6 +43,8 @@
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .about-page,
@@ -54,6 +56,7 @@
   width: 85%;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   .text-zone {
     flex: 1;
@@ -206,7 +209,7 @@
         font-size: 1.8rem;
         opacity: 0.6;
         margin-right: 5px; /* spacing after <h1> */
-        position: static; /* ensure it’s inline */
+        position: static; /* ensure it's inline */
       }
 
       &::after {
@@ -216,7 +219,7 @@
         font-size: 1.8rem;
         opacity: 0.6;
         margin-left: 5px; /* spacing before </h1> */
-        position: static; /* ensure it’s inline */
+        position: static; /* ensure it's inline */
       }
     }
   }
@@ -230,6 +233,10 @@
   html,
   body {
     overflow: auto;
+  }
+
+  .page {
+    padding-left: 0; /* Remove sidebar padding on mobile */
   }
 
   .about-page,
