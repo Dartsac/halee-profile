@@ -34,7 +34,11 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className='projects-grid'>
           {/* Project 1 */}
-          <Link className='project-item' to='/projects/email'>
+          <Link
+            className='project-item'
+            to='/projects/email'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <div className='project-img-wrapper'>
               <div className='project-img-1'></div>
             </div>
@@ -58,7 +62,11 @@ const Projects = () => {
           </Link>
 
           {/* Project 2 */}
-          <Link className='project-item' to='/projects/sms'>
+          <Link
+            className='project-item'
+            to='/projects/sms'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <div className='project-img-wrapper'>
               <div className='project-img-2'></div>
             </div>
@@ -81,7 +89,11 @@ const Projects = () => {
           </Link>
 
           {/* Project 3 */}
-          <Link className='project-item' to='/projects/blog'>
+          <Link
+            className='project-item'
+            to='/projects/blog'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <div className='project-img-wrapper'>
               <div className='project-img-3'></div>
             </div>
@@ -104,7 +116,11 @@ const Projects = () => {
           </Link>
 
           {/* Project 4 */}
-          <Link className='project-item' to='/projects/ecom/'>
+          <Link
+            className='project-item'
+            to='/projects/ecom/'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <div className='project-img-wrapper'>
               <div className='project-img-4'></div>
             </div>

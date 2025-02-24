@@ -93,7 +93,11 @@ const Home = () => {
             <span>{currentDescriptor}</span>
           </h1>
           <h2>Crafting Words That Inspire</h2>
-          <Link to='/contact' className='flat-button'>
+          <Link
+            to='/contact'
+            className='flat-button'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             CONTACT ME
           </Link>
         </div>

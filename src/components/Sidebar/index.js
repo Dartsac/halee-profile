@@ -79,7 +79,10 @@ const Sidebar = () => {
             activeclassname='active'
             className='contact-link'
             to='/contact'
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false)
+              window.scrollTo(0, 0)
+            }}
           >
             <FontAwesomeIcon
               className='icon'

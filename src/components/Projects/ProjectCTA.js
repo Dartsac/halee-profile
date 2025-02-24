@@ -14,7 +14,11 @@ const ProjectCTA = () => {
           resonates with your audience and drives real results. Let's create
           something amazing together!
         </p>
-        <Link to='/contact' className='cta-button'>
+        <Link
+          to='/contact'
+          className='cta-button'
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Let's Talk!
         </Link>
       </div>
