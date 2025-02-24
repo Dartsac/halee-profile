@@ -30,7 +30,8 @@
       z-index: 1;
     }
 
-    &:hover {
+    &:hover,
+    &.touch-hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
@@ -43,8 +44,10 @@
       }
     }
 
-    &:active {
+    &:active,
+    &:focus {
       transform: translateY(-2px);
+      outline: none;
     }
 
     .button-content {
@@ -53,6 +56,7 @@
       justify-content: flex-start;
       position: relative;
       z-index: 2;
+      width: 100%;
     }
 
     .text-content {
@@ -93,31 +97,71 @@
   }
 
   // Responsive styles
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 2rem;
+  @media (max-width: 992px) {
+    margin-top: 5rem;
 
     .nav-button {
-      width: 100%;
+      .arrow {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    // Keep buttons side-by-side but adjust dimensions
+    margin-top: 4rem;
+
+    .nav-button {
+      padding: 1.5rem;
+
+      .button-content {
+        justify-content: space-between;
+      }
+
+      // Make sure touch targets are large enough on mobile
+      &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        right: -10px;
+        z-index: -1;
+      }
     }
   }
 
   @media (max-width: 480px) {
-    margin-top: 4rem;
+    margin-top: 3rem;
 
     .nav-button {
-      padding: 1.4rem 1.6rem;
+      padding: 1.2rem 1rem;
 
       .arrow {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        min-width: 14px; // Ensure consistent spacing
       }
 
       .label {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
       }
 
       .project-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%; // Allow text to truncate if needed
+      }
+
+      .text-content {
+        max-width: 75%; // Leave room for arrow
+      }
+
+      // Enhance touch feedback on mobile
+      &:active {
+        background-color: #0a0a0a;
       }
     }
   }
