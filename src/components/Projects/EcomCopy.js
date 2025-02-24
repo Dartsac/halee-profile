@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import ProjectNavigation from './ProjectNavigation' // Import the navigation component
+import ProjectCTA from './ProjectCTA' // Import the CTA component
 import './index.scss'
 
 const EcomCopy = () => {
@@ -134,6 +135,9 @@ const EcomCopy = () => {
               making confident purchases.
             </li>
           </ul>
+
+          {/* Add the CTA component before navigation */}
+          <ProjectCTA />
 
           {/* Add the ProjectNavigation component */}
           <ProjectNavigation currentProject='/projects/ecom' />

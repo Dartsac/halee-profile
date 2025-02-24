@@ -3,6 +3,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import Carousel from '../Carousel' // Reusable carousel component
 import ProjectNavigation from './ProjectNavigation' // Import the new navigation component
+import ProjectCTA from './ProjectCTA' // Import the CTA component
 import './EmailCampaigns.scss'
 import './index.scss'
 
@@ -121,7 +122,10 @@ const EmailCampaigns = () => {
             </li>
           </ul>
 
-          {/* Add the ProjectNavigation component */}
+          {/* Add the CTA component before navigation */}
+          <ProjectCTA />
+
+          {/* Project navigation component */}
           <ProjectNavigation currentProject='/projects/email' />
         </div>
       </div>
