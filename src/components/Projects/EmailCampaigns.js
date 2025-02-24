@@ -75,17 +75,18 @@ const EmailCampaigns = () => {
           </p>
           <ul>
             <li>
-              Focus on urgency and exclusivity: Leveraged limited-time offers
-              and countdown language to encourage quick action.
+              <strong>Focus on urgency and exclusivity:</strong> Leveraged
+              limited-time offers and countdown language to encourage quick
+              action.
             </li>
             <li>
-              Highlighting product value: Showcased Bevel's flagship products,
-              like the Bevel Trimmer and Shave Essentials, emphasizing their
-              premium quality and gifting potential.
+              <strong>Highlighting product value:</strong> Showcased Bevel's
+              flagship products, like the Bevel Trimmer and Shave Essentials,
+              emphasizing their premium quality and gifting potential.
             </li>
             <li>
-              Tone: Infused emails with bold, energetic language that appealed
-              to Bevel's audience.
+              <strong>Tone:</strong> Infused emails with bold, energetic
+              language that appealed to Bevel's audience.
             </li>
           </ul>
 
@@ -96,25 +97,27 @@ const EmailCampaigns = () => {
           </p>
           <ul>
             <li>
-              Increasing Engagement: Designed subject lines and preview text to
-              capture attention and drive higher open rates, ensuring Bevel's
-              audience remained engaged during key sales periods.
+              <strong>Increasing Engagement:</strong> Designed subject lines and
+              preview text to capture attention and drive higher open rates,
+              ensuring Bevel's audience remained engaged during key sales
+              periods.
             </li>
             <li>
-              Boosting Brand Awareness: Each campaign reinforced Bevel's
-              presence in a competitive market, ensuring the brand remained
-              top-of-mind during key shopping periods.
+              <strong>Boosting Brand Awareness:</strong> Each campaign
+              reinforced Bevel's presence in a competitive market, ensuring the
+              brand remained top-of-mind during key shopping periods.
             </li>
             <li>
-              Driving Conversions: Highlighted the unique value of Bevel's
-              products, such as the Bevel Trimmer and curated holiday bundles,
-              with persuasive calls-to-action encouraging customers to complete
-              purchases.
+              <strong>Driving Conversions:</strong> Highlighted the unique value
+              of Bevel's products, such as the Bevel Trimmer and curated holiday
+              bundles, with persuasive calls-to-action encouraging customers to
+              complete purchases.
             </li>
             <li>
-              Supporting Seasonal Sales: Strategically timed messaging and
-              promotions to align with shopping trends, aiming to maximize sales
-              during Black Friday, Cyber Monday, and holiday shopping peaks.
+              <strong>Supporting Seasonal Sales:</strong> Strategically timed
+              messaging and promotions to align with shopping trends, aiming to
+              maximize sales during Black Friday, Cyber Monday, and holiday
+              shopping peaks.
             </li>
           </ul>
 
