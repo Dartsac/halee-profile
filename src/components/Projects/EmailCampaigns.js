@@ -5,7 +5,7 @@ import Carousel from '../Carousel' // Reusable carousel component
 import './EmailCampaigns.scss'
 import './index.scss'
 
-import Hero from '../../assets/images/email/email.png'
+import Hero from '../../assets/images/email/head.png'
 import Content from '../../assets/images/email/email.png'
 
 const EmailCampaigns = () => {
