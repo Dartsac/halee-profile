@@ -47,6 +47,7 @@ const EmailCampaigns = () => {
                     'a',
                     'i',
                     'g',
+                    'n',
                     's',
                   ]}
                   idx={12}
@@ -68,13 +69,18 @@ const EmailCampaigns = () => {
             tone. My work focused on combining persuasive copywriting with clear
             calls-to-action to drive conversions.
           </p>
-          <div className='inline-image'>
-            <img
-              src={Content}
-              alt='Email Writing Process'
-              className='inline-img'
-            />
-          </div>
+          <section className='carousel-section'>
+            <h2>Email Examples I Wrote</h2>
+            <Carousel />
+          </section>
+
+          {/* <div className='inline-image'> */}
+          {/*   <img */}
+          {/*     src={Content} */}
+          {/*     alt='Email Writing Process' */}
+          {/*     className='inline-img' */}
+          {/*   /> */}
+          {/* </div> */}
           <h2>Writing Process</h2>
           <p>
             For each email, I developed high-impact subject lines, preview text,
@@ -96,12 +102,35 @@ const EmailCampaigns = () => {
               to Bevel’s audience.
             </li>
           </ul>
-        </section>
 
-        {/* Carousel Section */}
-        <section className='carousel-section'>
-          <h2>Email Examples I Wrote</h2>
-          <Carousel />
+          <h2>Intended Impact</h2>
+          <p>
+            While specific campaign metrics are unavailable, each email campaign
+            was crafted with the goal of achieving the following:
+          </p>
+          <ul>
+            <li>
+              Increasing Engagement: Designed subject lines and preview text to
+              capture attention and drive higher open rates, ensuring Bevel’s
+              audience remained engaged during key sales periods.
+            </li>
+            <li>
+              Boosting Brand Awareness: Each campaign reinforced Bevel’s
+              presence in a competitive market, ensuring the brand remained
+              top-of-mind during key shopping periods.
+            </li>
+            <li>
+              Driving Conversions: Highlighted the unique value of Bevel’s
+              products, such as the Bevel Trimmer and curated holiday bundles,
+              with persuasive calls-to-action encouraging customers to complete
+              purchases.
+            </li>
+            <li>
+              Supporting Seasonal Sales: Strategically timed messaging and
+              promotions to align with shopping trends, aiming to maximize sales
+              during Black Friday, Cyber Monday, and holiday shopping peaks.
+            </li>
+          </ul>
         </section>
       </div>
       <Loader />
