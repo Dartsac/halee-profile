@@ -1,24 +1,241 @@
 .projects-page {
-  /* If needed, same layout rules as .about-page, .contact-page */
   display: flex;
-  flex-direction: column; /* stacked: title -> grid */
+  flex-direction: column;
   align-items: center;
   width: 85%;
   max-width: 1200px;
-  margin: 0 auto; /* center horizontally */
+  margin: 0 auto;
+  padding-bottom: 60px;
+
+  .text-zone {
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
 }
 
-/* For project detail pages, allow scrolling */
+/* Projects Grid and Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.project-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+    .project-img-wrapper::after {
+      opacity: 0.6;
+    }
+
+    .item-content {
+      background-color: #000;
+
+      .card-title {
+        color: #d3dbc1;
+      }
+
+      svg {
+        transform: translate(5px, -5px);
+        path {
+          stroke: #d3dbc1;
+        }
+      }
+    }
+
+    .count {
+      color: #000;
+    }
+  }
+}
+
+.project-img-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.project-img-1,
+.project-img-2,
+.project-img-3,
+.project-img-4 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.item-content {
+  padding: 20px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.count {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #d3dbc1;
+  color: #000;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.title-row svg {
+  transition: transform 0.3s ease;
+
+  path {
+    transition: stroke 0.3s ease;
+  }
+}
+
+/* For project detail pages */
 .project-detail-page {
   height: auto;
   min-height: 100vh;
   overflow: visible;
-  padding-bottom: 60px; /* Add padding to the bottom */
+  padding-bottom: 60px;
   text-align: center;
 
   .text-zone {
     max-width: 700px !important;
     text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+
+  .project-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    // background-color: #fff;
+    // border-radius: 12px;
+    // padding: 40px;
+    // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #000;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        // background-color: #d3dbc1;
+        background-color: #000;
+      }
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    ul {
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      text-align: left;
+
+      li {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+      color: #000;
+    }
   }
 }
 
@@ -26,55 +243,6 @@
 body.project-page-active {
   overflow: auto !important;
   height: auto !important;
-}
-
-.projects-page .text-zone {
-  /* Optional spacing for heading/paragraph */
-  max-width: 700px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* For individual project pages, we'll add project content styling */
-.project-content {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
-
-  h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-    position: relative;
-  }
-
-  h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-    color: #333;
-  }
-
-  p,
-  li {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  ul {
-    padding-left: 2rem;
-    margin-bottom: 1.5rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  strong {
-    font-weight: 600;
-  }
 }
 
 /* Carousel section styling */
@@ -108,42 +276,169 @@ body.project-page-active {
   }
 }
 
-/* The grid or flex container for your 4 project items */
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap; /* let items wrap in multiple rows if needed */
-  justify-content: space-between;
-  width: 100%;
+/* Responsive styles */
+@media (max-width: 992px) {
+  .projects-page {
+    width: 90%;
+
+    .text-zone {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .project-item {
+    height: 350px;
+  }
+
+  .project-detail-page {
+    .project-content {
+      padding: 30px;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p,
+      li {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
-/* Each "card" or project square */
-.project-item {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 48%; /* each takes about half width on big screens */
-  height: 400px; /* or 300px, or a different fixed height if you want squares */
-  margin-bottom: 40px;
-  text-decoration: none; /* remove default link styling */
+@media (max-width: 768px) {
+  .projects-page {
+    width: 95%;
+
+    .text-zone {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .project-content {
+    text-align: center;
+
+    ul {
+      text-align: left;
+    }
+  }
+
+  .project-detail-page {
+    .project-content {
+      padding: 25px;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p,
+      li {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 
-/* The container for the background image */
+@media (max-width: 480px) {
+  .projects-page {
+    width: 95%;
+
+    .text-zone {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .project-item {
+    height: 300px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .count {
+    top: 15px;
+    right: 15px;
+    font-size: 0.8rem;
+  }
+
+  .item-content {
+    padding: 15px;
+  }
+
+  .project-detail-page {
+    .project-content {
+      padding: 20px;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      p,
+      li {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
 .project-img-wrapper {
-  flex: 1; /* let the image area fill most of the card */
+  flex: 1;
+  position: relative;
   overflow: hidden;
   width: 100%;
-  box-shadow: 0 22px 24px rgb(51 51 50 / 50%);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
 }
 
-/* (Optional) background images for each project */
+/* Ensure these class selectors match exactly what's in your JSX */
 .project-img-1 {
   background-image: url('../../assets/images/email/email.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   width: 100%;
   height: 100%;
+  transition: transform 0.8s ease;
 }
 
 .project-img-2 {
@@ -153,9 +448,9 @@ body.project-page-active {
   background-position: center;
   width: 100%;
   height: 100%;
+  transition: transform 0.8s ease;
 }
 
-/* Same idea for .project-img-3, .project-img-4, etc. */
 .project-img-3 {
   background-image: url('../../assets/images/bevel.png');
   background-size: cover;
@@ -163,7 +458,9 @@ body.project-page-active {
   background-position: center;
   width: 100%;
   height: 100%;
+  transition: transform 0.8s ease;
 }
+
 .project-img-4 {
   background-image: url('../../assets/images/ecom.png');
   background-size: cover;
@@ -171,129 +468,5 @@ body.project-page-active {
   background-position: center;
   width: 100%;
   height: 100%;
-}
-
-/* Content area below the image (title, arrow, subtitle) */
-.item-content {
-  margin-top: 10px;
-}
-
-/* Title row with the arrow svg on the right */
-.title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Project card title styling */
-.card-title {
-  margin: 0;
-  font-size: 1.75rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #000;
-}
-
-/* The rotated count number (001, 002, etc.) on the side */
-.count {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: -1.75rem;
-  transform: rotate(-90deg) translateY(-100%);
-  transform-origin: top right;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #000;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 992px) {
-  .projects-grid {
-    justify-content: center; /* center them if you like */
-  }
-
-  .project-item {
-    flex: 0 1 80%; /* each item takes 80% width at tablet sizes */
-    margin-bottom: 30px;
-  }
-
-  .project-content {
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      font-size: 1.6rem;
-    }
-
-    p,
-    li {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .project-content {
-    text-align: center;
-
-    ul {
-      text-align: left;
-    }
-  }
-
-  .carousel-section {
-    padding: 1rem 0;
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    .gallery-container {
-      right: 60px;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-grid {
-    margin-bottom: 30px;
-  }
-  .project-item {
-    flex: 0 1 100%; /* full width on mobile */
-    height: 300px; /* or reduce the height further for small screens */
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-  .subtitle-sm {
-    font-size: 0.75rem;
-  }
-
-  .project-content {
-    h2 {
-      font-size: 1.6rem;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-    }
-
-    p,
-    li {
-      font-size: 1.2rem;
-    }
-  }
-
-  .carousel-section {
-    padding: 0.5rem 0;
-
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-  }
+  transition: transform 0.8s ease;
 }

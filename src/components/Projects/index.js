@@ -39,13 +39,13 @@ const Projects = () => {
             to='/projects/email'
             onClick={() => window.scrollTo(0, 0)}
           >
+            <span className='count'>001</span>
             <div className='project-img-wrapper'>
               <div className='project-img-1'></div>
             </div>
             <div className='item-content'>
               <div className='title-row'>
                 <h3 className='card-title'>Email Campaigns</h3>
-                {/* A small arrow svg, same as your sample */}
                 <svg
                   width='24'
                   height='25'
@@ -58,7 +58,6 @@ const Projects = () => {
                 </svg>
               </div>
             </div>
-            <span className='count'>001</span>
           </Link>
 
           {/* Project 2 */}
@@ -67,6 +66,7 @@ const Projects = () => {
             to='/projects/sms'
             onClick={() => window.scrollTo(0, 0)}
           >
+            <span className='count'>002</span>
             <div className='project-img-wrapper'>
               <div className='project-img-2'></div>
             </div>
@@ -85,7 +85,6 @@ const Projects = () => {
                 </svg>
               </div>
             </div>
-            <span className='count'>002</span>
           </Link>
 
           {/* Project 3 */}
@@ -94,6 +93,7 @@ const Projects = () => {
             to='/projects/blog'
             onClick={() => window.scrollTo(0, 0)}
           >
+            <span className='count'>003</span>
             <div className='project-img-wrapper'>
               <div className='project-img-3'></div>
             </div>
@@ -112,7 +112,6 @@ const Projects = () => {
                 </svg>
               </div>
             </div>
-            <span className='count'>003</span>
           </Link>
 
           {/* Project 4 */}
@@ -121,6 +120,7 @@ const Projects = () => {
             to='/projects/ecom/'
             onClick={() => window.scrollTo(0, 0)}
           >
+            <span className='count'>004</span>
             <div className='project-img-wrapper'>
               <div className='project-img-4'></div>
             </div>
@@ -139,7 +139,6 @@ const Projects = () => {
                 </svg>
               </div>
             </div>
-            <span className='count'>004</span>
           </Link>
         </div>
       </div>
