@@ -1,25 +1,130 @@
-.headshot {
-  /* Let .headshot naturally size itself or 
-     set a max-width if you want a certain limit on large screens. */
-  flex: 1; /* or flex: 0 0 45%; if you want it specifically 45% wide */
-  max-width: 45%; /* This is optional if you want an upper limit (45% of its container). */
-  /* border: 3px solid #000; */
-  border-radius: 10px; /* if you want the entire container rounded corners, otherwise remove */
-  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+.about-page {
+  margin-top: 50px; /* Adds space at the top for vertical centering */
 
-  /* You usually don’t need display: flex for a simple image container.
-     If you remove 'align-items: center; justify-content: center;', 
-     the image won't be forced or cropped in odd ways. */
-  display: block;
-  overflow: hidden; /* So that if 'object-fit: cover' is used, we hide overflow. */
+  .text-zone {
+    flex: 1;
+    max-width: 55%;
+    margin-right: 30px;
+  }
+}
 
-  img {
-    display: block;
-    width: 100%; /* Let the img fill the container's width */
-    height: auto; /* Maintain aspect ratio */
+.headshot-container {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  position: relative;
+  margin-left: 20px;
+
+  .headshot {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    object-fit: cover; /* 'cover' crops to fill the container if aspect ratios differ */
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 3px solid #000;
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally if needed */
 
-    /* If you don't want *any* cropping, use 'object-fit: contain' or remove object-fit entirely. */
+    &:hover {
+      transform: translate(-5px, -5px);
+      box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #d3dbc1;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: #d3dbc1;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+  .headshot-container {
+    max-width: 42%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about-page {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-top: 0; /* Reset margin on smaller screens */
+
+    .text-zone {
+      max-width: 85% !important;
+      margin: 0 auto;
+    }
+
+    .headshot-container {
+      max-width: 50%; /* Increased from 35% */
+      margin: 30px auto; /* Equal top and bottom margins */
+    }
+
+    .resume-button {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headshot-container {
+    max-width: 55%; /* Increased from 40% */
+    margin: 25px auto; /* Equal top and bottom margins */
+
+    .headshot {
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+      border-width: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headshot-container {
+    max-width: 65%; /* Increased from 45% */
+    margin: 20px auto; /* Equal top and bottom margins */
+
+    .headshot {
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .resume-button {
+    display: block;
+    width: auto;
+    max-width: 220px;
+    margin: 25px auto;
+    padding: 10px 0;
+    text-align: center;
   }
 }

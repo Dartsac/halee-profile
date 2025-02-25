@@ -12,8 +12,13 @@ const Layout = () => {
       location.pathname.startsWith('/projects/') &&
       location.pathname !== '/projects'
 
-    // Enable scrolling for projects main page and project detail pages
-    if (location.pathname === '/projects' || isProjectDetailPage) {
+    // Enable scrolling for projects, about, and project detail pages
+    // Only restrict scrolling on home and contact pages
+    if (
+      location.pathname === '/projects' ||
+      isProjectDetailPage ||
+      location.pathname === '/about'
+    ) {
       document.body.style.overflow = 'auto'
     } else {
       document.body.style.overflow = 'hidden'
@@ -22,11 +27,9 @@ const Layout = () => {
     return () => {}
   }, [location.pathname])
 
-  // Only force one-screen height on home, about, and contact pages
+  // Only force one-screen height on home and contact pages
   const shouldForceOneScreen =
-    location.pathname === '/about' ||
-    location.pathname === '/contact' ||
-    location.pathname === '/'
+    location.pathname === '/contact' || location.pathname === '/'
 
   return (
     <div className='App'>
