@@ -75,22 +75,41 @@
   .flat-button {
     color: #d3dbc1;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
-    padding: 10px 10px;
-    border: 1px solid #000;
+    padding: 12px 24px;
+    border: 2px solid #000;
     margin-top: 25px;
-    float: left;
+    display: inline-block;
     animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
     background-color: #000;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 
     &:hover {
-      background: #d3dbc1;
+      background-color: #d3dbc1;
       color: #000;
       border-color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+
+  .logo-container {
+    .solid-logo {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translate(-5px, -5px) rotateZ(29deg) !important;
+        filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 0.2));
+      }
     }
   }
 }
@@ -193,6 +212,10 @@
     h1 {
       font-size: 32px;
     }
+
+    .flat-button {
+      padding: 10px 20px;
+    }
   }
 
   .logo-container {
@@ -252,10 +275,11 @@
       }
 
       .flat-button {
-        width: 100%;
-        width: 130px;
+        width: auto;
+        max-width: 180px;
         text-align: center;
         margin-top: 10px;
+        padding: 10px 0;
       }
     }
   }
