@@ -13,6 +13,13 @@
   height: auto;
   min-height: 100vh;
   overflow: visible;
+  padding-bottom: 60px; /* Add padding to the bottom */
+  text-align: center;
+
+  .text-zone {
+    max-width: 700px !important;
+    text-align: center;
+  }
 }
 
 /* Add this class to body when viewing project detail pages */
@@ -150,7 +157,6 @@ body.project-page-active {
 
 /* Same idea for .project-img-3, .project-img-4, etc. */
 .project-img-3 {
-  /* background-image: url('/path/to/some-image.png'); */
   background-image: url('../../assets/images/bevel.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,7 +165,6 @@ body.project-page-active {
   height: 100%;
 }
 .project-img-4 {
-  /* background-image: url('/path/to/another-image.png'); */
   background-image: url('../../assets/images/ecom.png');
   background-size: cover;
   background-repeat: no-repeat;

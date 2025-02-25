@@ -137,6 +137,51 @@
   }
 }
 
+/* Project page styling - mimic the sub-992px styling for h1 tags at all screen sizes */
+.project-detail-page,
+.projects-page {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .text-zone {
+    max-width: 90%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    font-size: 4.8rem;
+    font-family: 'Coolvetica';
+    color: #000;
+    font-weight: 400;
+    margin: 20px auto;
+    left: 0;
+
+    &::before {
+      content: '<h1> ';
+      font-family: 'La Belle Aurore';
+      color: #4d4d4e;
+      font-size: 1.8rem;
+      opacity: 0.6;
+      margin-right: 5px;
+      position: static;
+    }
+
+    &::after {
+      content: ' </h1>';
+      font-family: 'La Belle Aurore';
+      color: #4d4d4e;
+      font-size: 1.8rem;
+      opacity: 0.6;
+      margin-left: 5px;
+      position: static;
+    }
+  }
+}
+
 /* =========================================
    RESPONSIVE BREAKPOINTS
 ========================================= */
@@ -147,8 +192,7 @@
 */
 @media (max-width: 1200px) {
   .about-page,
-  .contact-page,
-  .projects-page {
+  .contact-page {
     width: 85%; /* or something narrower if you like */
     max-width: 1000px; /* optional if you want smaller max at 1200px */
 
@@ -160,6 +204,16 @@
       font-size: 4.8rem; /* scale down a bit from 53px */
     }
   }
+
+  .project-detail-page,
+  .projects-page {
+    width: 85%;
+    max-width: 1000px;
+
+    h1 {
+      font-size: 4.8rem;
+    }
+  }
 }
 
 /*
@@ -168,8 +222,7 @@
 */
 @media (max-width: 992px) {
   .about-page,
-  .contact-page,
-  .projects-page {
+  .contact-page {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -199,7 +252,8 @@
       color: #000;
       font-weight: 400;
       margin: 20px auto; /* center horizontally if parent has text-align: center */
-      margin-right: 80.36px;
+      margin-right: 0;
+      left: 0;
 
       /* Pseudo-elements as inline text: */
       &::before {
@@ -223,6 +277,13 @@
       }
     }
   }
+
+  .project-detail-page,
+  .projects-page {
+    h1 {
+      font-size: 3.6rem;
+    }
+  }
 }
 
 /*
@@ -241,7 +302,7 @@
 
   .about-page,
   .contact-page,
-  .projects-page {
+  .projects-page:not(.project-detail-page) {
     width: 85%;
     max-width: 600px; /* smaller container on mobile tablets */
 
@@ -257,6 +318,21 @@
     .headshot {
       max-width: 60%;
       margin-bottom: 20px; /* spacing under the image */
+    }
+
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+
+  .project-detail-page,
+  .projects-page {
+    width: 85%;
+    max-width: 600px;
+
+    .text-zone p {
+      font-size: 1.4rem;
+      line-height: 1.6;
     }
 
     h1 {
@@ -292,9 +368,10 @@
   .page {
     padding: 0;
   }
+
   .about-page,
   .contact-page,
-  .projects-page {
+  .projects-page:not(.project-detail-page) {
     .text-zone {
       max-width: 90%;
       margin-right: 0;
@@ -320,6 +397,30 @@
       max-width: 60%;
       margin-bottom: 20px; /* spacing under the image */
       box-shadow: 7px 7px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .project-detail-page,
+  .projects-page {
+    .text-zone {
+      max-width: 90%;
+      margin-right: 0;
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin: 3px 0;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 2.4rem;
+
+      &::before,
+      &::after {
+        font-size: 1.4rem;
+      }
     }
   }
 }
