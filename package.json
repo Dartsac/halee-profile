@@ -2,7 +2,7 @@
   "name": "halee-profile",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://dartsac.github.io/halee-profile",
+  "homepage": "https://haleemccray.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
