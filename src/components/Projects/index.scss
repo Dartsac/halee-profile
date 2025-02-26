@@ -158,7 +158,7 @@
   height: auto;
   min-height: 100vh;
   overflow: visible;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   text-align: center;
 
   .text-zone {
@@ -185,6 +185,9 @@
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 
     h2 {
       font-size: 2.2rem;
@@ -224,11 +227,17 @@
       margin-bottom: 1.5rem;
       width: 100%;
       text-align: left;
+      box-sizing: border-box;
 
       li {
         font-size: 1.6rem;
         line-height: 1.8;
         margin-bottom: 1rem;
+        padding-right: 1rem; /* Add some right padding */
+        overflow-wrap: break-word; /* Allow words to break */
+        word-wrap: break-word;
+        box-sizing: border-box;
+        max-width: 100%;
       }
     }
 
@@ -335,6 +344,7 @@ body.project-page-active {
 
     ul {
       text-align: left;
+      padding-left: 1.5rem;
     }
   }
 
@@ -352,6 +362,7 @@ body.project-page-active {
 
       p,
       li {
+        padding-right: 0.5rem;
         font-size: 1.4rem;
       }
     }
@@ -390,6 +401,9 @@ body.project-page-active {
   .project-detail-page {
     .project-content {
       padding: 20px;
+      ul {
+        padding-left: 1.2rem;
+      }
 
       h2 {
         font-size: 1.7rem;
@@ -402,6 +416,8 @@ body.project-page-active {
       p,
       li {
         font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
       }
     }
   }
