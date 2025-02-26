@@ -4,6 +4,7 @@ import Loader from '../Loader'
 import ProjectNavigation from './ProjectNavigation' // Import the navigation component
 import ProjectCTA from './ProjectCTA' // Import the CTA component
 import './index.scss'
+import './EcomCopy.scss' // Import the new SCSS file for product links
 
 const EcomCopy = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -86,6 +87,18 @@ const EcomCopy = () => {
               discoverability and inspire confidence in potential customers.
             </li>
           </ul>
+
+          <div className='product-cta-container'>
+            <a
+              href='https://getbevel.com/products/bevel-electric-shave-essentials-kit'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='product-cta-button'
+            >
+              Check Out The Product
+              <span className='button-arrow'>→</span>
+            </a>
+          </div>
 
           <h2>Bevel On-the-Go Bath and Body Gift Set (Holiday Promotion)</h2>
           <h3>About the Project</h3>

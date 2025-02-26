@@ -1,0 +1,69 @@
+// EcomCopy.scss - Styling for e-commerce product links
+.product-cta-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.product-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #d3dbc1;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .button-arrow {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #d3dbc1;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+    .button-arrow {
+      transform: translateX(5px);
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .product-cta-container {
+    margin: 30px 0;
+  }
+
+  .product-cta-button {
+    padding: 12px 24px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-cta-container {
+    margin: 25px 0;
+  }
+
+  .product-cta-button {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    width: 80%;
+    max-width: 250px;
+  }
+}
