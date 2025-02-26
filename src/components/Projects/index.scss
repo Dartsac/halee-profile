@@ -367,6 +367,47 @@ body.project-page-active {
       }
     }
   }
+
+  /* Remove hover effects for project cards on mobile */
+  .project-item {
+    &:hover {
+      transform: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      .project-img-wrapper::after {
+        opacity: 0.4;
+      }
+
+      .item-content {
+        background-color: #f8f8f8;
+
+        .card-title {
+          color: #000;
+        }
+
+        svg {
+          transform: none;
+          path {
+            stroke: #1a1a19;
+          }
+        }
+      }
+
+      .count {
+        color: #000;
+        background-color: #d3dbc1;
+      }
+    }
+  }
+
+  .project-img-1,
+  .project-img-2,
+  .project-img-3,
+  .project-img-4 {
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 @media (max-width: 480px) {
