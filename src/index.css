@@ -13,8 +13,31 @@ body {
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+/* This ensures the menu doesn't get cut off in landscape mode */
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 #root {
   overflow: hidden;
+  height: 100%;
+}
+
+/* Helper class to prevent scrolling when mobile menu is open */
+body.menu-open {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* For pages that should scroll */
+body.allow-scroll {
+  overflow: auto !important;
+  position: static;
 }
