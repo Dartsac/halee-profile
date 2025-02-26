@@ -19,7 +19,7 @@ const images = [Img1, Img2, Img3, Img4, Img5]
 //   so that the center image appears larger.
 const positions = [-30, -5, 30, 65, 90]
 const scales = [0.9, 1, 1.1, 1, 0.9]
-const opacities = [0.2, 0.6, 1, 0.6, 0.2]
+const opacities = [0.4, 0.6, 1, 0.6, 0.4]
 
 const Carousel = () => {
   const [offset, setOffset] = useState(0)
