@@ -9,10 +9,13 @@ import EmailCampaigns from './components/Projects/EmailCampaigns'
 import SmsStrategies from './components/Projects/SmsStrategies'
 import BlogArticles from './components/Projects/BlogArticles'
 import EcomCopy from './components/Projects/EcomCopy'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
+      {/* Add ScrollToTop component here */}
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />

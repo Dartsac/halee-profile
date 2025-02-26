@@ -24,7 +24,8 @@ const Layout = () => {
       document.body.style.overflow = 'hidden'
     }
 
-    return () => {}
+    // Scroll to the top whenever the route changes
+    window.scrollTo(0, 0)
   }, [location.pathname])
 
   // Only force one-screen height on home and contact pages

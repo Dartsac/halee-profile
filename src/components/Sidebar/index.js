@@ -8,8 +8,8 @@ import {
   faEnvelope,
   faHome,
   faUser,
-  faBars, // add this for the hamburger icon
-  faTimes, // optional if you want an 'X' close icon
+  faBars,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -19,6 +19,12 @@ const Sidebar = () => {
 
   // Toggle the nav
   const toggleNav = () => setIsOpen(!isOpen)
+
+  // Function to handle navigation and scroll to top
+  const handleNavClick = () => {
+    setIsOpen(false)
+    window.scrollTo(0, 0)
+  }
 
   return (
     <>
@@ -33,7 +39,7 @@ const Sidebar = () => {
 
       {/* The sidebar */}
       <div className={`nav-bar ${isOpen ? 'mobile-show' : ''}`}>
-        <Link className='logo' to='/' onClick={() => setIsOpen(false)}>
+        <Link className='logo' to='/' onClick={handleNavClick}>
           <img src={LogoH} alt='logo' />
         </Link>
         <nav>
@@ -42,7 +48,7 @@ const Sidebar = () => {
             activeclassname='active'
             className='home-link'
             to='/'
-            onClick={() => setIsOpen(false)} // close menu when link is clicked
+            onClick={handleNavClick}
           >
             <FontAwesomeIcon className='icon' icon={faHome} color='#4d4d4e' />
             <span className='menu-text'>Home</span>
@@ -53,7 +59,7 @@ const Sidebar = () => {
             activeclassname='active'
             className='about-link'
             to='/about'
-            onClick={() => setIsOpen(false)}
+            onClick={handleNavClick}
           >
             <FontAwesomeIcon className='icon' icon={faUser} color='#4d4d4e' />
             <span className='menu-text'>About Me</span>
@@ -64,7 +70,7 @@ const Sidebar = () => {
             activeclassname='active'
             className='projects-link'
             to='/projects'
-            onClick={() => setIsOpen(false)}
+            onClick={handleNavClick}
           >
             <FontAwesomeIcon
               className='icon'
@@ -79,10 +85,7 @@ const Sidebar = () => {
             activeclassname='active'
             className='contact-link'
             to='/contact'
-            onClick={() => {
-              setIsOpen(false)
-              window.scrollTo(0, 0)
-            }}
+            onClick={handleNavClick}
           >
             <FontAwesomeIcon
               className='icon'
