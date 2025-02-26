@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
-import ProjectNavigation from './ProjectNavigation' // Import the navigation component
-import ProjectCTA from './ProjectCTA' // Import the CTA component
+import ProjectNavigation from './ProjectNavigation'
+import ProjectCTA from './ProjectCTA'
+import SmsGallery from './SmsGallery' // Import the new SMS Gallery component
 import './index.scss'
 
 const SmsStrategies = () => {
@@ -56,6 +57,9 @@ const SmsStrategies = () => {
         </div>
 
         <div className='project-content'>
+          {/* First image - top left position */}
+          <SmsGallery position='top-left' />
+
           <h2>About the Project</h2>
           <p>
             I crafted SMS campaigns to support key sales events such as Black
@@ -67,6 +71,9 @@ const SmsStrategies = () => {
             sense of urgency to maximize customer engagement during pivotal
             shopping periods.
           </p>
+
+          {/* Second image - top right position */}
+          <SmsGallery position='top-right' />
 
           <h2>Key Campaign Strategies</h2>
           <ul>
@@ -86,6 +93,9 @@ const SmsStrategies = () => {
               website or explore specific product bundles.
             </li>
           </ul>
+
+          {/* Third image - bottom left position */}
+          <SmsGallery position='bottom-left' />
 
           <h2>Intended Results & Impact</h2>
           <p>
@@ -113,6 +123,9 @@ const SmsStrategies = () => {
               self-care, and style.
             </li>
           </ul>
+
+          {/* Fourth image - bottom right position */}
+          <SmsGallery position='bottom-right' />
 
           {/* Add the CTA component before navigation */}
           <ProjectCTA />

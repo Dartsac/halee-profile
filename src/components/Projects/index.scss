@@ -181,10 +181,10 @@
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
-    // background-color: #fff;
-    // border-radius: 12px;
-    // padding: 40px;
-    // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 
     h2 {
       font-size: 2.2rem;
@@ -201,8 +201,8 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        // background-color: #d3dbc1;
-        background-color: #000;
+        background-color: #d3dbc1;
+        // background-color: #000;
       }
     }
 
