@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/halee-profile/static/css/main.cc5d4f6a.css",
-    "main.js": "/halee-profile/static/js/main.5ef84ca0.js",
+    "main.css": "/halee-profile/static/css/main.f73b9568.css",
+    "main.js": "/halee-profile/static/js/main.5b042152.js",
     "static/js/453.4ac3334c.chunk.js": "/halee-profile/static/js/453.4ac3334c.chunk.js",
-    "static/media/img1.png": "/halee-profile/static/media/img1.514c452d4252a153263b.png",
+    "static/media/img1.png": "/halee-profile/static/media/img1.b2431075a22ffe6ed04a.png",
     "static/media/email.png": "/halee-profile/static/media/email.10b7c8eeceab2da64631.png",
-    "static/media/img4.png": "/halee-profile/static/media/img4.5aa0072456addf9350b6.png",
+    "static/media/img4.png": "/halee-profile/static/media/img4.df8ba31b8d754963a9d9.png",
     "static/media/sms.png": "/halee-profile/static/media/sms.9f5f32d7cac38cb70d2e.png",
     "static/media/img5.png": "/halee-profile/static/media/img5.dbc6cca62bae83bb6be0.png",
-    "static/media/img3.png": "/halee-profile/static/media/img3.640cca64f22dc4c621a1.png",
-    "static/media/img2.png": "/halee-profile/static/media/img2.53c9d2680faaf89b718a.png",
+    "static/media/img3.png": "/halee-profile/static/media/img3.b71d9d3a1af7f5a6531e.png",
+    "static/media/img2.png": "/halee-profile/static/media/img2.403fb77efb216983f034.png",
     "static/media/ecom.png": "/halee-profile/static/media/ecom.3f6e8d0e918f9fc68e4b.png",
     "static/media/LogoH.png": "/halee-profile/static/media/LogoH.83dfc84aeba37f49aff8.png",
     "static/media/headshot1.jpeg": "/halee-profile/static/media/headshot1.b503025a323059df1bec.jpeg",
+    "static/media/HaleeMcCray Resume.pdf": "/halee-profile/static/media/HaleeMcCray Resume.5673aee898abe4262006.pdf",
     "static/media/bevel.png": "/halee-profile/static/media/bevel.4c8dc9eca1b1c76c5f18.png",
     "static/media/logo.png": "/halee-profile/static/media/logo.b9c95d18433c20215c63.png",
     "static/media/helvetica-neu.ttf": "/halee-profile/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/LaBelleAurore.woff2": "/halee-profile/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/CoolveticaRg-Regular.woff2": "/halee-profile/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/halee-profile/index.html",
-    "main.cc5d4f6a.css.map": "/halee-profile/static/css/main.cc5d4f6a.css.map",
-    "main.5ef84ca0.js.map": "/halee-profile/static/js/main.5ef84ca0.js.map",
+    "main.f73b9568.css.map": "/halee-profile/static/css/main.f73b9568.css.map",
+    "main.5b042152.js.map": "/halee-profile/static/js/main.5b042152.js.map",
     "453.4ac3334c.chunk.js.map": "/halee-profile/static/js/453.4ac3334c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc5d4f6a.css",
-    "static/js/main.5ef84ca0.js"
+    "static/css/main.f73b9568.css",
+    "static/js/main.5b042152.js"
   ]
 }
