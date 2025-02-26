@@ -29,11 +29,15 @@ const Sidebar = () => {
   return (
     <>
       {/* Hamburger button (only visible on small screens) */}
-      <button className='hamburger-btn' onClick={toggleNav}>
+      <button
+        className={`hamburger-btn ${isOpen ? 'menu-open' : ''}`}
+        onClick={toggleNav}
+        aria-label='Menu'
+      >
         {isOpen ? (
-          <FontAwesomeIcon icon={faTimes} color='#fff' />
+          <FontAwesomeIcon icon={faTimes} color='#d3dbc1' size='2xl' />
         ) : (
-          <FontAwesomeIcon icon={faBars} color='#000' />
+          <FontAwesomeIcon icon={faBars} color='#d3dbc1' size='xl' />
         )}
       </button>
 
