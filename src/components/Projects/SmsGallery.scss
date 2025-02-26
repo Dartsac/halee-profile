@@ -19,21 +19,18 @@
   .sms-image-wrapper {
     width: 300px;
     height: auto;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     .sms-image {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 10px;
+      background-color: #fff;
     }
   }
 }
