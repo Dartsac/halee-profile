@@ -29,6 +29,14 @@
       &:first-child {
         margin-left: 0;
       }
+
+      /* Stack name and email fields on smaller screens */
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+      }
     }
   }
 
