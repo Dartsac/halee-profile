@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import './index.scss'
@@ -8,6 +9,7 @@ import Swal from 'sweetalert2'
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,11 +27,21 @@ const Contact = () => {
         'service_jzo574n',
         'template_unv8nbx', //template id from account
         refForm.current,
-        'Wu_Hrbe-Nw0XGxvGL', //user token
+        '1XR6UC8fBM2M1mM7n', //user token
       )
       .then(
         () => {
-          Swal.fire("I've got mail! :)", "I'll be in touch soon", 'success')
+          Swal.fire({
+            title: "I've got mail! :)",
+            text: "I'll be in touch soon",
+            icon: 'success',
+            confirmButtonText: 'OK',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // Redirect to home page after clicking OK
+              navigate('/')
+            }
+          })
         },
         () => {
           Swal.fire('Oops...', 'Failed to send message. Try again.', 'error')
