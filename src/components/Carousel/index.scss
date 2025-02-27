@@ -42,7 +42,7 @@
 /* Base styles for carousel items */
 .gallery-item {
   position: absolute;
-  left: 40.5%;
+  left: 39%;
   top: 50%;
   width: 340px;
   height: 600px;
@@ -80,19 +80,25 @@
   @media (max-width: 1200px) {
     width: 340px;
     height: 600px;
-    left: 38.5%;
+    left: 39.25%;
   }
 
   @media (max-width: 992px) {
-    width: 300px;
+    width: 280px;
     height: 500px;
-    left: 38.5%;
+    left: 40.5%;
+  }
+
+  @media (max-width: 864px) {
+    width: 280px;
+    height: 500px;
+    left: 39.4%;
   }
 
   @media (max-width: 768px) {
-    width: 260px;
-    height: 400px;
-    left: 39.5%; /* Center on mobile */
+    width: 240px;
+    height: 410px;
+    left: 40.4%; /* Center on mobile */
   }
 
   @media (max-width: 480px) {
