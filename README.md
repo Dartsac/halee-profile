@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Halee McCray Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website for copywriter and content strategist Halee McCray.
 
-## Available Scripts
+## 📋 Overview
 
-In the project directory, you can run:
+This project is a professional portfolio website designed to showcase Halee McCray's writing samples, experience, and services as a copywriter and content strategist. The site features a clean, engaging design with intuitive navigation, responsive layout, and seamless content presentation.
 
-### `npm start`
+Visit the live site: [haleemccray.com](https://haleemccray.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing
+- **Portfolio Showcase**: Organized display of writing samples and client work
+- **Service Overview**: Clear presentation of copywriting and content strategy services
+- **Contact Integration**: Simple contact form for client inquiries
+- **SEO Optimization**: Implemented best practices for search visibility
+- **Fast Performance**: Optimized images and assets for quick loading
+- **Interactive UI**: Custom animations and transitions for an engaging user experience
 
-### `npm test`
+## 🛠️ Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js: Created with Create React App
+- SCSS: Advanced styling with variables and mixins
+- JavaScript (ES6+): Modern JavaScript features
+- Font Awesome: Icon library for UI elements
+- EmailJS: Form submission handling
+- GSAP: Animation library for logo and text effects
+- React Router: Client-side routing
+- GitHub Pages: Hosting solution
 
-### `npm run build`
+## 🚀 Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/Dartsac/halee-profile.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+   cd halee-profile
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+halee-profile/
+├── public/                      # Static files
+│   ├── favicon_io/              # Favicon files
+│   ├── index.html
+│   └── manifest.json
+├── src/
+│   ├── assets/                  # Assets directory
+│   │   ├── fonts/               # Custom fonts
+│   │   ├── images/              # Image files
+│   │   └── HaleeMcCray Resume.pdf
+│   ├── components/              # React components
+│   │   ├── About/               # About page component
+│   │   ├── AnimatedLetters/     # Text animation component
+│   │   ├── Carousel/            # Carousel component
+│   │   ├── Contact/             # Contact page with form
+│   │   ├── Home/                # Homepage component
+│   │   ├── Layout/              # Layout wrapper
+│   │   ├── Loader/              # Loading animation
+│   │   ├── Logo/                # Logo animation
+│   │   ├── Projects/            # Projects section with subcomponents
+│   │   ├── ScrollToTop/         # Utility for page navigation
+│   │   └── Sidebar/             # Navigation sidebar
+│   ├── App.js                   # Main App component
+│   ├── App.scss                 # Global styles
+│   └── index.js                 # Entry point
+└── package.json                 # Dependencies and scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+## 🔍 Development Process
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This site was developed with a focus on:
 
-### Analyzing the Bundle Size
+1. **Client-First Design**: Working closely with Halee to ensure the site reflects her professional brand and meets her specific needs
+2. **Modern Web Practices**: Implementing current web development standards for accessibility and performance
+3. **Content Strategy**: Organizing the portfolio to highlight Halee's strengths and showcase her diverse writing samples
+4. **Conversion Optimization**: Strategic placement of contact opportunities and calls-to-action
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 License
 
-### Making a Progressive Web App
+This project is available for code reference but the content is proprietary to Halee McCray.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👤 Contact
 
-### Advanced Configuration
+Developer: [Isaac Dobson](https://github.com/Dartsac)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ for Halee McCray
