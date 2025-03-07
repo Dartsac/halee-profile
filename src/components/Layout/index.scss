@@ -18,8 +18,8 @@
   top: 30px;
   left: calc(9% + 30px); /* Adjust left position to account for sidebar */
   font-size: 18px;
-  color: #4d4d4e;
-  opacity: 0.6;
+  color: #3a3a3b;
+  opacity: 0.8;
   font-family: 'La Belle Aurore';
 }
 
@@ -28,8 +28,8 @@
   bottom: 0;
   left: calc(9% + 30px); /* Adjust left position to account for sidebar */
   font-size: 18px;
-  color: #4d4d4e;
-  opacity: 0.6;
+  color: #3a3a3b;
+  opacity: 0.8;
   font-family: 'La Belle Aurore';
 }
 
@@ -81,26 +81,26 @@
     &::before {
       content: '<h1>';
       font-family: 'La Belle Aurore';
-      color: #4d4d4e;
+      color: #3a3a3b;
       font-size: 1.8rem;
       position: absolute;
       margin-top: -10px;
       left: -10px;
-      opacity: 0.6;
+      opacity: 0.8;
       line-height: 1.8;
     }
 
     &::after {
       content: '</h1>';
       font-family: 'La Belle Aurore';
-      color: #4d4d4e;
+      color: #3a3a3b;
       font-size: 1.8rem;
       line-height: 1.8;
       position: absolute;
       left: -30px;
       bottom: -20px;
       margin-left: 20px;
-      opacity: 0.6;
+      opacity: 0.8;
     }
   }
 
@@ -163,9 +163,9 @@
     &::before {
       content: '<h1> ';
       font-family: 'La Belle Aurore';
-      color: #4d4d4e;
+      color: #3a3a3b;
       font-size: 1.8rem;
-      opacity: 0.6;
+      opacity: 0.8;
       margin-right: 5px;
       position: static;
     }
@@ -173,9 +173,9 @@
     &::after {
       content: ' </h1>';
       font-family: 'La Belle Aurore';
-      color: #4d4d4e;
+      color: #3a3a3b;
       font-size: 1.8rem;
-      opacity: 0.6;
+      opacity: 0.8;
       margin-left: 5px;
       position: static;
     }
@@ -259,9 +259,9 @@
       &::before {
         content: '<h1> ';
         font-family: 'La Belle Aurore';
-        color: #4d4d4e;
+        color: #3a3a3b;
         font-size: 1.8rem;
-        opacity: 0.6;
+        opacity: 0.8;
         margin-right: 5px; /* spacing after <h1> */
         position: static; /* ensure it's inline */
       }
@@ -269,9 +269,9 @@
       &::after {
         content: ' </h1>';
         font-family: 'La Belle Aurore';
-        color: #4d4d4e;
+        color: #3a3a3b;
         font-size: 1.8rem;
-        opacity: 0.6;
+        opacity: 0.8;
         margin-left: 5px; /* spacing before </h1> */
         position: static; /* ensure it's inline */
       }
