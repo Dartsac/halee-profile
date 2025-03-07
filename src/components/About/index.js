@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Headshot from '../../assets/images/headshot1.jpeg'
+import Headshot from '../../assets/images/headshot1.webp'
 import Resume from '../../assets/HaleeMcCray Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
-import LogoH from '../../assets/images/logo.png'
+import Halee from '../../assets/images/logo.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBriefcase,
@@ -84,7 +84,7 @@ const Sidebar = ({ onMenuStateChange }) => {
       {/* The sidebar */}
       <div className={`nav-bar ${isOpen ? 'mobile-show' : ''}`}>
         <Link className='logo' to='/' onClick={handleNavClick}>
-          <img src={LogoH} alt='logo' />
+          <img src={Halee} alt='logo' width='60' height='16' />
         </Link>
         <nav>
           <NavLink
@@ -146,6 +146,7 @@ const Sidebar = ({ onMenuStateChange }) => {
               rel='noreferrer'
               href='https://www.linkedin.com/in/halee-mccray-7040892a1/'
               onClick={handleNavClick}
+              aria-label='LinkedIn Profile'
             >
               <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
             </a>

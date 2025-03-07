@@ -1,5 +1,5 @@
 import './index.scss'
-import LogoH from '../../assets/images/LogoH.png'
+import LogoH from '../../assets/images/LogoH.webp'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 

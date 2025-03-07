@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import './index.scss'
 
 // Import your five images
-import Img1 from '../../assets/images/email/img1.png'
-import Img2 from '../../assets/images/email/img2.png'
-import Img3 from '../../assets/images/email/img3.png'
-import Img4 from '../../assets/images/email/img4.png'
-import Img5 from '../../assets/images/email/img5.png'
+import Img1 from '../../assets/images/email/img1.webp'
+import Img2 from '../../assets/images/email/img2.webp'
+import Img3 from '../../assets/images/email/img3.webp'
+import Img4 from '../../assets/images/email/img4.webp'
+import Img5 from '../../assets/images/email/img5.webp'
 
 // Our fixed array of five images.
 const images = [Img1, Img2, Img3, Img4, Img5]
