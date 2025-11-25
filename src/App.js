@@ -9,6 +9,8 @@ import EmailCampaigns from './components/Projects/EmailCampaigns'
 import SmsStrategies from './components/Projects/SmsStrategies'
 import BlogArticles from './components/Projects/BlogArticles'
 import EcomCopy from './components/Projects/EcomCopy'
+import Blog from './components/Blog'
+import BlogPost from './components/Blog/BlogPost'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path='projects/sms' element={<SmsStrategies />} />
           <Route path='projects/blog' element={<BlogArticles />} />
           <Route path='projects/ecom' element={<EcomCopy />} />
+          <Route path='blog' element={<Blog />} />
+          <Route path='blog/:slug' element={<BlogPost />} />
         </Route>
       </Routes>
     </>

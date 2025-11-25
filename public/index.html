@@ -23,6 +23,8 @@
   <meta property="og:image:height" content="630" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Halee</title>
+  <!-- Netlify Identity Widget for CMS authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -36,6 +38,18 @@
         publicKey: '1XR6UC8fBM2M1mM7n',
       })
     })
+  </script>
+  <!-- Netlify Identity redirect handler -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
 </body>
 

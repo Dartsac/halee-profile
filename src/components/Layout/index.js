@@ -13,17 +13,22 @@ const Layout = () => {
   }
 
   useEffect(() => {
-    // Check if the current path is a project details page
+    // Check if the current path is a project details page or blog page
     const isProjectDetailPage =
       location.pathname.startsWith('/projects/') &&
       location.pathname !== '/projects'
 
-    // Enable scrolling for projects, about, and project detail pages
+    const isBlogPage =
+      location.pathname === '/blog' ||
+      location.pathname.startsWith('/blog/')
+
+    // Enable scrolling for projects, about, blog, and detail pages
     // Only restrict scrolling on home and contact pages
     if (
       location.pathname === '/projects' ||
       isProjectDetailPage ||
-      location.pathname === '/about'
+      location.pathname === '/about' ||
+      isBlogPage
     ) {
       document.body.classList.add('allow-scroll')
       document.body.style.overflow = 'auto'

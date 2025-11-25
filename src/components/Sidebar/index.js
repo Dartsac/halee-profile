@@ -10,6 +10,7 @@ import {
   faUser,
   faBars,
   faTimes,
+  faPenNib,
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -122,6 +123,17 @@ const Sidebar = ({ onMenuStateChange }) => {
               color='#4d4d4e'
             />
             <span className='menu-text'>Projects</span>
+          </NavLink>
+
+          <NavLink
+            exact='true'
+            activeclassname='active'
+            className='blog-link'
+            to='/blog'
+            onClick={handleNavClick}
+          >
+            <FontAwesomeIcon className='icon' icon={faPenNib} color='#4d4d4e' />
+            <span className='menu-text'>Blog</span>
           </NavLink>
 
           <NavLink
