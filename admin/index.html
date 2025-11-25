@@ -6,20 +6,19 @@
   <meta name="robots" content="noindex" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    // Configure Netlify Identity to use the correct site
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.init({
-        APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
-      });
-    }
-  </script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    // Configure and initialize Netlify Identity
     if (window.netlifyIdentity) {
+      // Configure to use the correct Netlify site
+      window.netlifyIdentity.init({
+        APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
+      });
+
+      // Redirect to admin after login
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
