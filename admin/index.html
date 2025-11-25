@@ -13,11 +13,11 @@
   <script>
     // Configure and initialize Netlify Identity
     if (window.netlifyIdentity) {
-      // Configure to use the correct Netlify site
+      // Force the widget to use the Netlify backend URL
       window.netlifyIdentity.init({
         APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
       });
-
+      
       // Redirect to admin after login
       window.netlifyIdentity.on("init", user => {
         if (!user) {

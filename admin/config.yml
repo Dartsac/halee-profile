@@ -1,26 +1,48 @@
 backend:
   name: git-gateway
+  repo: Dartsac/halee-profile
   branch: main
+  base_url: https://haleemccray.netlify.app
 
 # Publish mode - editorial workflow allows drafts
 publish_mode: editorial_workflow
 
 # Media files will be stored in the repo under public/images/blog
-media_folder: "public/images/blog"
-public_folder: "/images/blog"
+media_folder: 'public/images/blog'
+public_folder: '/images/blog'
 
 # Collections define the structure for the different content types on your site
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Posts" # Used in the UI
-    folder: "public/content/blog" # The path to the folder where the documents are stored
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Blog Posts' # Used in the UI
+    folder: 'public/content/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., 2025-03-15-my-favorite-books.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., 2025-03-15-my-favorite-books.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
-      - {label: "Excerpt", name: "excerpt", widget: "text", hint: "A short description of your post (150-200 characters)"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", hint: "Add tags like 'books', 'movies', 'TV shows'"}
-      - {label: "Published", name: "published", widget: "boolean", default: true}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Featured Image',
+          name: 'featuredImage',
+          widget: 'image',
+          required: false,
+        }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          hint: 'A short description of your post (150-200 characters)',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          hint: "Add tags like 'books', 'movies', 'TV shows'",
+        }
+      - {
+          label: 'Published',
+          name: 'published',
+          widget: 'boolean',
+          default: true,
+        }
