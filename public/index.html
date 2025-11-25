@@ -25,14 +25,6 @@
   <title>Halee</title>
   <!-- Netlify Identity Widget for CMS authentication -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    // Configure Netlify Identity to use the correct site
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.init({
-        APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
-      });
-    }
-  </script>
 </head>
 
 <body>
@@ -47,17 +39,26 @@
       })
     })
   </script>
-  <!-- Netlify Identity redirect handler -->
+  <!-- Netlify Identity configuration and redirect handler -->
   <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
+    // Wait for the widget to be ready before configuring
+    window.addEventListener('DOMContentLoaded', function() {
+      if (window.netlifyIdentity) {
+        // Configure to use the correct Netlify site
+        window.netlifyIdentity.init({
+          APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
+        });
+
+        // Redirect to admin after login
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    });
   </script>
 </body>
 
