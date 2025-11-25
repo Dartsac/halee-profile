@@ -25,6 +25,14 @@
   <title>Halee</title>
   <!-- Netlify Identity Widget for CMS authentication -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Configure Netlify Identity to use the correct site
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        APIUrl: "https://haleemccray.netlify.app/.netlify/identity"
+      });
+    }
+  </script>
 </head>
 
 <body>
