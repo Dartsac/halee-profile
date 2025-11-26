@@ -1,4 +1,10 @@
 import matter from 'gray-matter';
+import { Buffer } from 'buffer';
+
+// Polyfill Buffer for gray-matter in browser environment
+if (typeof window !== 'undefined') {
+  window.Buffer = Buffer;
+}
 
 /**
  * Fetch and parse all blog posts from the public/content/blog directory
