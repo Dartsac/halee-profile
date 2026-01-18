@@ -1,9 +1,12 @@
 ---
-title: "Welcome to My Blog!"
-date: 2025-03-15T10:00:00Z
+title: Welcome to My Blog!
+date: 2026-01-03T08:17:00.000-05:00
 featuredImage: null
-excerpt: "Welcome to my personal blog where I share thoughts on my favorite books, movies, TV shows, and more!"
-tags: ["welcome", "about"]
+excerpt: Welcome to my personal blog where I share thoughts on my favorite
+  books, movies, TV shows, and more!
+tags:
+  - welcome
+  - about
 published: true
 ---
 
