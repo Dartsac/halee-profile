@@ -7,8 +7,6 @@ import Loader from '../Loader'
 const descriptors = ['skilled writer.', 'avid reader.', 'sharp editor.']
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = [' ', 'H', 'a', 'l', 'e', 'e']
   const [currentDescriptor, setCurrentDescriptor] = useState('')
   const [descriptorIndex, setDescriptorIndex] = useState(0)
   const [typingPhase, setTypingPhase] = useState('typing')
@@ -57,19 +55,6 @@ const Home = () => {
 
     return () => clearTimeout(timeout)
   }, [currentDescriptor, typingPhase, descriptorIndex, isAnimating])
-
-  useEffect(() => {
-    if (!isAnimating) return // Do nothing until animation starts
-  }, [currentDescriptor, isAnimating])
-
-  // Existing effect for changing letter class after 4 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <>

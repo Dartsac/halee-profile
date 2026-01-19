@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Headshot from '../../assets/images/headshot1.webp'
 import Resume from '../../assets/HaleeMcCray Resume.pdf'
 import Loader from '../Loader'
