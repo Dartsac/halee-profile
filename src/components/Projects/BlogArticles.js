@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+import React, { useEffect } from 'react'
 import Loader from '../Loader'
 import ProjectNavigation from './ProjectNavigation' // Import the navigation component
 import ProjectCTA from './ProjectCTA' // Import the CTA component
 import './index.scss'
 
 const BlogArticles = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
   useEffect(() => {
     // Enable scrolling when on project detail pages
     document.body.classList.add('project-page-active')
 
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
     return () => {
-      clearTimeout(timer)
       // Remove the class when component unmounts
       document.body.classList.remove('project-page-active')
     }
@@ -28,25 +20,7 @@ const BlogArticles = () => {
       <div className='container projects-page project-detail-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={[
-                'B',
-                'l',
-                'o',
-                'g',
-                ' ',
-                'A',
-                'r',
-                't',
-                'i',
-                'c',
-                'l',
-                'e',
-                's',
-              ]}
-              idx={10}
-            />
+            Blog Articles
           </h1>
           <p>
             Expert grooming advice articles targeting specific needs of Bevel's
@@ -55,77 +29,95 @@ const BlogArticles = () => {
         </div>
 
         <div className='project-content'>
-          <h2>About the Project</h2>
-          <p>
-            As part of my collaboration with Bevel, I developed two blog
-            articles addressing key grooming concerns for Bevel's audience of
-            young Black men:
-          </p>
-          <ul>
-            <li>
-              <strong>
-                "The Best Shaving Routine for Razor Bump Prevention"
-              </strong>
-            </li>
-            <li>
-              <strong>
-                "The Best Solutions for Ingrown Hairs After Shaving"
-              </strong>
-            </li>
-          </ul>
-          <p>
-            These articles were developed to align with Bevel's mission of
-            providing actionable, expert advice while maintaining an engaging
-            and relatable tone. They are part of Bevel's ongoing content
-            strategy and were designed to support their digital marketing
-            efforts.
-          </p>
-
           <h2>My Writing Process</h2>
-          <ul>
-            <li>
-              <strong>Audience-Centric Research:</strong> I conducted in-depth
-              research into the specific challenges Black men face with razor
-              bumps and ingrown hairs, consulting dermatological sources,
-              customer insights, and grooming forums to ensure the content was
-              accurate and relatable.
-            </li>
-            <li>
-              <strong>SEO Optimization:</strong> Strategically incorporated
-              keywords such as "razor bump prevention," "ingrown hair
-              solutions," and "shaving tips for Black men" to enhance
-              discoverability while maintaining natural readability.
-            </li>
-            <li>
-              <strong>Tone Alignment:</strong> Kept the tone engaging,
-              educational, and relatable to connect with Bevel's audience while
-              reinforcing the brand's authority in grooming.
-            </li>
-          </ul>
+          <p>
+            When writing for Bevel, SEO is the foundation but not the final
+            word. I start with keyword research and search intent, then shape
+            each blog around what the reader actually wants to know. From there,
+            I apply Bevel's tone: approachable, confident, and rooted in
+            culture. The result is content that is optimized to perform while
+            still feeling human, helpful, and unmistakably on-brand.
+          </p>
 
-          <h2>Intended Results & Impact</h2>
-          <p>The blogs were created with the following goals in mind:</p>
-          <ul>
-            <li>
-              <strong>Drive Website Traffic:</strong> Leverage SEO strategies to
-              attract new visitors searching for grooming advice.
-            </li>
-            <li>
-              <strong>Build Brand Authority:</strong> Establish Bevel as a go-to
-              resource for solving common grooming challenges faced by Black
-              men.
-            </li>
-            <li>
-              <strong>Encourage Product Exploration:</strong> Seamlessly
-              integrate mentions of Bevel's products as effective solutions for
-              razor bumps and ingrown hairs.
-            </li>
-            <li>
-              <strong>Strengthen Community Connections:</strong> Reinforce
-              Bevel's dedication to addressing real grooming concerns faced by
-              their audience.
-            </li>
-          </ul>
+          <h2>Published Articles</h2>
+          <div className='article-links'>
+            <a
+              href='https://getbevel.com/blogs/articles/faces-of-atlanta-vol-4'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>Faces of Atlanta Vol. 4</span>
+              <span className='article-desc'>
+                Holiday campaign celebrating Atlanta families and their grooming
+                traditions
+              </span>
+            </a>
+            <a
+              href='https://getbevel.com/blogs/articles/a-bevel-holiday'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>A Bevel Holiday</span>
+              <span className='article-desc'>
+                Heartwarming story of a grandson gifting his grandfather the
+                perfect grooming kit
+              </span>
+            </a>
+            <a
+              href='https://getbevel.com/blogs/articles/bevel-teams-up-with-big3-and-nancy-lieberman-charities-to-bring-a-dream-court%E2%84%A2-to-santa-monica'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>
+                Bevel Teams Up with BIG3 and Nancy Lieberman Charities
+              </span>
+              <span className='article-desc'>
+                Partnership announcement for bringing a Dream Court™ to Santa
+                Monica
+              </span>
+            </a>
+            <a
+              href='https://getbevel.com/blogs/articles/celebrating-fathers-and-the-wisdom-they-pass-down'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>
+                Celebrating Fathers and the Wisdom They Pass Down
+              </span>
+              <span className='article-desc'>
+                Father's Day feature exploring how fathers impart valuable
+                lessons
+              </span>
+            </a>
+            <a
+              href='https://getbevel.com/blogs/articles/military'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>Serving Those Who Serve</span>
+              <span className='article-desc'>
+                Announcement of Bevel's military discount program
+              </span>
+            </a>
+            <a
+              href='https://getbevel.com/blogs/articles/teams-up-with-ufc-heavyweight-curtis-razor-blaydes'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='article-card'
+            >
+              <span className='article-title'>
+                Bevel Teams Up with UFC Heavyweight Curtis "Razor" Blaydes
+              </span>
+              <span className='article-desc'>
+                Partnership announcement with UFC heavyweight contender
+              </span>
+            </a>
+          </div>
 
           {/* Add the CTA component before navigation */}
           <ProjectCTA />

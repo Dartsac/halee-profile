@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+import React, { useEffect } from 'react'
 import Loader from '../Loader'
 import ProjectNavigation from './ProjectNavigation'
 import ProjectCTA from './ProjectCTA'
@@ -7,18 +6,11 @@ import SmsGallery from './SmsGallery' // Import the new SMS Gallery component
 import './index.scss'
 
 const SmsStrategies = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
   useEffect(() => {
     // Enable scrolling when on project detail pages
     document.body.classList.add('project-page-active')
 
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
     return () => {
-      clearTimeout(timer)
       // Remove the class when component unmounts
       document.body.classList.remove('project-page-active')
     }
@@ -29,26 +21,7 @@ const SmsStrategies = () => {
       <div className='container projects-page project-detail-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={[
-                'S',
-                'M',
-                'S',
-                ' ',
-                'S',
-                't',
-                'r',
-                'a',
-                't',
-                'e',
-                'g',
-                'i',
-                'e',
-                's',
-              ]}
-              idx={10}
-            />
+            SMS Strategies
           </h1>
           <p>
             Strategic SMS campaign content to engage customers and drive

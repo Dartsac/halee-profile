@@ -1,23 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import './index.scss'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef()
   const navigate = useNavigate()
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -54,11 +44,7 @@ const Contact = () => {
       <div className='container contact-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
+            Contact Me
           </h1>
           <p>
             I am interested in full-time job opportunities - especially

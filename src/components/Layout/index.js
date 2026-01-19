@@ -53,15 +53,7 @@ const Layout = () => {
     <div className={`App ${menuOpen ? 'menu-open' : ''}`}>
       <Sidebar onMenuStateChange={handleMenuStateChange} />
       <div className={`page ${shouldForceOneScreen ? 'fixed-height' : ''}`}>
-        <span className='tags top-tags'>&lt;body&gt;</span>
-
         <Outlet />
-
-        <span className='tags bottom-tags'>
-          &lt;/body&gt;
-          <br />
-          <span className='bottom-tag-html'>&lt;/html&gt;</span>
-        </span>
       </div>
     </div>
   )

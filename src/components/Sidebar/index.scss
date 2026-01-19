@@ -233,6 +233,9 @@ body.menu-open {
         &.projects-link::after {
           content: none;
         }
+        &.blog-link::after {
+          content: none;
+        }
         &.contact-link::after {
           content: none;
         }
@@ -260,6 +263,39 @@ body.menu-open {
   /* Slide down when mobile-show is added */
   .nav-bar.mobile-show {
     transform: translateY(0);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .hamburger-btn {
+    width: 44px;
+    height: 44px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .nav-bar {
+    nav {
+      padding-top: 60px;
+
+      .menu-text {
+        margin-left: 30px;
+      }
+
+      a {
+        font-size: 20px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    ul {
+      padding: 15px 0 30px 20px;
+
+      li svg {
+        font-size: 28px;
+      }
+    }
   }
 }
 

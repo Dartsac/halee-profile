@@ -9,11 +9,8 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   color: #000;
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   position: relative;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
 
   @media (max-width: 768px) {
     width: 100%;

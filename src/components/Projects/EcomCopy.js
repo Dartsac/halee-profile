@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+import React, { useEffect } from 'react'
 import Loader from '../Loader'
 import ProjectNavigation from './ProjectNavigation' // Import the navigation component
 import ProjectCTA from './ProjectCTA' // Import the CTA component
@@ -7,18 +6,11 @@ import './index.scss'
 import './EcomCopy.scss' // Import the new SCSS file for product links
 
 const EcomCopy = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
   useEffect(() => {
     // Enable scrolling when on project detail pages
     document.body.classList.add('project-page-active')
 
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
     return () => {
-      clearTimeout(timer)
       // Remove the class when component unmounts
       document.body.classList.remove('project-page-active')
     }
@@ -29,27 +21,7 @@ const EcomCopy = () => {
       <div className='container projects-page project-detail-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={[
-                'E',
-                '-',
-                'C',
-                'o',
-                'm',
-                'm',
-                'e',
-                'r',
-                'c',
-                'e',
-                ' ',
-                'C',
-                'o',
-                'p',
-                'y',
-              ]}
-              idx={10}
-            />
+            E-Commerce Copy
           </h1>
           <p>
             Converting product descriptions that showcase Bevel's premium

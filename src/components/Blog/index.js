@@ -1,24 +1,15 @@
 import { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import BlogCard from './BlogCard'
 import { getAllPosts, getAllTags, filterPostsByTag } from '../../utils/blogUtils'
 import './index.scss'
 
 const Blog = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
   const [posts, setPosts] = useState([])
   const [filteredPosts, setFilteredPosts] = useState([])
   const [tags, setTags] = useState([])
   const [selectedTag, setSelectedTag] = useState(null)
   const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -59,11 +50,7 @@ const Blog = () => {
       <div className='container blog-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['B', 'l', 'o', 'g']}
-              idx={15}
-            />
+            Blog
           </h1>
           <p>
             Welcome to my personal blog! Here I share my thoughts on books, movies, TV shows, and everything in between.

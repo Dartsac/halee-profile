@@ -1,57 +1,39 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Headshot from '../../assets/images/headshot1.webp'
 import Resume from '../../assets/HaleeMcCray Resume.pdf'
-import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import './index.scss'
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <>
       <div className='container about-page'>
         <div className='text-zone'>
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-          </h1>
+          <h1>About Me</h1>
           <p>
-            I'm a proud first-generation Georgia State University alumna with a
-            serious passion for writing and editing. My mission? To make my
-            readers <strong>feel</strong> something—anything! Whether it's a
-            burst of joy, a tear (hopefully happy), or that perfect <em>OMG</em>{' '}
-            or <em>LOL</em> moment, I aim to spark genuine emotion.
+            I'm a Copywriter who blends creative storytelling with data-driven
+            SEO. My mission? To make your readers
+            <strong> feel</strong> something while ensuring your brand gets
+            found. Whether it's a burst of joy or a click-through to purchase, I
+            aim to spark genuine emotion and measurable action.
           </p>
           <p>
-            With a degree in psychology, I understand that connecting with
-            people starts with knowing what makes them tick. When you tap into
-            what someone truly cares about, that's when they believe in your
-            brand. From selling products and informing the public to crafting an
-            entertaining blog, the key is creating content that inspires thought
-            and emotion.
+            With a degree in psychology from Georgia State University, I
+            understand that connecting with people starts with knowing what
+            makes them tick. When you tap into what someone truly cares about,
+            that's when they believe in your brand. From selling products to
+            crafting an entertaining blog, the key is creating content that
+            inspires thought and emotion.
           </p>
           <p>
-            But I'm not just about tugging at heartstrings. I'm Google Analytics
-            certified and know my way around keyword research (SemRush, Google
-            Keyword Planner—you name it). I craft content that not only sounds
-            great but actually delivers measurable results. I've worked with
-            brands like Walker & Company and tackled a variety of freelance
-            editing projects, ensuring every word lands just right to get your
-            audience engaged and taking action.
+            But I'm not just about tugging at heartstrings—I'm about results. I
+            am Google Analytics certified and proficient in technical SEO tools
+            like SemRush and Google Keyword Planner. I don't just guess what
+            your audience wants; I research the keywords they use and the
+            questions they ask. I craft content that ranks, resonates, and
+            converts.
           </p>
           <p>
             Let's connect and see how I can help you craft content that speaks

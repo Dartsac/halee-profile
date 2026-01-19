@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+import React, { useEffect } from 'react'
 import Loader from '../Loader'
 import Carousel from '../Carousel' // Reusable carousel component
 import ProjectNavigation from './ProjectNavigation' // Import the new navigation component
@@ -8,18 +7,11 @@ import './EmailCampaigns.scss'
 import './index.scss'
 
 const EmailCampaigns = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
   useEffect(() => {
     // Enable scrolling when on project detail pages
     document.body.classList.add('project-page-active')
 
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
     return () => {
-      clearTimeout(timer)
       // Remove the class when component unmounts
       document.body.classList.remove('project-page-active')
     }
@@ -30,27 +22,7 @@ const EmailCampaigns = () => {
       <div className='container projects-page project-detail-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={[
-                'E',
-                'm',
-                'a',
-                'i',
-                'l',
-                ' ',
-                'C',
-                'a',
-                'm',
-                'p',
-                'a',
-                'i',
-                'g',
-                'n',
-                's',
-              ]}
-              idx={11}
-            />
+            Email Campaigns
           </h1>
           <p>
             I crafted engaging and on-brand email campaigns for key sales

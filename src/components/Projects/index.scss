@@ -239,6 +239,44 @@
         box-sizing: border-box;
         max-width: 100%;
       }
+
+    }
+
+    .article-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .article-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem 1.5rem;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f0f0f0;
+          transform: translateX(5px);
+        }
+
+        .article-title {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .article-desc {
+          font-size: 1.4rem;
+          color: #666;
+          margin-top: 0.4rem;
+          font-weight: 400;
+        }
+      }
     }
 
     strong {
@@ -365,6 +403,22 @@ body.project-page-active {
         padding-right: 0.5rem;
         font-size: 1.4rem;
       }
+
+      .article-links .article-card {
+        padding: 1rem 1.2rem;
+
+        .article-title {
+          font-size: 1.4rem;
+        }
+
+        .article-desc {
+          font-size: 1.2rem;
+        }
+
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
 
@@ -412,7 +466,8 @@ body.project-page-active {
 
 @media (max-width: 480px) {
   .projects-page {
-    width: 95%;
+    width: 100%;
+    padding: 0 15px;
 
     .text-zone {
       p {
@@ -459,6 +514,62 @@ body.project-page-active {
         font-size: 1.3rem;
         line-height: 1.6;
         margin-bottom: 0.8rem;
+      }
+
+      .article-links .article-card {
+        padding: 0.8rem 1rem;
+
+        .article-title {
+          font-size: 1.3rem;
+        }
+
+        .article-desc {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .projects-page {
+    padding: 0 10px;
+
+    .text-zone p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .project-item {
+    height: 260px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .project-detail-page {
+    .project-content {
+      padding: 15px;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p,
+      li {
+        font-size: 1.2rem;
+      }
+
+      .article-links .article-card {
+        .article-title {
+          font-size: 1.2rem;
+        }
+
+        .article-desc {
+          font-size: 1rem;
+        }
       }
     }
   }

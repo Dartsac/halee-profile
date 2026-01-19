@@ -1,10 +1,10 @@
 # Halee McCray Portfolio
 
-A modern, responsive portfolio website for copywriter and content strategist Halee McCray.
+A modern, responsive portfolio website for copywriter Halee McCray.
 
 ## 📋 Overview
 
-This project is a professional portfolio website designed to showcase Halee McCray's writing samples, experience, and services as a copywriter and content strategist. The site features a clean, engaging design with intuitive navigation, responsive layout, and seamless content presentation.
+This project is a professional portfolio website designed to showcase Halee McCray's writing samples, experience, and services as a copywriter. The site features a clean, engaging design with intuitive navigation, responsive layout, and seamless content presentation.
 
 Visit the live site: [haleemccray.com](https://haleemccray.com)
 
@@ -12,7 +12,7 @@ Visit the live site: [haleemccray.com](https://haleemccray.com)
 
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing
 - **Portfolio Showcase**: Organized display of writing samples and client work
-- **Service Overview**: Clear presentation of copywriting and content strategy services
+- **Service Overview**: Clear presentation of copywriting services
 - **Contact Integration**: Simple contact form for client inquiries
 - **SEO Optimization**: Implemented best practices for search visibility
 - **Fast Performance**: Optimized images and assets for quick loading
@@ -93,8 +93,7 @@ This site was developed with a focus on:
 
 1. **Client-First Design**: Working closely with Halee to ensure the site reflects her professional brand and meets her specific needs
 2. **Modern Web Practices**: Implementing current web development standards for accessibility and performance
-3. **Content Strategy**: Organizing the portfolio to highlight Halee's strengths and showcase her diverse writing samples
-4. **Conversion Optimization**: Strategic placement of contact opportunities and calls-to-action
+3. **Conversion Optimization**: Strategic placement of contact opportunities and calls-to-action
 
 ## 📝 License
 

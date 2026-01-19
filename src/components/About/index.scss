@@ -111,8 +111,8 @@
 
 @media screen and (max-width: 480px) {
   .headshot-container {
-    max-width: 65%; /* Increased from 45% */
-    margin: 20px auto; /* Equal top and bottom margins */
+    max-width: 65%;
+    margin: 20px auto;
 
     .headshot {
       box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
@@ -124,7 +124,24 @@
     width: auto;
     max-width: 220px;
     margin: 25px auto;
-    padding: 10px 0;
+    padding: 12px 20px;
     text-align: center;
+    min-height: 44px; /* Touch-friendly */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .headshot-container {
+    max-width: 70%;
+
+    .headshot {
+      box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .resume-button {
+    max-width: 200px;
+    font-size: 1.3rem;
+    padding: 10px 16px;
   }
 }

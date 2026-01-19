@@ -37,6 +37,10 @@
   @media (max-width: 480px) {
     height: 400px;
   }
+
+  @media (max-width: 320px) {
+    height: 350px;
+  }
 }
 
 /* Base styles for carousel items */
@@ -106,6 +110,12 @@
     height: 380px;
     left: 34.5%;
   }
+
+  @media (max-width: 320px) {
+    width: 170px;
+    height: 320px;
+    left: 30%;
+  }
 }
 
 /* Controls container */
@@ -124,6 +134,11 @@
     height: 50px;
   }
 
+  @media (max-width: 320px) {
+    gap: 15px;
+    height: 44px;
+  }
+
   /* Button styles for next/previous */
   button {
     width: 50px;
@@ -134,15 +149,17 @@
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+    min-width: 44px; /* Touch-friendly minimum */
+    min-height: 44px;
 
     @media (max-width: 768px) {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
     }
 
     @media (max-width: 480px) {
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
     }
 
     &:hover {

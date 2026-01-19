@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
-import AnimatedLetters from '../AnimatedLetters'
 import Loader from '../Loader'
 import { getPostBySlug, formatDate, getAdjacentPosts } from '../../utils/blogUtils'
 import './index.scss'
@@ -9,7 +8,6 @@ import './index.scss'
 const BlogPost = () => {
   const { slug } = useParams()
   const navigate = useNavigate()
-  const [letterClass, setLetterClass] = useState('text-animate')
   const [post, setPost] = useState(null)
   const [adjacentPosts, setAdjacentPosts] = useState({ prevPost: null, nextPost: null })
   const [loading, setLoading] = useState(true)
@@ -18,12 +16,7 @@ const BlogPost = () => {
     // Enable scrolling for blog post pages
     document.body.classList.add('project-page-active')
 
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
     return () => {
-      clearTimeout(timer)
       document.body.classList.remove('project-page-active')
     }
   }, [])
@@ -67,13 +60,7 @@ const BlogPost = () => {
     <>
       <div className='container blog-post-page project-detail-page'>
         <div className='text-zone'>
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={post.title.split('')}
-              idx={15}
-            />
-          </h1>
+          <h1>{post.title}</h1>
           <div className='post-meta'>
             <span className='post-date'>{formatDate(post.date)}</span>
             {post.tags && post.tags.length > 0 && (
