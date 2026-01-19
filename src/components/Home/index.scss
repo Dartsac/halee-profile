@@ -10,66 +10,40 @@
 
   h1 {
     color: #000;
-    font-size: 53px;
+    font-size: 8rem; /* Massive, editorial size */
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
-    position: relative;
-    height: 200px;
-    line-height: 1.2;
-
-    span.descriptors {
-      display: inline-block;
-      vertical-align: top;
-      width: 100%;
-      height: 1.5em;
-      padding: 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    &::before {
-      content: '<h1>';
-      font-family: 'La Belle Aurore';
-      color: #3a3a3b;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: 15px;
-      opacity: 0.8;
-    }
-
-    &::after {
-      content: '</h1>';
-      font-family: 'La Belle Aurore';
-      color: #3a3a3b;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      opacity: 0.8;
-      animation: fadeInOpacity 1s 2s backwards;
-    }
-
-    img {
-      width: 44px;
-      margin-left: 20px;
-      opacity: 0;
-      height: auto;
-      animation: jackInTheBox 1.5s ease-out;
-      animation-fill-mode: forwards;
-      animation-delay: 1.4s;
-    }
+    line-height: 0.9;
+    letter-spacing: -2px; /* Tighter tracking for display font */
+    text-transform: uppercase;
   }
 
   h2 {
-    color: #000;
+    color: #555;
     margin-top: 20px;
-    font-weight: 500;
-    font-size: 11px;
-    font-family: sans-serif;
-    letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    .highlight {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  .hero-copy {
+    font-size: 1.6rem;
+    color: #444;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 80%;
+    margin-top: 20px;
   }
 
   .flat-button {
@@ -77,13 +51,12 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 4px;
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-decoration: none;
     padding: 12px 24px;
     border: 2px solid #000;
     margin-top: 25px;
     display: inline-block;
-    animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
     background-color: #000;
     border-radius: 4px;
@@ -210,7 +183,16 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 4.8rem;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .hero-copy {
+      max-width: 100%;
     }
 
     .flat-button {
@@ -259,7 +241,6 @@
       h1 {
         font-size: 44px;
         width: 100%;
-        height: 150px;
         line-height: 1.2;
         &::before {
           margin-top: -20px;
