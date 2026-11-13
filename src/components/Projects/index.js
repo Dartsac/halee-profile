@@ -30,8 +30,10 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>Email Campaigns</h3>
+                <h2 className='card-title'>Email Campaigns</h2>
                 <svg
+                  aria-hidden='true'
+                  focusable='false'
                   width='24'
                   height='25'
                   viewBox='0 0 24 25'
@@ -57,8 +59,10 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>SMS Strategies</h3>
+                <h2 className='card-title'>SMS Strategies</h2>
                 <svg
+                  aria-hidden='true'
+                  focusable='false'
                   width='24'
                   height='25'
                   viewBox='0 0 24 25'
@@ -84,8 +88,10 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>Blog Articles</h3>
+                <h2 className='card-title'>Blog Articles</h2>
                 <svg
+                  aria-hidden='true'
+                  focusable='false'
                   width='24'
                   height='25'
                   viewBox='0 0 24 25'
@@ -111,8 +117,10 @@ const Projects = () => {
             </div>
             <div className='item-content'>
               <div className='title-row'>
-                <h3 className='card-title'>E-Commerce Product Copy</h3>
+                <h2 className='card-title'>E-Commerce Product Copy</h2>
                 <svg
+                  aria-hidden='true'
+                  focusable='false'
                   width='24'
                   height='25'
                   viewBox='0 0 24 25'

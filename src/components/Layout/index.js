@@ -1,19 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Sidebar from '../Sidebar'
 import './index.scss'
 
+const MAIN_CONTENT_ID = 'main-content'
+
 const Layout = () => {
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const mainRef = useRef(null)
+  const isFirstRender = useRef(true)
+  const shouldFocusMain = useRef(false)
 
-  // Handle menu state changes from the Sidebar component
-  const handleMenuStateChange = (isOpen) => {
+  const handleMenuStateChange = useCallback((isOpen) => {
     setMenuOpen(isOpen)
-  }
+  }, [])
 
   useEffect(() => {
-    // Check if the current path is a project details page or blog page
     const isProjectDetailPage =
       location.pathname.startsWith('/projects/') &&
       location.pathname !== '/projects'
@@ -35,26 +38,52 @@ const Layout = () => {
       document.body.style.overflow = 'auto'
     } else {
       document.body.classList.remove('allow-scroll')
-      document.body.style.overflow = menuOpen ? 'hidden' : 'hidden'
+      document.body.style.overflow = 'hidden'
     }
 
-    // Scroll to the top whenever the route changes
     window.scrollTo(0, 0)
 
-    // Close mobile menu when route changes
-    setMenuOpen(false)
-    document.body.classList.remove('menu-open')
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+    } else {
+      shouldFocusMain.current = true
+    }
+  }, [location.pathname])
+
+  // After client-side navigation, move focus to the new page content so
+  // keyboard and screen reader users start at the top of the page. Wait until
+  // the mobile menu has closed, because <main> is inert while it is open.
+  useEffect(() => {
+    if (shouldFocusMain.current && !menuOpen && mainRef.current) {
+      shouldFocusMain.current = false
+      mainRef.current.focus({ preventScroll: true })
+    }
   }, [location.pathname, menuOpen])
+
+  const skipToContent = (event) => {
+    // HashRouter would treat "#main-content" as a route, so focus directly.
+    event.preventDefault()
+    mainRef.current?.focus()
+  }
 
   // Only force one-screen height on the contact page.
   const shouldForceOneScreen = location.pathname === '/contact'
 
   return (
     <div className={`App ${menuOpen ? 'menu-open' : ''}`}>
+      <a className='skip-link' href={`#${MAIN_CONTENT_ID}`} onClick={skipToContent}>
+        Skip to main content
+      </a>
       <Sidebar onMenuStateChange={handleMenuStateChange} />
-      <div className={`page ${shouldForceOneScreen ? 'fixed-height' : ''}`}>
+      <main
+        id={MAIN_CONTENT_ID}
+        ref={mainRef}
+        tabIndex={-1}
+        inert={menuOpen ? '' : undefined}
+        className={`page ${shouldForceOneScreen ? 'fixed-height' : ''}`}
+      >
         <Outlet />
-      </div>
+      </main>
     </div>
   )
 }

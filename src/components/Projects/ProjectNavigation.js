@@ -40,8 +40,9 @@ const ProjectNavigation = ({ currentProject }) => {
   }
 
   return (
-    <div className='project-navigation'>
+    <nav className='project-navigation' aria-label='More projects'>
       <button
+        type='button'
         className='nav-button prev-button'
         onClick={() => navigateToProject(prevProject.path)}
       >
@@ -57,6 +58,7 @@ const ProjectNavigation = ({ currentProject }) => {
       </button>
 
       <button
+        type='button'
         className='nav-button next-button'
         onClick={() => navigateToProject(nextProject.path)}
       >
@@ -70,7 +72,7 @@ const ProjectNavigation = ({ currentProject }) => {
           </div>
         </div>
       </button>
-    </div>
+    </nav>
   )
 }
 

@@ -177,7 +177,7 @@
 .no-posts-message {
   text-align: center;
   font-size: 1.8rem;
-  color: #666;
+  color: #4a4a4a; /* 4.5:1+ on the #d3dbc1 page background */
   padding: 60px 20px;
 }
 
@@ -204,7 +204,7 @@
 
 .post-date {
   font-size: 1.5rem;
-  color: #666;
+  color: #4a4a4a; /* 4.5:1+ on the #d3dbc1 page background */
 }
 
 .post-tags {
@@ -364,8 +364,10 @@
   margin-bottom: 30px;
   transition: color 0.3s ease;
 
+  /* #d3dbc1 text would vanish on the matching page background */
   &:hover {
-    color: #d3dbc1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 }
 

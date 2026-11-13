@@ -46,11 +46,12 @@ const About = () => {
             rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon={faFileArrowDown} /> Download Resume
+            <span className='visually-hidden'> (PDF, opens in a new tab)</span>
           </a>
         </div>
 
         <div className='headshot-container'>
-          <img className='headshot' src={Headshot} alt='headshot' />
+          <img className='headshot' src={Headshot} alt='Portrait of Halee McCray' />
         </div>
       </div>
       <Loader />

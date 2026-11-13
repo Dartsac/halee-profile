@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './index.scss'
 import Halee from '../../assets/images/logo.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,65 +14,119 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
+const MOBILE_MENU_ID = 'site-navigation'
+const MOBILE_BREAKPOINT = 768
+const ICON_COLOR = '#7a7a7b'
+const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])'
+
 const Sidebar = ({ onMenuStateChange }) => {
-  // Track if the mobile nav is open
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const { pathname } = useLocation()
+  const menuButtonRef = useRef(null)
+  const navBarRef = useRef(null)
 
-  // Check if we're on mobile and update state
+  const closeMenu = useCallback(({ returnFocus = false } = {}) => {
+    setIsOpen(false)
+    if (returnFocus && menuButtonRef.current) {
+      menuButtonRef.current.focus()
+    }
+  }, [])
+
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT)
     }
 
-    // Initial check
     checkIfMobile()
-
-    // Add event listener for window resize
     window.addEventListener('resize', checkIfMobile)
-
-    // Clean up
     return () => window.removeEventListener('resize', checkIfMobile)
   }, [])
 
-  // Toggle the nav
-  const toggleNav = () => {
-    const newState = !isOpen
-    setIsOpen(newState)
+  // The mobile menu only exists on small screens; close it when leaving them.
+  useEffect(() => {
+    if (!isMobile) setIsOpen(false)
+  }, [isMobile])
 
-    // Toggle body class to prevent scrolling
-    if (newState) {
-      document.body.classList.add('menu-open')
-    } else {
-      document.body.classList.remove('menu-open')
-    }
-
-    // Notify parent component if callback exists
-    if (onMenuStateChange) {
-      onMenuStateChange(newState)
-    }
-  }
-
-  // Function to handle navigation and scroll to top
-  const handleNavClick = () => {
+  // Close the menu after any navigation, including browser back/forward.
+  useEffect(() => {
     setIsOpen(false)
-    document.body.classList.remove('menu-open')
-    window.scrollTo(0, 0)
+  }, [pathname])
 
-    // Notify parent component
-    if (onMenuStateChange) {
-      onMenuStateChange(false)
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', isOpen)
+    if (onMenuStateChange) onMenuStateChange(isOpen)
+  }, [isOpen, onMenuStateChange])
+
+  useEffect(() => () => document.body.classList.remove('menu-open'), [])
+
+  // While the mobile menu is open: move focus into it, close on Escape,
+  // and keep Tab / Shift+Tab cycling between the menu button and menu links.
+  useEffect(() => {
+    if (!isOpen) return undefined
+
+    const firstLink = navBarRef.current?.querySelector('nav a')
+    if (firstLink) firstLink.focus()
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        closeMenu({ returnFocus: true })
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      const focusable = [
+        menuButtonRef.current,
+        ...navBarRef.current.querySelectorAll(FOCUSABLE_SELECTOR),
+      ].filter(Boolean)
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      const active = document.activeElement
+
+      if (!focusable.includes(active)) {
+        event.preventDefault()
+        first.focus()
+      } else if (event.shiftKey && active === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, closeMenu])
+
+  const toggleNav = () => {
+    if (isOpen) {
+      closeMenu({ returnFocus: true })
+    } else {
+      setIsOpen(true)
     }
   }
+
+  const handleNavClick = () => {
+    closeMenu()
+    window.scrollTo(0, 0)
+  }
+
+  const isMenuHidden = isMobile && !isOpen
 
   return (
     <>
-      {/* Hamburger button (only visible on small screens) */}
       {isMobile && (
         <button
+          ref={menuButtonRef}
+          type='button'
           className={`hamburger-btn ${isOpen ? 'menu-open' : ''}`}
           onClick={toggleNav}
           aria-label='Menu'
+          aria-expanded={isOpen}
+          aria-controls={MOBILE_MENU_ID}
         >
           {isOpen ? (
             <FontAwesomeIcon icon={faTimes} color='#d3dbc1' size='2xl' />
@@ -82,37 +136,27 @@ const Sidebar = ({ onMenuStateChange }) => {
         </button>
       )}
 
-      {/* The sidebar */}
-      <div className={`nav-bar ${isOpen ? 'mobile-show' : ''}`}>
+      <div
+        id={MOBILE_MENU_ID}
+        ref={navBarRef}
+        className={`nav-bar ${isOpen ? 'mobile-show' : ''}`}
+        inert={isMenuHidden ? '' : undefined}
+      >
         <Link className='logo' to='/' onClick={handleNavClick}>
-          <img src={Halee} alt='logo' width='60' height='16' />
+          <img src={Halee} alt='Halee McCray – home' width='60' height='16' />
         </Link>
-        <nav>
-          <NavLink
-            exact='true'
-            activeclassname='active'
-            className='home-link'
-            to='/'
-            onClick={handleNavClick}
-          >
-            <FontAwesomeIcon className='icon' icon={faHome} color='#4d4d4e' />
+        <nav aria-label='Main'>
+          <NavLink className='home-link' to='/' end onClick={handleNavClick}>
+            <FontAwesomeIcon className='icon' icon={faHome} color={ICON_COLOR} />
             <span className='menu-text'>Home</span>
           </NavLink>
 
-          <NavLink
-            exact='true'
-            activeclassname='active'
-            className='about-link'
-            to='/about'
-            onClick={handleNavClick}
-          >
-            <FontAwesomeIcon className='icon' icon={faUser} color='#4d4d4e' />
+          <NavLink className='about-link' to='/about' onClick={handleNavClick}>
+            <FontAwesomeIcon className='icon' icon={faUser} color={ICON_COLOR} />
             <span className='menu-text'>About Me</span>
           </NavLink>
 
           <NavLink
-            exact='true'
-            activeclassname='active'
             className='projects-link'
             to='/projects'
             onClick={handleNavClick}
@@ -120,25 +164,21 @@ const Sidebar = ({ onMenuStateChange }) => {
             <FontAwesomeIcon
               className='icon'
               icon={faBriefcase}
-              color='#4d4d4e'
+              color={ICON_COLOR}
             />
             <span className='menu-text'>Projects</span>
           </NavLink>
 
-          <NavLink
-            exact='true'
-            activeclassname='active'
-            className='blog-link'
-            to='/blog'
-            onClick={handleNavClick}
-          >
-            <FontAwesomeIcon className='icon' icon={faPenNib} color='#4d4d4e' />
+          <NavLink className='blog-link' to='/blog' onClick={handleNavClick}>
+            <FontAwesomeIcon
+              className='icon'
+              icon={faPenNib}
+              color={ICON_COLOR}
+            />
             <span className='menu-text'>Blog</span>
           </NavLink>
 
           <NavLink
-            exact='true'
-            activeclassname='active'
             className='contact-link'
             to='/contact'
             onClick={handleNavClick}
@@ -146,7 +186,7 @@ const Sidebar = ({ onMenuStateChange }) => {
             <FontAwesomeIcon
               className='icon'
               icon={faEnvelope}
-              color='#4d4d4e'
+              color={ICON_COLOR}
             />
             <span className='menu-text'>Contact Me</span>
           </NavLink>
@@ -158,9 +198,9 @@ const Sidebar = ({ onMenuStateChange }) => {
               rel='noreferrer'
               href='https://www.linkedin.com/in/halee-mccray-7040892a1/'
               onClick={handleNavClick}
-              aria-label='LinkedIn Profile'
+              aria-label='LinkedIn profile (opens in a new tab)'
             >
-              <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
+              <FontAwesomeIcon icon={faLinkedin} color={ICON_COLOR} />
             </a>
           </li>
         </ul>

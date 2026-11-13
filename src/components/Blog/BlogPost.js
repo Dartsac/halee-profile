@@ -78,7 +78,7 @@ const BlogPost = () => {
         <div className='project-content blog-post-content'>
           {post.featuredImage && (
             <div className='featured-image'>
-              <img src={post.featuredImage} alt={post.title} />
+              <img src={post.featuredImage} alt='' />
             </div>
           )}
 
