@@ -27,6 +27,12 @@
   box-shadow: none;
 }
 
+/* Inset ring stays visible on both the green page and the black open menu */
+.hamburger-btn:focus-visible {
+  outline: 3px solid #d3dbc1;
+  outline-offset: -5px;
+}
+
 .nav-bar {
   background: #000;
   width: 60px;
@@ -36,6 +42,12 @@
   height: 100%;
   z-index: 9999;
   transition: transform 0.3s ease;
+
+  /* The global black focus ring is invisible on the black sidebar */
+  a:focus-visible {
+    outline: 2px solid #d3dbc1;
+    outline-offset: -2px;
+  }
 
   .logo {
     display: block;
@@ -65,14 +77,15 @@
 
     a {
       font-size: 22px;
-      color: #4d4d4e;
+      color: #7a7a7b;
       display: block;
       line-height: 51px;
       height: 51px;
       position: relative;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: #d3dbc1;
         svg {
           opacity: 0;
@@ -97,7 +110,8 @@
         transition: opacity 0.3s ease-out;
       }
 
-      &:hover:after {
+      &:hover:after,
+      &:focus-visible:after {
         opacity: 1;
       }
 
@@ -152,7 +166,8 @@
       padding: 7px 0px;
       font-size: 15px;
       line-height: 16px;
-      &:hover svg {
+      &:hover svg,
+      a:focus-visible svg {
         color: #d3dbc1;
       }
     }
@@ -181,7 +196,11 @@ body.menu-open {
     top: 0;
     left: 0;
     transform: translateY(-100%);
-    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    /* Hide the closed menu from keyboard and screen readers once it slides away */
+    visibility: hidden;
+    transition:
+      transform 0.4s cubic-bezier(0.65, 0, 0.35, 1),
+      visibility 0s linear 0.4s;
     overflow-y: auto; /* Allow scrolling within the menu if needed */
     overflow-x: hidden; /* Hide horizontal overflow */
 
@@ -263,6 +282,8 @@ body.menu-open {
   /* Slide down when mobile-show is added */
   .nav-bar.mobile-show {
     transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   }
 }
 

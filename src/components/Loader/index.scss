@@ -25,6 +25,13 @@
   width: calc(var(--uib-size) * 0.64);
 }
 
+/* The loader is purely decorative motion; skip it entirely */
+@media (prefers-reduced-motion: reduce) {
+  .loader-overlay {
+    display: none;
+  }
+}
+
 @keyframes realFadeOut {
   0% {
     opacity: 1;

@@ -10,40 +10,60 @@ const Logo = () => {
 
   useEffect(() => {
     const path = outlineLogoRef.current
-    if (!path) return
+    if (!path) return undefined
 
-    const length = path.getTotalLength()
+    const prefersReducedMotion =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    gsap.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: length,
+    const ctx = gsap.context(() => {
+      // Show the finished logo without the drawing and fade animations.
+      if (prefersReducedMotion) {
+        gsap.set(bgRef.current, { opacity: 1 })
+        gsap.set(solidLogoRef.current, { opacity: 1 })
+        return
+      }
+
+      const length = path.getTotalLength()
+
+      gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+      })
+
+      const tl = gsap.timeline()
+
+      tl.to(bgRef.current, {
+        duration: 1,
+        opacity: 1,
+      })
+
+      tl.to(path, {
+        strokeDashoffset: 0,
+        duration: 20,
+        ease: 'none',
+      })
+
+      // Reveal the solid logo
+      gsap.fromTo(
+        solidLogoRef.current,
+        { opacity: 0 },
+        { opacity: 1, delay: 4, duration: 4 },
+      )
     })
 
-    const tl = gsap.timeline()
-
-    tl.to(bgRef.current, {
-      duration: 1,
-      opacity: 1,
-    })
-
-    tl.to(path, {
-      strokeDashoffset: 0,
-      duration: 20,
-      ease: 'none',
-    })
-
-    // Reveal the solid logo
-    gsap.fromTo(
-      solidLogoRef.current,
-      { opacity: 0 },
-      { opacity: 1, delay: 4, duration: 4 },
-    )
+    return () => ctx.revert()
   }, [])
 
+  // Decorative monogram: hidden from assistive technology.
   return (
-    <div className='logo-container' ref={bgRef}>
-      <img ref={solidLogoRef} className='solid-logo' src={LogoH} alt='solid' />
-      <svg viewBox='0 0 3000 3000' xmlns='http://www.w3.org/2000/svg'>
+    <div className='logo-container' ref={bgRef} aria-hidden='true'>
+      <img ref={solidLogoRef} className='solid-logo' src={LogoH} alt='' />
+      <svg
+        viewBox='0 0 3000 3000'
+        xmlns='http://www.w3.org/2000/svg'
+        focusable='false'
+      >
         <g className='svg-container' fill='none'>
           <path
             ref={outlineLogoRef}

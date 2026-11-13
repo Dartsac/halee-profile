@@ -10,7 +10,7 @@ const BlogCard = ({ post }) => {
     >
       {post.featuredImage && (
         <div className='blog-card-image'>
-          <img src={post.featuredImage} alt={post.title} />
+          <img src={post.featuredImage} alt='' />
         </div>
       )}
       <div className='blog-card-content'>
@@ -31,6 +31,8 @@ const BlogCard = ({ post }) => {
         <div className='read-more'>
           <span>Read More</span>
           <svg
+            aria-hidden='true'
+            focusable='false'
             width='20'
             height='20'
             viewBox='0 0 24 25'
