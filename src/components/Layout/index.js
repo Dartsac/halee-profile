@@ -22,9 +22,10 @@ const Layout = () => {
       location.pathname === '/blog' ||
       location.pathname.startsWith('/blog/')
 
-    // Enable scrolling for projects, about, blog, and detail pages
-    // Only restrict scrolling on home and contact pages
+    // Keep content pages scrollable, including the homepage on small screens.
+    // The contact page retains its fixed-height layout.
     if (
+      location.pathname === '/' ||
       location.pathname === '/projects' ||
       isProjectDetailPage ||
       location.pathname === '/about' ||
@@ -45,9 +46,8 @@ const Layout = () => {
     document.body.classList.remove('menu-open')
   }, [location.pathname, menuOpen])
 
-  // Only force one-screen height on home and contact pages
-  const shouldForceOneScreen =
-    location.pathname === '/contact' || location.pathname === '/'
+  // Only force one-screen height on the contact page.
+  const shouldForceOneScreen = location.pathname === '/contact'
 
   return (
     <div className={`App ${menuOpen ? 'menu-open' : ''}`}>

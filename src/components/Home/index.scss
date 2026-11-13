@@ -1,267 +1,116 @@
 .home-page {
+  min-height: calc(100vh - 120px);
+  justify-content: flex-start;
+  padding: 64px 10%;
+
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
+    width: 55%;
+    max-width: 640px;
   }
 
   h1 {
     color: #000;
-    font-size: 8rem; /* Massive, editorial size */
+    font: 400 clamp(4.4rem, 6vw, 8rem) / 1 'Coolvetica';
     margin: 0;
-    font-family: 'Coolvetica';
-    font-weight: 400;
-    line-height: 0.9;
-    letter-spacing: -2px; /* Tighter tracking for display font */
+    letter-spacing: -2px;
     text-transform: uppercase;
   }
 
   h2 {
-    color: #555;
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 1.8rem;
-    font-family: 'Helvetica Neue', sans-serif;
-    letter-spacing: 2.5px;
+    color: #444;
+    margin: 24px 0 0;
+    font: 400 1.8rem / 1.5 'Helvetica Neue', sans-serif;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-
-    .highlight {
-      color: #000;
-      font-weight: 600;
-    }
   }
 
   .hero-copy {
-    font-size: 1.6rem;
+    font: 400 1.8rem / 1.7 'Helvetica Neue', sans-serif;
     color: #444;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-    max-width: 80%;
-    margin-top: 20px;
+    margin: 24px 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   .flat-button {
-    color: #d3dbc1;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    font-family: 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-    padding: 12px 24px;
-    border: 2px solid #000;
-    margin-top: 25px;
     display: inline-block;
-    white-space: nowrap;
-    background-color: #000;
+    color: #d3dbc1;
+    background: #000;
+    border: 2px solid #000;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    padding: 14px 22px;
+    font: 500 13px / 1.5 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
 
     &:hover {
-      background-color: #d3dbc1;
+      background: #d3dbc1;
       color: #000;
-      border-color: #000;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
+  }
 
-    &:active {
-      transform: translateY(-1px);
-    }
+  .secondary-button {
+    background: transparent;
+    color: #000;
+  }
+
+  .featured-work {
+    display: inline-block;
+    margin-top: 28px;
+    color: #333;
+    font: 400 1.5rem / 1.6 'Helvetica Neue', sans-serif;
+    text-underline-offset: 4px;
+  }
+
+  a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 5px;
   }
 
   .logo-container {
-    .solid-logo {
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: translate(-5px, -5px) rotateZ(29deg) !important;
-        filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 0.2));
-      }
-    }
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 0.6;
-    transform: translateY(0);
-  }
-}
-
-/* Optional: Define additional fade-in keyframes if needed */
-@keyframes fadeInDescriptors {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================================
-   RESPONSIVE BREAKPOINTS
-========================================= */
-
-/* 
-  Desktop-ish: 1200px or below 
-  -> Slightly reduce max-width of container or adjust spacing
-*/
-@media (max-width: 1240px) {
-  .home-page {
-    width: 85%; /* or something narrower if you like */
-    max-width: 1000px; /* optional if you want smaller max at 1200px */
-
-    .text-zone {
-      margin-right: 10px; /* slightly reduce margin */
-
-      h1 {
-        font-size: 48px; /* scale down a bit from 53px */
-      }
-    }
-  }
-
-  .logo-container {
-    width: 500px;
-    height: 500px;
+    width: 40%;
+    max-width: 500px;
+    height: auto;
     right: 2%;
   }
 }
 
-/*
-  Tablet-ish: 992px or below 
-  -> Start stacking or adjusting the flex proportions
-*/
-@media (max-width: 992px) {
-  .home-page {
-    .text-zone {
-      max-width: 90%;
-      margin-right: 0;
-      margin-bottom: 20px; /* add some spacing below text */
-      h1 {
-        font-size: 40px;
-        left: 0;
-        margin: 0 auto; /* let auto left/right margins center it */
-      }
-    }
-  }
-
-  .logo-container {
-    width: 400px;
-    height: 400px;
-    right: 2%;
-  }
-}
-
-/*
-  Mobile-ish: 768px or below 
-  -> Further reduce font sizes, spacing, etc.
-*/
 @media (max-width: 768px) {
   .home-page {
-    width: 100%;
-    max-width: 1000px; /* smaller container on mobile tablets */
+    padding: 48px 8%;
 
     .text-zone {
-      margin-bottom: 15px;
-      /* Possibly reduce paragraph font-size: */
-      p {
-        font-size: 14px;
-      }
+      width: 100%;
+      max-width: 600px;
     }
 
-    h1 {
-      font-size: 4.8rem;
-      line-height: 1;
+    .logo-container {
+      display: none;
     }
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     .hero-copy {
-      max-width: 100%;
+      font-size: 1.6rem;
     }
-
-    .flat-button {
-      padding: 10px 20px;
-    }
-  }
-
-  .logo-container {
-    width: 300px;
-    height: 300px;
-    right: 0;
   }
 }
 
-/*
-  Very small screens: 480px or below
-  -> Even smaller fonts/images
-*/
-@media (max-width: 480px) {
+@media (prefers-reduced-motion: reduce) {
   .home-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+    animation: none;
+    opacity: 1;
 
     .logo-container {
-      width: 70px;
-      height: 100px;
-      margin-bottom: 100px; // Adds spacing between logo and text
-      position: static; // Removes absolute positioning for stacking
-      right: auto;
-      left: auto;
-      margin-top: 150px;
-    }
-
-    .text-zone {
-      position: static;
-      width: 90%;
-      max-width: 300px;
-      transform: none;
-      margin: 0 auto; // Center text content
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-
-      h1 {
-        font-size: 44px;
-        width: 100%;
-        line-height: 1.2;
-        &::before {
-          margin-top: -20px;
-          font-size: 14px;
-        }
-        &::after {
-          font-size: 14px;
-        }
-      }
-
-      h2 {
-        font-size: 14px;
-      }
-
-      .flat-button {
-        width: auto;
-        max-width: 180px;
-        text-align: center;
-        margin-top: 10px;
-        padding: 10px 0;
-      }
+      display: none;
     }
   }
 }

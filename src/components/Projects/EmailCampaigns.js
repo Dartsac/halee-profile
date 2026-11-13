@@ -1,103 +1,99 @@
 import React, { useEffect } from 'react'
 import Loader from '../Loader'
-import Carousel from '../Carousel' // Reusable carousel component
-import ProjectNavigation from './ProjectNavigation' // Import the new navigation component
-import ProjectCTA from './ProjectCTA' // Import the CTA component
-import './EmailCampaigns.scss'
+import Carousel from '../Carousel'
+import ProjectNavigation from './ProjectNavigation'
+import ProjectCTA from './ProjectCTA'
 import './index.scss'
+import './EmailCampaigns.scss'
 
 const EmailCampaigns = () => {
   useEffect(() => {
-    // Enable scrolling when on project detail pages
     document.body.classList.add('project-page-active')
-
-    return () => {
-      // Remove the class when component unmounts
-      document.body.classList.remove('project-page-active')
-    }
+    return () => document.body.classList.remove('project-page-active')
   }, [])
 
   return (
     <>
-      <div className='container projects-page project-detail-page'>
+      <div className='container projects-page project-detail-page email-case-study'>
         <div className='text-zone'>
-          <h1>
-            Email Campaigns
-          </h1>
+          <p className='case-study-label'>Bevel · Email copywriting</p>
+          <h1>Seasonal offers. A consistent brand voice.</h1>
           <p>
-            I crafted engaging and on-brand email campaigns for key sales
-            events, including Black Friday, Cyber Monday, Fall Sale, and Holiday
-            Promotions. Each campaign was designed to captivate Bevel's target
-            audience while maintaining Bevel's signature witty, conversational
-            tone. My work focused on combining persuasive copywriting with clear
-            calls-to-action to drive conversions.
+            Email campaigns for Black Friday, Cyber Monday, Fall Sale, and
+            holiday promotions—written to make Bevel’s offers clear without
+            losing its witty, conversational tone.
           </p>
         </div>
 
         <div className='project-content'>
-          <section className='carousel-section'>
-            <h2>Email Examples I Wrote</h2>
+          <section aria-labelledby='brief-heading' className='case-study-section'>
+            <h2 id='brief-heading'>The brief</h2>
+            <p>
+              Give Bevel’s audience a reason to shop during key seasonal sales.
+              Each email needed to communicate the offer, highlight product
+              value, and guide readers toward a clear next step.
+            </p>
+            <dl className='case-study-facts'>
+              <div>
+                <dt>My role</dt>
+                <dd>Copywriting: subject lines, preview text, and email body copy.</dd>
+              </div>
+              <div>
+                <dt>The focus</dt>
+                <dd>Bevel’s grooming products, seasonal deals, and gifting opportunities.</dd>
+              </div>
+              <div>
+                <dt>The challenge</dt>
+                <dd>Balance limited-time urgency with a consistent, conversational brand voice.</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section className='carousel-section' aria-labelledby='examples-heading'>
+            <h2 id='examples-heading'>Selected email campaigns</h2>
+            <p>Browse the campaign examples below to see the copy in context.</p>
             <Carousel />
           </section>
 
-          <h2>Writing Process</h2>
-          <p>
-            For each email, I developed high-impact subject lines, preview text,
-            and email body copy that highlighted Bevel's most significant deals
-            of the year. My approach included:
-          </p>
-          <ul>
-            <li>
-              <strong>Focus on urgency and exclusivity:</strong> Leveraged
-              limited-time offers and countdown language to encourage quick
-              action.
-            </li>
-            <li>
-              <strong>Highlighting product value:</strong> Showcased Bevel's
-              flagship products, like the Bevel Trimmer and Shave Essentials,
-              emphasizing their premium quality and gifting potential.
-            </li>
-            <li>
-              <strong>Tone:</strong> Infused emails with bold, energetic
-              language that appealed to Bevel's audience.
-            </li>
-          </ul>
+          <section aria-labelledby='approach-heading' className='case-study-section'>
+            <h2 id='approach-heading'>The thinking behind the copy</h2>
+            <ul>
+              <li>
+                <strong>Give readers a reason to open.</strong> Subject lines
+                and preview text highlighted the seasonal offer, using urgency
+                and exclusivity to make the timing relevant.
+              </li>
+              <li>
+                <strong>Connect the deal to product value.</strong> Body copy
+                highlighted products such as the Bevel Trimmer and Shave
+                Essentials, emphasizing quality and gifting potential rather
+                than relying on the discount alone.
+              </li>
+              <li>
+                <strong>Keep the voice recognizable.</strong> Bold,
+                conversational language carried Bevel’s personality through
+                different sales moments, with clear calls to action to guide
+                readers toward shopping.
+              </li>
+            </ul>
+          </section>
 
-          <h2>Intended Impact</h2>
-          <p>
-            While specific campaign metrics are unavailable, each email campaign
-            was crafted with the goal of achieving the following:
-          </p>
-          <ul>
-            <li>
-              <strong>Increasing Engagement:</strong> Designed subject lines and
-              preview text to capture attention and drive higher open rates,
-              ensuring Bevel's audience remained engaged during key sales
-              periods.
-            </li>
-            <li>
-              <strong>Boosting Brand Awareness:</strong> Each campaign
-              reinforced Bevel's presence in a competitive market, ensuring the
-              brand remained top-of-mind during key shopping periods.
-            </li>
-            <li>
-              <strong>Driving Conversions:</strong> Highlighted the unique value
-              of Bevel's products, such as the Bevel Trimmer and curated holiday
-              bundles, with persuasive calls-to-action encouraging customers to
-              complete purchases.
-            </li>
-            <li>
-              <strong>Supporting Seasonal Sales:</strong> Strategically timed
-              messaging and promotions to align with shopping trends, aiming to
-              maximize sales during Black Friday, Cyber Monday, and holiday
-              shopping peaks.
-            </li>
-          </ul>
+          <section aria-labelledby='outcomes-heading' className='case-study-section'>
+            <h2 id='outcomes-heading'>Goals &amp; measurement</h2>
+            <p>
+              The campaigns were designed to encourage opens, clicks, and
+              purchases while reinforcing Bevel’s brand voice. Campaign
+              performance metrics are not available, so these are objectives,
+              not reported results.
+            </p>
+            <p>
+              To evaluate performance, I would look at open rates for subject
+              line testing, click-through rates for message and CTA engagement,
+              and conversion rates for the purchase journey.
+            </p>
+          </section>
 
-          {/* Add the CTA component before navigation */}
           <ProjectCTA />
-
-          {/* Project navigation component */}
           <ProjectNavigation currentProject='/projects/email' />
         </div>
       </div>
