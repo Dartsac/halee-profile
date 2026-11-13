@@ -10,10 +10,8 @@ const EMAILJS_TEMPLATE_ID = 'template_unv8nbx'
 const EMAILJS_PUBLIC_KEY = '1XR6UC8fBM2M1mM7n'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/halee-mccray-7040892a1/'
-// TODO(owner): add Halee's public contact email (e.g. 'name@example.com') to
-// show a direct mailto fallback. No address exists in the repo, so the
-// email link stays hidden until this is set.
-const DIRECT_EMAIL = ''
+// Shown as a direct mailto fallback alongside LinkedIn.
+const DIRECT_EMAIL = 'haleemccray41@gmail.com'
 
 const FIELDS = ['name', 'email', 'subject', 'message']
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/

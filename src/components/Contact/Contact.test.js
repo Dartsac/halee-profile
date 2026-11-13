@@ -140,12 +140,16 @@ test('keeps the user input and offers a fallback when sending fails', async () =
   await waitFor(() => expect(screen.queryByRole('alert')).not.toBeInTheDocument())
 })
 
-test('always shows a LinkedIn fallback outside the form', () => {
+test('always shows email and LinkedIn fallbacks outside the form', () => {
   renderContact()
 
   expect(screen.getByText(/prefer not to use the form/i)).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /linkedin/i })).toHaveAttribute(
     'href',
     'https://www.linkedin.com/in/halee-mccray-7040892a1/',
+  )
+  expect(screen.getByRole('link', { name: 'haleemccray41@gmail.com' })).toHaveAttribute(
+    'href',
+    'mailto:haleemccray41@gmail.com',
   )
 })
