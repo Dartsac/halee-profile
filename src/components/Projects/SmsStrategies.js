@@ -24,8 +24,8 @@ const SmsStrategies = () => {
             SMS Strategies
           </h1>
           <p>
-            Strategic SMS campaign content to engage customers and drive
-            conversions during key sales events.
+            Text message campaigns that sent Bevel customers to shop during its
+            biggest sales.
           </p>
         </div>
 
@@ -35,14 +35,11 @@ const SmsStrategies = () => {
 
           <h2>About the Project</h2>
           <p>
-            I crafted SMS campaigns to support key sales events such as Black
-            Friday, Cyber Monday, Fall Sale, and Holiday Promotions. Each
-            campaign was tailored to Bevel's brand voice, delivering concise,
-            engaging, and actionable messages designed to capture attention and
-            encourage immediate responses. These SMS campaigns focused on
-            driving website traffic, promoting product bundles, and fostering a
-            sense of urgency to maximize customer engagement during pivotal
-            shopping periods.
+            I wrote SMS campaigns for Black Friday, Cyber Monday, the Fall Sale,
+            and holiday promotions. Each message had to be short, sound like
+            Bevel, and tell customers what to do. The campaigns sent customers
+            to the website, promoted product bundles, and used deadlines to get
+            people to buy during the sale.
           </p>
 
           {/* Second image - top right position */}
@@ -51,19 +48,16 @@ const SmsStrategies = () => {
           <h2>Key Campaign Strategies</h2>
           <ul>
             <li>
-              <strong>Personalized Messaging:</strong> Crafted SMS copy that
-              addressed customers directly and reflected Bevel's conversational
-              and engaging tone.
+              <strong>Personal messages.</strong> The copy spoke to customers
+              directly, in Bevel's conversational tone.
             </li>
             <li>
-              <strong>Urgency and Exclusivity:</strong> Emphasized
-              time-sensitive promotions with phrases like "Don't Miss Out!
-              Limited Time Offer" to drive instant responses.
+              <strong>Urgency.</strong> Phrases like "Don't Miss Out! Limited
+              Time Offer" pushed customers to act before the deal ended.
             </li>
             <li>
-              <strong>Clear and Concise CTAs:</strong> Focused on short,
-              action-oriented language that guided customers to shop Bevel's
-              website or explore specific product bundles.
+              <strong>Short calls to action.</strong> Each text pointed
+              customers to Bevel's website or to a specific product bundle.
             </li>
           </ul>
 
@@ -72,28 +66,26 @@ const SmsStrategies = () => {
 
           <h2>Intended Results & Impact</h2>
           <p>
-            While specific campaign metrics are unavailable, each SMS campaign
-            was strategically designed to:
+            I don't have performance data for these campaigns. I wrote them
+            with these goals:
           </p>
           <ul>
             <li>
-              <strong>Drive Traffic to Bevel's Website:</strong> Provided direct
-              links to sales and product pages to simplify the customer journey
-              and encourage quick action.
+              <strong>Website traffic.</strong> Direct links to sale and product
+              pages let customers shop in one tap.
             </li>
             <li>
-              <strong>Boost Sales During Key Promotions:</strong> Highlighted
-              exclusive deals and product bundles to maximize conversions.
+              <strong>Sales during promotions.</strong> Messages led with
+              exclusive deals and product bundles.
             </li>
             <li>
-              <strong>Enhance Customer Engagement:</strong> Delivered timely and
-              relevant messages to keep Bevel top-of-mind and build stronger
-              brand connections.
+              <strong>Engagement.</strong> Messages arrived when each sale was
+              live, which kept Bevel on customers' minds.
             </li>
             <li>
-              <strong>Increase Customer Retention:</strong> Fostered loyalty by
-              keeping messaging aligned with Bevel's value of community,
-              self-care, and style.
+              <strong>Retention.</strong> Messages stayed true to Bevel's values
+              of community, self-care, and style, so customers kept coming
+              back.
             </li>
           </ul>
 

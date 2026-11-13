@@ -12,31 +12,25 @@ const About = () => {
         <div className='text-zone'>
           <h1>About Me</h1>
           <p>
-            I'm a Copywriter who blends creative storytelling with data-driven
-            SEO. My mission? To make your readers
-            <strong> feel</strong> something while ensuring your brand gets
-            found. Whether it's a burst of joy or a click-through to purchase, I
-            aim to spark genuine emotion and measurable action.
+            I'm a copywriter who pairs storytelling with SEO research. I want
+            your readers to <strong>feel</strong> something, and I want search
+            engines to find your brand. Sometimes that feeling is joy. Sometimes
+            it's the nudge to click "buy."
           </p>
           <p>
-            With a degree in psychology from Georgia State University, I
-            understand that connecting with people starts with knowing what
-            makes them tick. When you tap into what someone truly cares about,
-            that's when they believe in your brand. From selling products to
-            crafting an entertaining blog, the key is creating content that
-            inspires thought and emotion.
+            My psychology degree from Georgia State University taught me that
+            connecting with people starts with knowing what they care about.
+            People trust a brand that speaks to those cares. That holds whether
+            I'm writing a product page or an entertaining blog post.
           </p>
           <p>
-            But I'm not just about tugging at heartstrings—I'm about results. I
-            am Google Analytics certified and proficient in technical SEO tools
-            like SemRush and Google Keyword Planner. I don't just guess what
-            your audience wants; I research the keywords they use and the
-            questions they ask. I craft content that ranks, resonates, and
-            converts.
+            I back the writing with research. I'm Google Analytics certified,
+            and I use SEO tools like Semrush and Google Keyword Planner to find
+            the keywords your audience searches and the questions they ask. Then
+            I write content that ranks in search and persuades readers to act.
           </p>
           <p>
-            Let's connect and see how I can help you craft content that speaks
-            directly to your audience.
+            If you need copy for your next project, get in touch.
           </p>
 
           <a

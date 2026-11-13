@@ -154,9 +154,9 @@ const Contact = () => {
         <div className='text-zone'>
           <h1>Contact Me</h1>
           <p>
-            I am interested in full-time job opportunities - especially
-            ambitious or large projects. However, if you have other requests or
-            questions, don’t hesitate to contact me using the form below!
+            I take on freelance copywriting and content projects, and I'm open
+            to full-time roles. Tell me about your project, role, or question
+            below, and I'll get back to you.
           </p>
           <div className='contact-form'>
             <form onSubmit={sendEmail} noValidate aria-busy={isSending}>
@@ -197,8 +197,8 @@ const Contact = () => {
                 {status === 'error' && (
                   <li>
                     <div className='form-alert' role='alert'>
-                      Sorry, your message didn’t send. Your text is still here,
-                      so you can try again—or <ContactFallback />.
+                      Sorry, your message didn't send. Your text is still
+                      here. Try again, or <ContactFallback />.
                     </div>
                   </li>
                 )}

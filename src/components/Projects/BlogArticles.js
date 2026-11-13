@@ -23,20 +23,19 @@ const BlogArticles = () => {
             Blog Articles
           </h1>
           <p>
-            Expert grooming advice articles targeting specific needs of Bevel's
-            audience.
+            Articles I wrote for Bevel's blog, including community stories,
+            holiday features, and partnership announcements.
           </p>
         </div>
 
         <div className='project-content'>
           <h2>My Writing Process</h2>
           <p>
-            When writing for Bevel, SEO is the foundation but not the final
-            word. I start with keyword research and search intent, then shape
-            each blog around what the reader actually wants to know. From there,
-            I apply Bevel's tone: approachable, confident, and rooted in
-            culture. The result is content that is optimized to perform while
-            still feeling human, helpful, and unmistakably on-brand.
+            I started each Bevel article with keyword research and search
+            intent, then built it around what the reader wanted to know. Then I
+            wrote it in Bevel's tone, which is approachable, confident, and
+            rooted in culture. The articles are built to rank in search and
+            still read like Bevel.
           </p>
 
           <h2>Published Articles</h2>
@@ -49,7 +48,7 @@ const BlogArticles = () => {
             >
               <span className='article-title'>Faces of Atlanta Vol. 4</span>
               <span className='article-desc'>
-                Holiday campaign celebrating Atlanta families and their grooming
+                A holiday campaign about Atlanta families and their grooming
                 traditions
               </span>
             </a>
@@ -61,8 +60,8 @@ const BlogArticles = () => {
             >
               <span className='article-title'>A Bevel Holiday</span>
               <span className='article-desc'>
-                Heartwarming story of a grandson gifting his grandfather the
-                perfect grooming kit
+                A holiday story about a grandson who gives his grandfather a
+                grooming kit
               </span>
             </a>
             <a
@@ -75,8 +74,7 @@ const BlogArticles = () => {
                 Bevel Teams Up with BIG3 and Nancy Lieberman Charities
               </span>
               <span className='article-desc'>
-                Partnership announcement for bringing a Dream Court™ to Santa
-                Monica
+                Announcing a partnership to build a Dream Court™ in Santa Monica
               </span>
             </a>
             <a
@@ -89,8 +87,7 @@ const BlogArticles = () => {
                 Celebrating Fathers and the Wisdom They Pass Down
               </span>
               <span className='article-desc'>
-                Father's Day feature exploring how fathers impart valuable
-                lessons
+                A Father's Day feature on the lessons fathers pass down
               </span>
             </a>
             <a
@@ -101,7 +98,7 @@ const BlogArticles = () => {
             >
               <span className='article-title'>Serving Those Who Serve</span>
               <span className='article-desc'>
-                Announcement of Bevel's military discount program
+                Announcing Bevel's military discount program
               </span>
             </a>
             <a
@@ -114,7 +111,8 @@ const BlogArticles = () => {
                 Bevel Teams Up with UFC Heavyweight Curtis "Razor" Blaydes
               </span>
               <span className='article-desc'>
-                Partnership announcement with UFC heavyweight contender
+                Announcing Bevel's partnership with the UFC heavyweight
+                contender
               </span>
             </a>
           </div>

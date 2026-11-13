@@ -11,15 +11,15 @@
   "pages": {
     "/": {
       "title": "Halee Dobson | Copywriter & Content Strategist",
-      "description": "Halee Dobson is a copywriter and content strategist writing emails, SMS, blog articles, and e-commerce copy that is clear, on-brand, and gives readers a reason to take the next step."
+      "description": "Halee Dobson is a copywriter and content strategist who writes emails, SMS campaigns, blog articles, and product pages that match each brand's voice."
     },
     "/about": {
       "title": "About | Halee Dobson",
-      "description": "Meet Halee Dobson, a copywriter with a psychology degree from Georgia State University who blends creative storytelling with data-driven SEO."
+      "description": "Meet Halee Dobson, a copywriter with a psychology degree from Georgia State University who pairs storytelling with SEO research."
     },
     "/contact": {
       "title": "Contact | Halee Dobson",
-      "description": "Get in touch with copywriter Halee Dobson about full-time opportunities, projects, or questions."
+      "description": "Contact copywriter Halee Dobson about freelance projects, full-time roles, or questions."
     },
     "/projects": {
       "title": "Projects | Halee Dobson",
@@ -35,7 +35,7 @@
     },
     "/projects/blog": {
       "title": "Bevel Blog Articles | Halee Dobson",
-      "description": "SEO-driven grooming advice articles written for Bevel in the brand's approachable, confident voice."
+      "description": "Articles Halee Dobson wrote for Bevel's blog, including community stories, holiday features, and partnership announcements."
     },
     "/projects/ecom": {
       "title": "Bevel E-Commerce Copy | Halee Dobson",
@@ -43,7 +43,7 @@
     },
     "/blog": {
       "title": "Blog | Halee Dobson",
-      "description": "Halee Dobson's personal blog, with thoughts on books, movies, TV shows, and everything in between."
+      "description": "Halee Dobson's personal blog about books, movies, and TV shows."
     }
   }
 }

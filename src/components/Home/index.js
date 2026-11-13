@@ -10,9 +10,9 @@ const Home = () => (
         <h1>Halee Dobson</h1>
         <h2>Copywriter &amp; content strategist</h2>
         <p className='hero-copy'>
-          I help brands find the right words—from emails and SMS to blog
-          articles and e-commerce copy. Clear, on-brand content that gives
-          readers a reason to take the next step.
+          I write emails, SMS campaigns, blog articles, and product pages for
+          brands. My copy matches each brand's voice and tells readers what to
+          do next.
         </p>
         <div className='hero-actions'>
           <Link to='/projects' className='flat-button'>

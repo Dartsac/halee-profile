@@ -14,7 +14,7 @@ test('homepage immediately explains the services and links to work and contact',
 
   expect(screen.getByRole('heading', { name: /copywriter & content strategist/i }))
     .toBeInTheDocument()
-  expect(screen.getByText(/I help brands find the right words/)).toBeInTheDocument()
+  expect(screen.getByText(/I write emails, SMS campaigns/)).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /view my work/i }))
     .toHaveAttribute('href', '/projects')
   expect(screen.getByRole('link', { name: /contact me/i }))
@@ -32,7 +32,7 @@ test('email case study explains the brief, role, approach, and measurement limit
     .toBeInTheDocument()
   expect(screen.getByRole('heading', { name: /thinking behind the copy/i }))
     .toBeInTheDocument()
-  expect(screen.getByText(/objectives, not reported results/)).toBeInTheDocument()
+  expect(screen.getByText(/goals, not reported results/)).toBeInTheDocument()
   expect(document.body).toHaveClass('project-page-active')
 
   unmount()

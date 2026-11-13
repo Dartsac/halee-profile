@@ -11,8 +11,8 @@ const Projects = () => {
             Projects
           </h1>
           <p>
-            Below are some of my favorite (and most challenging) projects. Click
-            on any card to learn more!
+            These are some of my favorite projects, and some of the hardest.
+            Select a card to see the details.
           </p>
         </div>
 

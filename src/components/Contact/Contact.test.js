@@ -125,7 +125,7 @@ test('keeps the user input and offers a fallback when sending fails', async () =
   fireEvent.click(sendButton())
 
   const alert = await screen.findByRole('alert')
-  expect(alert).toHaveTextContent(/didn’t send/i)
+  expect(alert).toHaveTextContent(/didn't send/i)
   expect(alert.querySelector('a[href*="linkedin.com"]')).not.toBeNull()
   expect(screen.getByLabelText(/name/i)).toHaveValue('Ada Lovelace')
   expect(screen.getByLabelText(/message/i)).toHaveValue('Hello Halee!')

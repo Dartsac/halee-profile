@@ -20,8 +20,8 @@ const EmailCampaigns = () => {
           <h1>Seasonal offers. A consistent brand voice.</h1>
           <p>
             Email campaigns for Black Friday, Cyber Monday, Fall Sale, and
-            holiday promotions—written to make Bevel’s offers clear without
-            losing its witty, conversational tone.
+            holiday promotions. Each one had to make Bevel's offer clear in the
+            brand's witty, conversational tone.
           </p>
         </div>
 
@@ -29,9 +29,9 @@ const EmailCampaigns = () => {
           <section aria-labelledby='brief-heading' className='case-study-section'>
             <h2 id='brief-heading'>The brief</h2>
             <p>
-              Give Bevel’s audience a reason to shop during key seasonal sales.
-              Each email needed to communicate the offer, highlight product
-              value, and guide readers toward a clear next step.
+              Give Bevel's audience a reason to shop during its seasonal sales.
+              Each email had to explain the offer, show why the products were
+              worth buying, and tell readers what to do next.
             </p>
             <dl className='case-study-facts'>
               <div>
@@ -40,7 +40,7 @@ const EmailCampaigns = () => {
               </div>
               <div>
                 <dt>The focus</dt>
-                <dd>Bevel’s grooming products, seasonal deals, and gifting opportunities.</dd>
+                <dd>Bevel's grooming products, seasonal deals, and gift ideas.</dd>
               </div>
               <div>
                 <dt>The challenge</dt>
@@ -51,7 +51,10 @@ const EmailCampaigns = () => {
 
           <section className='carousel-section' aria-labelledby='examples-heading'>
             <h2 id='examples-heading'>Selected email campaigns</h2>
-            <p>Browse the campaign examples below to see the copy in context.</p>
+            <p>
+              Use the arrows to browse the emails. Select the center email to
+              read it at full size.
+            </p>
             <Carousel />
           </section>
 
@@ -60,20 +63,19 @@ const EmailCampaigns = () => {
             <ul>
               <li>
                 <strong>Give readers a reason to open.</strong> Subject lines
-                and preview text highlighted the seasonal offer, using urgency
-                and exclusivity to make the timing relevant.
+                and preview text named the seasonal offer and used
+                limited-time language to get readers to open now.
               </li>
               <li>
                 <strong>Connect the deal to product value.</strong> Body copy
-                highlighted products such as the Bevel Trimmer and Shave
-                Essentials, emphasizing quality and gifting potential rather
-                than relying on the discount alone.
+                featured products such as the Bevel Trimmer and Shave
+                Essentials. It sold their quality and their appeal as gifts, so
+                the emails didn't rely on the discount alone.
               </li>
               <li>
-                <strong>Keep the voice recognizable.</strong> Bold,
-                conversational language carried Bevel’s personality through
-                different sales moments, with clear calls to action to guide
-                readers toward shopping.
+                <strong>Keep the voice recognizable.</strong> Every email used
+                Bevel's bold, conversational voice, whatever the sale. Each one
+                ended with a clear call to action that sent readers to shop.
               </li>
             </ul>
           </section>
@@ -81,15 +83,14 @@ const EmailCampaigns = () => {
           <section aria-labelledby='outcomes-heading' className='case-study-section'>
             <h2 id='outcomes-heading'>Goals &amp; measurement</h2>
             <p>
-              The campaigns were designed to encourage opens, clicks, and
-              purchases while reinforcing Bevel’s brand voice. Campaign
-              performance metrics are not available, so these are objectives,
-              not reported results.
+              I wrote the campaigns to earn opens, clicks, and purchases in
+              Bevel's voice. I don't have the campaign performance data, so
+              these are goals, not reported results.
             </p>
             <p>
-              To evaluate performance, I would look at open rates for subject
-              line testing, click-through rates for message and CTA engagement,
-              and conversion rates for the purchase journey.
+              To measure them, I would compare open rates across subject lines,
+              click-through rates on each call to action, and the share of
+              clicks that ended in a purchase.
             </p>
           </section>
 

@@ -53,7 +53,7 @@ const Blog = () => {
             Blog
           </h1>
           <p>
-            Welcome to my personal blog! Here I share my thoughts on books, movies, TV shows, and everything in between.
+            This is my personal blog, where I write about books, movies, and TV shows.
           </p>
 
           {/* Tag Filter */}

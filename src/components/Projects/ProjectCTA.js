@@ -8,18 +8,17 @@ const ProjectCTA = () => {
   return (
     <div className='project-cta'>
       <div className='cta-content'>
-        <h3>Ready to elevate your brand's voice?</h3>
+        <h3>Need copy for your brand?</h3>
         <p>
-          Got a project in mind? I'd love to help you craft content that
-          resonates with your audience and drives real results. Let's create
-          something amazing together!
+          Tell me about your audience and your goals, and I'll write copy built
+          to reach them.
         </p>
         <Link
           to='/contact'
           className='cta-button'
           onClick={() => window.scrollTo(0, 0)}
         >
-          Let's Talk!
+          Let's talk
         </Link>
       </div>
     </div>

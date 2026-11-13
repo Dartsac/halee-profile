@@ -24,8 +24,7 @@ const EcomCopy = () => {
             E-Commerce Copy
           </h1>
           <p>
-            Converting product descriptions that showcase Bevel's premium
-            grooming products.
+            Product descriptions I wrote to sell Bevel's grooming products.
           </p>
         </div>
 
@@ -33,30 +32,27 @@ const EcomCopy = () => {
           <h2>Bevel Electric Shave Essentials Kit</h2>
           <h3>About the Project</h3>
           <p>
-            I wrote the product copy for Bevel's newest Electric Shave
-            Essentials Kit, featured on their website. This kit was designed to
-            streamline the shaving routine for Bevel's audience, and my copy
-            emphasized its convenience, effectiveness, and alignment with the
-            brand's dedication to high-quality grooming products.
+            I wrote the product copy for Bevel's Electric Shave Essentials Kit,
+            sold on Bevel's website. The kit puts a full shaving routine in one
+            set. My copy focused on how convenient it is, how well it works, and
+            Bevel's standard for quality.
           </p>
 
           <h3>My Role</h3>
           <ul>
             <li>
-              <strong>Highlighting Product Benefits:</strong> Crafted clear,
-              concise, and persuasive product descriptions that focused on the
-              kit's key features, including its ability to deliver a smooth,
+              <strong>Product benefits.</strong> Short, persuasive descriptions
+              covered the kit's main features, including a smooth,
               irritation-free shave.
             </li>
             <li>
-              <strong>Tailoring to Bevel's Audience:</strong> Crafted language
-              that resonated with Bevel's primary demographic, emphasizing
-              precision, self-care, and style.
+              <strong>Bevel's audience.</strong> The language spoke to Bevel's
+              core customers and focused on precision, self-care, and style.
             </li>
             <li>
-              <strong>Optimizing for Online Shopping:</strong> Balanced SEO
-              considerations with engaging product details to enhance
-              discoverability and inspire confidence in potential customers.
+              <strong>Online shopping.</strong> The product details included the
+              keywords shoppers search for and gave them enough information to
+              buy with confidence.
             </li>
           </ul>
 
@@ -75,49 +71,44 @@ const EcomCopy = () => {
           <h2>Bevel On-the-Go Bath and Body Gift Set (Holiday Promotion)</h2>
           <h3>About the Project</h3>
           <p>
-            I developed the product copy for Bevel's On-the-Go Bath & Body Gift
-            Set, a limited-edition holiday offering available on Target's
-            website. This set featured Bevel's premium bath and body products in
-            a travel-friendly format, designed for convenience and practicality
-            during the holiday season.
+            I wrote the product copy for Bevel's On-the-Go Bath & Body Gift Set,
+            a limited-edition holiday set sold on Target's website. It packed
+            Bevel's bath and body products in travel sizes for the holidays.
           </p>
 
           <h3>My Role</h3>
           <ul>
             <li>
-              <strong>Crafting a Holiday Narrative:</strong> Positioned the set
-              as the perfect holiday gift for the man on the go, blending
-              festive language with practicality.
+              <strong>A holiday story.</strong> The copy presented the set as a
+              practical holiday gift for the man on the go, in festive
+              language.
             </li>
             <li>
-              <strong>Driving Urgency:</strong> Used promotional language to
-              highlight its limited-time availability and its appeal as a
-              thoughtful gift option.
+              <strong>Urgency.</strong> Promotional language pointed out that
+              the set was only available for a limited time and made a
+              thoughtful gift.
             </li>
             <li>
-              <strong>Enhancing Product Appeal:</strong> Focused on the set's
-              versatility and high-quality grooming essentials, ensuring it
-              stood out among holiday gift options.
+              <strong>Product appeal.</strong> The copy focused on the range of
+              grooming essentials in the set so it stood out from other holiday
+              gifts.
             </li>
           </ul>
 
           <h2>Intended Results & Impact</h2>
-          <p>Both projects aimed to:</p>
+          <p>Both projects had the same goals:</p>
           <ul>
             <li>
-              <strong>Boost Product Sales:</strong> Emphasize the unique
-              benefits and value of Bevel's products to encourage customer
-              conversions.
+              <strong>Sales.</strong> Show the benefits and value of Bevel's
+              products so customers buy.
             </li>
             <li>
-              <strong>Maintain Brand Voice:</strong> Ensure consistency with
-              Bevel's conversational and confident tone, tailored to their
-              audience.
+              <strong>Brand voice.</strong> Keep Bevel's conversational,
+              confident tone.
             </li>
             <li>
-              <strong>Enhance the Shopping Experience:</strong> Create
-              informative, engaging product descriptions to guide customers in
-              making confident purchases.
+              <strong>Shopping experience.</strong> Give customers the
+              information they need to buy with confidence.
             </li>
           </ul>
 
