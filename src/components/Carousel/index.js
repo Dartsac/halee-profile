@@ -1,63 +1,49 @@
 import React, { useState } from 'react'
+import Lightbox from '../Lightbox'
+import emailSamples from './emailSamples'
 import './index.scss'
 
-// Import your five images
-import Img1 from '../../assets/images/email/img1.webp'
-import Img2 from '../../assets/images/email/img2.webp'
-import Img3 from '../../assets/images/email/img3.webp'
-import Img4 from '../../assets/images/email/img4.webp'
-import Img5 from '../../assets/images/email/img5.webp'
-
-// Our fixed array of five images.
-const images = [Img1, Img2, Img3, Img4, Img5]
-
-// Updated slot settings:
-// - Change the positions to spread the images further apart.
-//   (Here we use [10, 30, 50, 70, 90], so that the leftmost image
-//    is at 10% and the rightmost at 90% of the container's width.)
-// - The scales remain similar (with a slightly larger center image)
-//   so that the center image appears larger.
+// Slot settings by position relative to the centered email (slot 2).
 const positions = [-30, -5, 30, 65, 90]
 const scales = [0.9, 1, 1.1, 1, 0.9]
 const opacities = [0.5, 0.7, 1, 0.7, 0.5]
+const CENTER_SLOT = 2
 
 const Carousel = () => {
   const [offset, setOffset] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [openSampleIndex, setOpenSampleIndex] = useState(null)
 
-  const handleNext = () => {
+  const count = emailSamples.length
+  const centerIndex = (offset + CENTER_SLOT) % count
+  const centerSample = emailSamples[centerIndex]
+
+  const rotateBy = (step) => {
     if (isAnimating) return
     setIsAnimating(true)
-    setOffset((prev) => (prev + 1) % images.length)
+    setOffset((prev) => (prev + step + count) % count)
     setTimeout(() => setIsAnimating(false), 400)
   }
 
-  const handlePrev = () => {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setOffset((prev) => (prev - 1 + images.length) % images.length)
-    setTimeout(() => setIsAnimating(false), 400)
+  const handleItemClick = (relativePos, index) => {
+    if (relativePos === CENTER_SLOT) {
+      setOpenSampleIndex(index)
+    } else {
+      // Bring a side email to the center before it can be enlarged.
+      rotateBy(relativePos - CENTER_SLOT)
+    }
   }
+
+  const openSample = openSampleIndex === null ? null : emailSamples[openSampleIndex]
 
   return (
     <div className='gallery'>
       <div className='gallery-container'>
-        {images.map((img, i) => {
-          // Calculate the relative position (0 to 4) for this image.
-          const relativePos = (i - offset + images.length) % images.length
+        {emailSamples.map((sample, i) => {
+          const relativePos = (i - offset + count) % count
+          const isCenter = relativePos === CENTER_SLOT
+          const zIndex = isCenter ? 3 : relativePos === 1 || relativePos === 3 ? 2 : 1
 
-          // Compute the z-index: the center image (relativePos === 2) should appear on top.
-          const zIndex =
-            relativePos === 2
-              ? 3
-              : relativePos === 1 || relativePos === 3
-                ? 2
-                : 1
-
-          // The inline style:
-          // - translateX: moves the image horizontally based on the positions array.
-          // - translateY(-50%) centers it vertically.
-          // - scale: adjusts its size.
           const style = {
             transform: `translate(calc(${positions[relativePos]}% - 50%), -50%) scale(${scales[relativePos]})`,
             opacity: opacities[relativePos],
@@ -65,23 +51,62 @@ const Carousel = () => {
           }
 
           return (
-            <img
-              key={img}
-              className='gallery-item'
+            <button
+              key={sample.src}
+              type='button'
+              className={`gallery-item${isCenter ? ' is-center' : ''}`}
               style={style}
-              src={img}
-              alt={`img${i + 1}`}
-            />
+              onClick={() => handleItemClick(relativePos, i)}
+              tabIndex={isCenter ? 0 : -1}
+              aria-hidden={isCenter ? undefined : 'true'}
+              aria-label={
+                isCenter
+                  ? `Enlarge email ${i + 1} of ${count}: ${sample.title}`
+                  : undefined
+              }
+            >
+              <img src={sample.src} alt={isCenter ? sample.alt : ''} />
+              {isCenter && (
+                <span className='gallery-item-hint' aria-hidden='true'>
+                  View larger
+                </span>
+              )}
+            </button>
           )
         })}
       </div>
       <div className='gallery-controls'>
         <button
+          type='button'
           className='gallery-controls-previous'
-          onClick={handlePrev}
+          onClick={() => rotateBy(-1)}
+          aria-label='Previous email'
         ></button>
-        <button className='gallery-controls-next' onClick={handleNext}></button>
+        <button
+          type='button'
+          className='gallery-controls-next'
+          onClick={() => rotateBy(1)}
+          aria-label='Next email'
+        ></button>
       </div>
+      <p className='gallery-caption' aria-live='polite'>
+        Email {centerIndex + 1} of {count}: {centerSample.title}
+      </p>
+
+      {openSample && (
+        <Lightbox
+          title={openSample.title}
+          image={{ src: openSample.src, alt: openSample.alt }}
+          onClose={() => setOpenSampleIndex(null)}
+        >
+          <details className='sample-transcript'>
+            <summary>Read the email text</summary>
+            {openSample.transcript.map((block, blockIndex) => (
+              <p key={blockIndex}>{block}</p>
+            ))}
+          </details>
+        </Lightbox>
+      )}
     </div>
   )
 }
