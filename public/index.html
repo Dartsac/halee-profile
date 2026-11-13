@@ -49,19 +49,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- emailjs -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-      defer
-    ></script>
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function () {
-        emailjs.init({
-          publicKey: '1XR6UC8fBM2M1mM7n',
-        })
-      })
-    </script>
+    <!-- EmailJS is bundled via the @emailjs/browser package (see src/components/Contact). -->
     <!-- Netlify Identity configuration and redirect handler -->
     <script>
       // Wait for the widget to be ready before configuring
