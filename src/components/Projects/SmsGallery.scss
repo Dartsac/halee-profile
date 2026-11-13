@@ -17,13 +17,33 @@
   }
 
   .sms-image-wrapper {
+    position: relative;
     width: 300px;
     height: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
     overflow: hidden;
     transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-5px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #000;
+      outline-offset: 4px;
+    }
+
+    .sms-enlarge-hint {
+      display: block;
+      margin-top: 6px;
+      text-align: right;
+      color: #333;
+      font: 500 1.2rem / 1.4 'Helvetica Neue', sans-serif;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .sms-image {
