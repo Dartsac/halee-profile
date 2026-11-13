@@ -61,7 +61,8 @@ const Layout = () => {
   }, [location.pathname, menuOpen])
 
   const skipToContent = (event) => {
-    // HashRouter would treat "#main-content" as a route, so focus directly.
+    // Focus directly so the hash change doesn't interfere with routing or
+    // the legacy #/ URL redirect.
     event.preventDefault()
     mainRef.current?.focus()
   }

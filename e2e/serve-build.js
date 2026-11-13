@@ -47,7 +47,14 @@ const server = http.createServer((req, res) => {
   }
 
   if (!fs.existsSync(filePath)) {
-    res.writeHead(404, { 'Content-Type': 'text/plain' }).end('Not found')
+    // Mimic GitHub Pages: unknown paths are served 404.html with a 404 status.
+    const fallback = path.join(BUILD_DIR, '404.html')
+    if (fs.existsSync(fallback)) {
+      res.writeHead(404, { 'Content-Type': CONTENT_TYPES['.html'] })
+      fs.createReadStream(fallback).pipe(res)
+    } else {
+      res.writeHead(404, { 'Content-Type': 'text/plain' }).end('Not found')
+    }
     return
   }
 

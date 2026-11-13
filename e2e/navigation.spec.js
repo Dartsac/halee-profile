@@ -10,7 +10,7 @@ test.describe('homepage calls to action', () => {
     await page.goto('/')
     await contentLink(page, /view my work/i).click()
 
-    await expect(page).toHaveURL(/#\/projects$/)
+    await expect(page).toHaveURL(/\/projects\/?$/)
     await expect(page.getByRole('heading', { level: 1, name: /projects/i })).toBeVisible()
   })
 
@@ -18,9 +18,16 @@ test.describe('homepage calls to action', () => {
     await page.goto('/')
     await contentLink(page, /contact me/i).click()
 
-    await expect(page).toHaveURL(/#\/contact$/)
+    await expect(page).toHaveURL(/\/contact\/?$/)
     await expect(page.getByRole('heading', { level: 1, name: /contact/i })).toBeVisible()
   })
+})
+
+test('legacy #/ links redirect to path URLs', async ({ page }) => {
+  await page.goto('/#/projects/email')
+
+  await expect(page).toHaveURL(/\/projects\/email\/?$/)
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
 })
 
 const PROJECT_PAGES = [
@@ -33,10 +40,10 @@ const PROJECT_PAGES = [
 test.describe('project pages', () => {
   for (const { card, path } of PROJECT_PAGES) {
     test(`${path} loads from the projects overview`, async ({ page }) => {
-      await page.goto('/#/projects')
+      await page.goto('/projects')
       await contentLink(page, card).click()
 
-      await expect(page).toHaveURL(new RegExp(`#${path}/?$`))
+      await expect(page).toHaveURL(new RegExp(`${path}/?$`))
       const heading = page.getByRole('heading', { level: 1 })
       await expect(heading).toBeVisible()
       await expect(heading).not.toHaveText('')
@@ -46,17 +53,17 @@ test.describe('project pages', () => {
 
 test.describe('blog', () => {
   test('listing renders posts and a post opens', async ({ page }) => {
-    await page.goto('/#/blog')
+    await page.goto('/blog')
     await expect(page.getByRole('heading', { level: 1, name: /blog/i })).toBeVisible()
 
-    const firstPost = page.locator('a[href^="#/blog/"]').first()
+    const firstPost = page.locator('a[href^="/blog/"]').first()
     await expect(firstPost).toBeVisible()
     const title = (await firstPost.getByRole('heading').first().textContent()).trim()
     expect(title).not.toBe('')
 
     await firstPost.click()
 
-    await expect(page).toHaveURL(/#\/blog\/[^/]+$/)
+    await expect(page).toHaveURL(/\/blog\/[^/]+\/?$/)
     // .first(): post markdown may repeat the title as its own level-1 heading.
     await expect(page.getByRole('heading', { level: 1, name: title }).first()).toBeVisible()
     await expect(page.getByRole('link', { name: /back to blog/i })).toBeVisible()

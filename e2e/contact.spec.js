@@ -21,19 +21,19 @@ const formFields = (page) => ({
 
 test.describe('contact form', () => {
   test('flags an empty submission without sending', async ({ page, emailjsRequests }) => {
-    await page.goto('/#/contact')
+    await page.goto('/contact')
     const form = formFields(page)
 
     await form.submit.click()
 
     await expectFlagged(form.name)
     await expectFlagged(form.message)
-    await expect(page).toHaveURL(/#\/contact$/)
+    await expect(page).toHaveURL(/\/contact\/?$/)
     expect(emailjsRequests).toHaveLength(0)
   })
 
   test('flags an invalid email address without sending', async ({ page, emailjsRequests }) => {
-    await page.goto('/#/contact')
+    await page.goto('/contact')
     const form = formFields(page)
 
     await form.name.fill('Test Visitor')
@@ -43,7 +43,7 @@ test.describe('contact form', () => {
     await form.submit.click()
 
     await expectFlagged(form.email)
-    await expect(page).toHaveURL(/#\/contact$/)
+    await expect(page).toHaveURL(/\/contact\/?$/)
     expect(emailjsRequests).toHaveLength(0)
   })
 
@@ -51,7 +51,7 @@ test.describe('contact form', () => {
     page,
     emailjsRequests,
   }) => {
-    await page.goto('/#/contact')
+    await page.goto('/contact')
     const form = formFields(page)
 
     await form.name.fill('Test Visitor')
