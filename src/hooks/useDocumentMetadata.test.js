@@ -26,7 +26,7 @@ afterEach(() => {
 test('sets the title, description, canonical URL, and share tags for a static route', () => {
   renderAt('/projects/email')
 
-  expect(document.title).toBe('Bevel Email Campaigns | Halee McCray')
+  expect(document.title).toBe('Bevel Email Campaigns | Halee Dobson')
   expect(metaContent('meta[name="description"]')).toMatch(/seasonal email campaigns for Bevel/)
   expect(document.head.querySelector('link[rel="canonical"]'))
     .toHaveAttribute('href', 'https://haleemccray.com/projects/email/')
@@ -43,7 +43,7 @@ test('uses blog post frontmatter once the post has loaded', () => {
     featuredImage: '/images/blog/cover.jpg',
   })
 
-  expect(document.title).toBe('Welcome to My Blog! | Halee McCray')
+  expect(document.title).toBe('Welcome to My Blog! | Halee Dobson')
   expect(metaContent('meta[name="description"]')).toBe('Thoughts on books and movies.')
   expect(metaContent('meta[property="og:type"]')).toBe('article')
   expect(metaContent('meta[property="og:image"]'))
@@ -56,5 +56,5 @@ test('uses blog post frontmatter once the post has loaded', () => {
 test('falls back to blog metadata while a blog post is loading', () => {
   renderAt('/blog/getting-started')
 
-  expect(document.title).toBe('Blog | Halee McCray')
+  expect(document.title).toBe('Blog | Halee Dobson')
 })

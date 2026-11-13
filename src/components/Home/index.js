@@ -7,7 +7,7 @@ const Home = () => (
   <>
     <div className='container home-page'>
       <div className='text-zone'>
-        <h1>Halee McCray</h1>
+        <h1>Halee Dobson</h1>
         <h2>Copywriter &amp; content strategist</h2>
         <p className='hero-copy'>
           I help brands find the right words—from emails and SMS to blog

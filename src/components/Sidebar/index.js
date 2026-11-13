@@ -143,7 +143,7 @@ const Sidebar = ({ onMenuStateChange }) => {
         inert={isMenuHidden ? '' : undefined}
       >
         <Link className='logo' to='/' onClick={handleNavClick}>
-          <img src={Halee} alt='Halee McCray – home' width='60' height='16' />
+          <img src={Halee} alt='Halee Dobson – home' width='60' height='16' />
         </Link>
         <nav aria-label='Main'>
           <NavLink className='home-link' to='/' end onClick={handleNavClick}>

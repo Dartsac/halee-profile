@@ -51,7 +51,7 @@ const About = () => {
         </div>
 
         <div className='headshot-container'>
-          <img className='headshot' src={Headshot} alt='Portrait of Halee McCray' />
+          <img className='headshot' src={Headshot} alt='Portrait of Halee Dobson' />
         </div>
       </div>
       <Loader />

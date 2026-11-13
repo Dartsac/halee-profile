@@ -1,10 +1,10 @@
-# Halee McCray Portfolio
+# Halee Dobson Portfolio
 
-A modern, responsive portfolio website for copywriter Halee McCray.
+A modern, responsive portfolio website for copywriter Halee Dobson.
 
 ## 📋 Overview
 
-This project is a professional portfolio website designed to showcase Halee McCray's writing samples, experience, and services as a copywriter. The site features a clean, engaging design with intuitive navigation, responsive layout, and seamless content presentation.
+This project is a professional portfolio website designed to showcase Halee Dobson's writing samples, experience, and services as a copywriter. The site features a clean, engaging design with intuitive navigation, responsive layout, and seamless content presentation.
 
 Visit the live site: [haleemccray.com](https://haleemccray.com)
 
@@ -97,7 +97,7 @@ This site was developed with a focus on:
 
 ## 📝 License
 
-This project is available for code reference but the content is proprietary to Halee McCray.
+This project is available for code reference but the content is proprietary to Halee Dobson.
 
 ## 👤 Contact
 
@@ -105,4 +105,4 @@ Developer: [Isaac Dobson](https://github.com/Dartsac)
 
 ---
 
-Made with ❤️ for Halee McCray
+Made with ❤️ for Halee Dobson
