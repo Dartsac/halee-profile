@@ -34,6 +34,7 @@
     "build": "react-scripts build",
     "postbuild": "node scripts/generate-static-pages.js",
     "test": "react-scripts test",
+    "test:e2e": "npm run build && playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -58,6 +59,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@playwright/test": "~1.61.1",
     "gh-pages": "^6.3.0"
   }
 }

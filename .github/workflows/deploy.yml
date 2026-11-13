@@ -35,6 +35,11 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Run unit tests
+        run: npm test -- --watchAll=false
+        env:
+          CI: true
+
       - name: Build the project
         run: npm run build
 
