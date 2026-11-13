@@ -24,24 +24,33 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Halee McCray - SEO Copywriter specializing in high-converting, search-optimized content."
-    />
-    <meta property="og:title" content="Halee McCray - SEO Copywriter" />
-    <meta
-      property="og:description"
-      content="Professional SEO copywriter crafting content that ranks and resonates. Specializing in email, SMS, blog, and e-commerce copy."
-    />
+    <!--
+      Page metadata defaults for the homepage. Values come from
+      src/hooks/pageMetadata.json: scripts/generate-static-pages.js rewrites
+      these tags for every route at build time (for crawlers and link
+      previews), and src/hooks/useDocumentMetadata.js updates them in the
+      browser. Keep the one-line attribute order (name/property, then content)
+      so the build script can find each tag.
+    -->
+    <title>Halee McCray | Copywriter &amp; Content Strategist</title>
+    <meta name="description" content="Halee McCray is a copywriter and content strategist writing emails, SMS, blog articles, and e-commerce copy that is clear, on-brand, and gives readers a reason to take the next step." />
+    <link rel="canonical" href="https://haleemccray.com/" />
+    <meta property="og:site_name" content="Halee McCray" />
+    <meta property="og:title" content="Halee McCray | Copywriter &amp; Content Strategist" />
+    <meta property="og:description" content="Halee McCray is a copywriter and content strategist writing emails, SMS, blog articles, and e-commerce copy that is clear, on-brand, and gives readers a reason to take the next step." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://haleemccray.com" />
+    <meta property="og:url" content="https://haleemccray.com/" />
+    <meta property="og:image" content="https://haleemccray.com/headshot-og.png" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image" content="%PUBLIC_URL%/headshot-og.png" />
-    <meta property="og:image:alt" content="Halee McCray - SEO Copywriter" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Halee McCray, copywriter and content strategist" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Halee McCray | Copywriter &amp; Content Strategist" />
+    <meta name="twitter:description" content="Halee McCray is a copywriter and content strategist writing emails, SMS, blog articles, and e-commerce copy that is clear, on-brand, and gives readers a reason to take the next step." />
+    <meta name="twitter:image" content="https://haleemccray.com/headshot-og.png" />
+    <meta name="twitter:image:alt" content="Halee McCray, copywriter and content strategist" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Halee McCray | SEO Copywriter</title>
     <!-- Netlify Identity Widget for CMS authentication -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>

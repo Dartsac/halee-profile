@@ -1,0 +1,49 @@
+{
+  "siteUrl": "https://haleemccray.com",
+  "siteName": "Halee McCray",
+  "defaultImage": {
+    "path": "/headshot-og.png",
+    "type": "image/png",
+    "width": "1200",
+    "height": "630",
+    "alt": "Halee McCray, copywriter and content strategist"
+  },
+  "pages": {
+    "/": {
+      "title": "Halee McCray | Copywriter & Content Strategist",
+      "description": "Halee McCray is a copywriter and content strategist writing emails, SMS, blog articles, and e-commerce copy that is clear, on-brand, and gives readers a reason to take the next step."
+    },
+    "/about": {
+      "title": "About | Halee McCray",
+      "description": "Meet Halee McCray, a copywriter with a psychology degree from Georgia State University who blends creative storytelling with data-driven SEO."
+    },
+    "/contact": {
+      "title": "Contact | Halee McCray",
+      "description": "Get in touch with copywriter Halee McCray about full-time opportunities, projects, or questions."
+    },
+    "/projects": {
+      "title": "Projects | Halee McCray",
+      "description": "Copywriting projects by Halee McCray for Bevel, including email campaigns, SMS strategies, blog articles, and e-commerce product copy."
+    },
+    "/projects/email": {
+      "title": "Bevel Email Campaigns | Halee McCray",
+      "description": "Case study: seasonal email campaigns for Bevel's Black Friday, Cyber Monday, Fall Sale, and holiday promotions, written in Bevel's witty, conversational voice."
+    },
+    "/projects/sms": {
+      "title": "Bevel SMS Strategies | Halee McCray",
+      "description": "SMS campaign copy written for Bevel's key sales events, including Black Friday, Cyber Monday, Fall Sale, and holiday promotions."
+    },
+    "/projects/blog": {
+      "title": "Bevel Blog Articles | Halee McCray",
+      "description": "SEO-driven grooming advice articles written for Bevel in the brand's approachable, confident voice."
+    },
+    "/projects/ecom": {
+      "title": "Bevel E-Commerce Copy | Halee McCray",
+      "description": "Product copy written for Bevel, including the Electric Shave Essentials Kit and the On-the-Go Bath & Body Gift Set."
+    },
+    "/blog": {
+      "title": "Blog | Halee McCray",
+      "description": "Halee McCray's personal blog, with thoughts on books, movies, TV shows, and everything in between."
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Loader from '../Loader'
 import { getPostBySlug, formatDate, getAdjacentPosts } from '../../utils/blogUtils'
+import { useBlogPostMetadata } from '../../hooks/useDocumentMetadata'
 import './index.scss'
 
 const BlogPost = () => {
@@ -11,6 +12,7 @@ const BlogPost = () => {
   const [post, setPost] = useState(null)
   const [adjacentPosts, setAdjacentPosts] = useState({ prevPost: null, nextPost: null })
   const [loading, setLoading] = useState(true)
+  useBlogPostMetadata(post)
 
   useEffect(() => {
     // Enable scrolling for blog post pages
