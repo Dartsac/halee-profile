@@ -12,8 +12,11 @@ import EcomCopy from './components/Projects/EcomCopy'
 import Blog from './components/Blog'
 import BlogPost from './components/Blog/BlogPost'
 import ScrollToTop from './components/ScrollToTop'
+import { useRouteMetadata } from './hooks/useDocumentMetadata'
 
 function App() {
+  useRouteMetadata()
+
   return (
     <>
       {/* Add ScrollToTop component here */}
