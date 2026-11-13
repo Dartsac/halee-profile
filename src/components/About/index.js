@@ -1,5 +1,5 @@
 import Headshot from '../../assets/images/headshot1.webp'
-import Resume from '../../assets/HaleeMcCray Resume.pdf'
+import Resume from '../../assets/Halee Dobson Resume.pdf'
 import Loader from '../Loader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'

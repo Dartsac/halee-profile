@@ -67,7 +67,7 @@ halee-profile/
 │   ├── assets/                  # Assets directory
 │   │   ├── fonts/               # Custom fonts
 │   │   ├── images/              # Image files
-│   │   └── HaleeMcCray Resume.pdf
+│   │   └── Halee Dobson Resume.pdf
 │   ├── components/              # React components
 │   │   ├── About/               # About page component
 │   │   ├── AnimatedLetters/     # Text animation component
